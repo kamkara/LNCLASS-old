@@ -22,8 +22,8 @@ gem 'turbolinks', '~> 5'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-#MEMEBERSHIPS
-#gem 'devise'
+######################### MEMEBERSHIPS  #######################
+gem 'devise', '~> 4.7', '>= 4.7.3'
 
 #REALTIME
 #gem "redis", ">= 4.0", :require => ["redis", "redis/connection/hiredis"]
@@ -41,7 +41,8 @@ gem 'turbolinks', '~> 5'
 
 
 ######################### URL BUILDERS  #######################
-#gem 'friendly_id', '~> 5.4'
+gem 'friendly_id', '~> 5.4.0'
+
 
 ######################### STYLES  #######################
 gem 'tailwindcss', '~> 1.0', '>= 1.0.3'
@@ -56,7 +57,7 @@ gem 'jquery-rails'
 ######################## FORMS #######################
 #gem 'simple_form', '~> 5.0', '>= 5.0.2'
 #gem 'bootstrap_form', '~> 4.5'
-gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
+#gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 
 
 # Use Active Storage variant
