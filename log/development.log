@@ -318,3 +318,1111 @@ Migrating to CreateFriendlyIdSlugs (20201013113656)
   [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(1463786832121341420)[0m
   [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1463786832121341420)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCourses (20201013115808)
+  [1m[35m (4.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (158.6ms)[0m  [1m[35mCREATE TABLE "courses" ("id" bigserial primary key, "title" character varying, "content" character varying, "matiere" character varying, "level" character varying, "author" character varying, "slug" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_b3c61f05ef"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (80.3ms)[0m  [1m[35mCREATE  INDEX  "index_courses_on_user_id" ON "courses"  ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (8.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201013115808"]]
+  [1m[35m (10.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(1463786832121341420)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-10-13 12:10:26 +0000
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 33.2ms | Allocations: 220)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 93)
+Started GET "/" for ::1 at 2020-10-13 12:10:30 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.8ms | Allocations: 145)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.6ms | Allocations: 75)
+Completed 200 OK in 8425ms (Views: 8330.6ms | ActiveRecord: 0.0ms | Allocations: 44583)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 5868ms (Views: 5866.6ms | ActiveRecord: 0.0ms | Allocations: 32587)
+
+
+Started GET "/" for ::1 at 2020-10-13 12:11:05 +0000
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (4.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:20
+  Rendered courses/index.html.erb within layouts/application (Duration: 35.4ms | Allocations: 1702)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 157ms (Views: 68.6ms | ActiveRecord: 26.3ms | Allocations: 10657)
+
+
+Started GET "/courses/new" for ::1 at 2020-10-13 12:11:08 +0000
+Processing by CoursesController#new as HTML
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (Duration: 165.1ms | Allocations: 8216)
+  Rendered courses/new.html.erb within layouts/application (Duration: 175.3ms | Allocations: 8565)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 322ms (Views: 248.5ms | ActiveRecord: 6.0ms | Allocations: 22184)
+
+
+Started GET "/courses/new" for ::1 at 2020-10-13 12:20:19 +0000
+Processing by CoursesController#new as HTML
+Completed 401 Unauthorized in 170ms (ActiveRecord: 0.0ms | Allocations: 1690)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-10-13 12:20:20 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 12.9ms | Allocations: 642)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 71.2ms | Allocations: 2968)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 8.7ms | Allocations: 134)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 287ms (Views: 138.4ms | ActiveRecord: 11.3ms | Allocations: 27326)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-10-13 12:20:27 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 7.7ms | Allocations: 213)
+  Rendered devise/shared/_links.html.erb (Duration: 6.2ms | Allocations: 124)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 26.0ms | Allocations: 1877)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 72ms (Views: 69.7ms | ActiveRecord: 0.0ms | Allocations: 9881)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-10-13 12:21:05 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.3ms | Allocations: 206)
+  Rendered devise/shared/_links.html.erb (Duration: 2.2ms | Allocations: 490)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 23.1ms | Allocations: 2050)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.7ms | Allocations: 132)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.4ms | Allocations: 73)
+Completed 200 OK in 87ms (Views: 84.9ms | ActiveRecord: 0.0ms | Allocations: 11447)
+
+
+Started POST "/users" for ::1 at 2020-10-13 12:21:09 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"6Cvnhm47W6urm8t6lVd5HeOZX7bWgTobVg4Ivxp9DygIGTmL83uh64NA+cC4aGTyCy4ESXzqEXe4YGmm8mGUgg==", "user"=>{"email"=>"kara@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kara@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (4.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "kara@gmail.com"], ["encrypted_password", "$2a$12$eOgbPo2IEGhO9OOi3ip6N.TzVl/H/egjJBkHIV7GZ8WQbKkpX8KzS"], ["created_at", "2020-10-13 12:21:10.645632"], ["updated_at", "2020-10-13 12:21:10.645632"]]
+  [1m[35m (69.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (2.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", "2020-10-13 12:21:10.739560"], ["last_sign_in_at", "2020-10-13 12:21:10.739560"], ["current_sign_in_ip", "::1/128"], ["last_sign_in_ip", "::1/128"], ["updated_at", "2020-10-13 12:21:10.740072"], ["id", 1]]
+  [1m[35m (37.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/courses/new
+Completed 302 Found in 965ms (ActiveRecord: 118.3ms | Allocations: 16187)
+
+
+Started GET "/courses/new" for ::1 at 2020-10-13 12:21:10 +0000
+Processing by CoursesController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (Duration: 10.8ms | Allocations: 1559)
+  Rendered courses/new.html.erb within layouts/application (Duration: 17.0ms | Allocations: 1903)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 25)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 189ms (Views: 73.1ms | ActiveRecord: 3.5ms | Allocations: 18182)
+
+
+Started POST "/courses" for ::1 at 2020-10-13 12:22:42 +0000
+Processing by CoursesController#create as HTML
+  Parameters: {"authenticity_token"=>"7r/2AqgDVCn/+WvT36wp4jo954KlLyOQtCaT+f4HBjYOjSgPNUOuadciWWnykzQN0oq8fQ9ECPxaSPLgFhudnA==", "course"=>{"title"=>" If Elon Musk were to move the Tesla company out of CA, wouldn’t that slow down production even more?", "content"=>"His name is Yusaku Maezawa. He is a Japanese Billionaire entrepreneur and founder of Japan's largest online fashion retail ZOZO. He founded it in 2004 and sold his 50.1% stake to SoftBank for $3.7 billion in 2019.", "matiere"=>"math", "level"=>"6e"}, "commit"=>"Create Course"}
+  [1m[36mUser Load (13.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 13.3ms | Allocations: 2965)
+
+
+
+NoMethodError - undefined method `author=' for nil:NilClass:
+  app/controllers/courses_controller.rb:25:in `create'
+
+Started POST "/__better_errors/275090684031a391/variables" for ::1 at 2020-10-13 12:22:43 +0000
+Started POST "/courses" for ::1 at 2020-10-13 12:23:09 +0000
+Processing by CoursesController#create as HTML
+  Parameters: {"authenticity_token"=>"7r/2AqgDVCn/+WvT36wp4jo954KlLyOQtCaT+f4HBjYOjSgPNUOuadciWWnykzQN0oq8fQ9ECPxaSPLgFhudnA==", "course"=>{"title"=>" If Elon Musk were to move the Tesla company out of CA, wouldn’t that slow down production even more?", "content"=>"His name is Yusaku Maezawa. He is a Japanese Billionaire entrepreneur and founder of Japan's largest online fashion retail ZOZO. He founded it in 2004 and sold his 50.1% stake to SoftBank for $3.7 billion in 2019.", "matiere"=>"math", "level"=>"6e"}, "commit"=>"Create Course"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (11.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/courses_controller.rb:28:in `create'
+  [1m[36mCourse Exists? (7.6ms)[0m  [1m[34mSELECT 1 AS one FROM "courses" WHERE "courses"."id" IS NOT NULL AND "courses"."slug" = $1 LIMIT $2[0m  [["slug", "if-elon-musk-were-to-move-the-tesla-company-out-of-ca-wouldn-t-that-slow-down-production-even-more"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:28:in `create'
+  [1m[36mCourse Create (1.7ms)[0m  [1m[32mINSERT INTO "courses" ("title", "content", "matiere", "level", "slug", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", " If Elon Musk were to move the Tesla company out of CA, wouldn’t that slow down production even more?"], ["content", "His name is Yusaku Maezawa. He is a Japanese Billionaire entrepreneur and founder of Japan's largest online fashion retail ZOZO. He founded it in 2004 and sold his 50.1% stake to SoftBank for $3.7 billion in 2019."], ["matiere", "math"], ["level", "6e"], ["slug", "if-elon-musk-were-to-move-the-tesla-company-out-of-ca-wouldn-t-that-slow-down-production-even-more"], ["user_id", 1], ["created_at", "2020-10-13 12:23:10.781854"], ["updated_at", "2020-10-13 12:23:10.781854"]]
+  ↳ app/controllers/courses_controller.rb:28:in `create'
+  [1m[35m (18.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/courses_controller.rb:28:in `create'
+Redirected to http://localhost:3000/courses/if-elon-musk-were-to-move-the-tesla-company-out-of-ca-wouldn-t-that-slow-down-production-even-more
+Completed 302 Found in 683ms (ActiveRecord: 59.4ms | Allocations: 96709)
+
+
+Started GET "/courses/if-elon-musk-were-to-move-the-tesla-company-out-of-ca-wouldn-t-that-slow-down-production-even-more" for ::1 at 2020-10-13 12:23:10 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"if-elon-musk-were-to-move-the-tesla-company-out-of-ca-wouldn-t-that-slow-down-production-even-more"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:53:in `set_course'
+Completed 404 Not Found in 32ms (ActiveRecord: 1.6ms | Allocations: 3250)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Course with 'id'=if-elon-musk-were-to-move-the-tesla-company-out-of-ca-wouldn-t-that-slow-down-production-even-more:
+  app/controllers/courses_controller.rb:53:in `set_course'
+
+Started POST "/__better_errors/20d1005da3824597/variables" for ::1 at 2020-10-13 12:23:11 +0000
+Started GET "/courses/if-elon-musk-were-to-move-the-tesla-company-out-of-ca-wouldn-t-that-slow-down-production-even-more" for ::1 at 2020-10-13 12:23:55 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"if-elon-musk-were-to-move-the-tesla-company-out-of-ca-wouldn-t-that-slow-down-production-even-more"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "if-elon-musk-were-to-move-the-tesla-company-out-of-ca-wouldn-t-that-slow-down-production-even-more"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:53:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 410)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 174ms (Views: 31.1ms | ActiveRecord: 20.2ms | Allocations: 31718)
+
+
+Started GET "/courses" for ::1 at 2020-10-13 12:24:33 +0000
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:20
+  Rendered courses/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 1226)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 57ms (Views: 48.0ms | ActiveRecord: 1.6ms | Allocations: 9980)
+
+
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1463786832121341420)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCourses (20201013115808)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (27.6ms)[0m  [1m[35mDROP TABLE "courses"[0m
+  [1m[36mprimary::SchemaMigration Destroy (1.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201013115808"]]
+  [1m[35m (18.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(1463786832121341420)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1463786832121341420)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCourses (20201013115808)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (192.5ms)[0m  [1m[35mCREATE TABLE "courses" ("id" bigserial primary key, "title" character varying, "content" text, "matiere" character varying, "level" character varying, "author" character varying, "slug" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_b3c61f05ef"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (36.2ms)[0m  [1m[35mCREATE  INDEX  "index_courses_on_user_id" ON "courses"  ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201013115808"]]
+  [1m[35m (22.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(1463786832121341420)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1463786832121341420)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCourses (20201013115808)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.6ms)[0m  [1m[35mDROP TABLE "courses"[0m
+  [1m[36mprimary::SchemaMigration Destroy (1.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201013115808"]]
+  [1m[35m (137.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(1463786832121341420)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1463786832121341420)[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCourses (20201013122819)
+  [1m[35m (4.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (106.4ms)[0m  [1m[35mCREATE TABLE "courses" ("id" bigserial primary key, "title" character varying, "content" text, "matiere" character varying, "level" character varying, "author" character varying, "slug" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_b3c61f05ef"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (38.8ms)[0m  [1m[35mCREATE  INDEX  "index_courses_on_user_id" ON "courses"  ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201013122819"]]
+  [1m[35m (22.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1463786832121341420)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/courses" for ::1 at 2020-10-13 12:29:22 +0000
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (1.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:20
+  Rendered courses/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 1814)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 93)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.8ms | Allocations: 127)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 75)
+Completed 200 OK in 411ms (Views: 305.2ms | ActiveRecord: 6.4ms | Allocations: 20580)
+
+
+Started GET "/courses/new" for ::1 at 2020-10-13 12:29:26 +0000
+Processing by CoursesController#new as HTML
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (Duration: 167.4ms | Allocations: 4781)
+  Rendered courses/new.html.erb within layouts/application (Duration: 169.4ms | Allocations: 5130)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 259ms (Views: 210.4ms | ActiveRecord: 8.3ms | Allocations: 18777)
+
+
+Started GET "/courses/new" for ::1 at 2020-10-13 12:30:27 +0000
+Processing by CoursesController#new as HTML
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (Duration: 6.9ms | Allocations: 1512)
+  Rendered courses/new.html.erb within layouts/application (Duration: 10.1ms | Allocations: 1855)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.8ms | Allocations: 142)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 75)
+Completed 200 OK in 79ms (Views: 76.4ms | ActiveRecord: 0.0ms | Allocations: 10733)
+
+
+Started GET "/" for ::1 at 2020-10-13 14:48:44 +0000
+  [1m[35m (48.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (95.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:20
+  Rendered courses/index.html.erb within layouts/application (Duration: 141.5ms | Allocations: 1814)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 2.9ms | Allocations: 93)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 1.6ms | Allocations: 127)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.6ms | Allocations: 75)
+Completed 200 OK in 685ms (Views: 455.1ms | ActiveRecord: 99.5ms | Allocations: 19695)
+
+
+Started GET "/courses/new" for ::1 at 2020-10-13 14:48:56 +0000
+Processing by CoursesController#new as HTML
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (Duration: 147.7ms | Allocations: 6872)
+  Rendered courses/new.html.erb within layouts/application (Duration: 159.6ms | Allocations: 7222)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 327ms (Views: 197.0ms | ActiveRecord: 93.4ms | Allocations: 20747)
+
+
+Started POST "/courses" for ::1 at 2020-10-13 14:50:06 +0000
+Processing by CoursesController#create as HTML
+  Parameters: {"authenticity_token"=>"2hjvfxNTqwRRFuqi2Ll+AqaNCjUCA1h9IN1KNbJ0WsTJ7TEsiixhrofV9IrCIOcD59m/6W8gwlBSVwXiUxQS3g==", "course"=>{"title"=>"Why are most of the big start-ups in India copy of other", "content"=>"In the 2010s, these Indian startups got bigger. Oyo, Ola, PayTM, Freshdesk, Zoho and others were not just content with taking over Indian market but went after global markets.\r\n\r\nAs we head into the 2020s, Indian startups are getting ambitious and there is more availability of risk capital. The system is slowly maturing and more investors are entering the market — some of whom are not just content with just copying enmasse of companies from other markets [for the simple reason that most of the copyable sectors are taken].", "matiere"=>"math", "level"=>"6e"}, "commit"=>"Create Course"}
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (Duration: 5.5ms | Allocations: 1284)
+  Rendered courses/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1373)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 215ms (Views: 47.8ms | ActiveRecord: 0.0ms | Allocations: 12067)
+
+
+Started GET "/courses" for ::1 at 2020-10-13 14:59:34 +0000
+Processing by CoursesController#index as HTML
+Completed 401 Unauthorized in 142ms (ActiveRecord: 0.0ms | Allocations: 1169)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-10-13 14:59:34 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 4.0ms | Allocations: 642)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 74.6ms | Allocations: 2496)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 25)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 219ms (Views: 106.5ms | ActiveRecord: 12.8ms | Allocations: 25482)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-10-13 15:01:49 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.6ms | Allocations: 546)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1926)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.8ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.8ms | Allocations: 132)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 46ms (Views: 43.5ms | ActiveRecord: 0.0ms | Allocations: 11407)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-10-13 15:02:01 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 23.7ms | Allocations: 213)
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 124)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 37.4ms | Allocations: 1664)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 98ms (Views: 95.5ms | ActiveRecord: 0.0ms | Allocations: 9641)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-10-13 15:02:34 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.3ms | Allocations: 206)
+  Rendered devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 490)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 14.0ms | Allocations: 2313)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.8ms | Allocations: 132)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 64ms (Views: 61.9ms | ActiveRecord: 0.0ms | Allocations: 11711)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-10-13 15:04:08 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.3ms | Allocations: 206)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 91.4ms | Allocations: 9897)
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 0.0ms | Allocations: 11659)
+
+
+
+NoMethodError - undefined method `school' for #<User:0x00005622ab197ca0>:
+  app/views/devise/registrations/new.html.erb:24
+  app/views/devise/registrations/new.html.erb:3
+
+Started POST "/__better_errors/a533582bb73b8872/variables" for ::1 at 2020-10-13 15:04:09 +0000
+Started GET "/users/sign_up" for ::1 at 2020-10-13 15:13:22 +0000
+
+Zeitwerk::NameError - expected file /home/chatln/LNCLASS_Education/PROD/LNCLASS/app/controllers/users/registrations_controller.rb to define constant Users::RegistrationsController, but didn't:
+
+Started POST "/__better_errors/3253e398243b7caa/variables" for ::1 at 2020-10-13 15:13:31 +0000
+Started GET "/users/sign_up" for ::1 at 2020-10-13 15:14:26 +0000
+
+ActionController::RoutingError - uninitialized constant Users::RegistrationsController:
+
+Started POST "/__better_errors/e7b83a464eb39c64/variables" for ::1 at 2020-10-13 15:14:27 +0000
+Started GET "/users/sign_up" for ::1 at 2020-10-13 15:20:26 +0000
+
+ActionController::RoutingError - uninitialized constant Users::RegistrationsController:
+
+Started POST "/__better_errors/db40190bd91d2246/variables" for ::1 at 2020-10-13 15:20:27 +0000
+Started GET "/users/sign_up" for ::1 at 2020-10-13 15:20:34 +0000
+
+ActionController::RoutingError - uninitialized constant Users::RegistrationsController:
+
+Started POST "/__better_errors/de8a4de2c84deba2/variables" for ::1 at 2020-10-13 15:20:35 +0000
+Started GET "/users/sign_up" for ::1 at 2020-10-13 15:21:45 +0000
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+Zeitwerk::NameError - expected file /home/chatln/LNCLASS_Education/PROD/LNCLASS/app/controllers/users/registrations_controller.rb to define constant Users::RegistrationsController, but didn't:
+
+Started POST "/__better_errors/526911c994de135e/variables" for ::1 at 2020-10-13 15:21:45 +0000
+Started GET "/users/sign_up" for ::1 at 2020-10-13 15:28:32 +0000
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 23.6ms | Allocations: 216)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 316.3ms | Allocations: 9932)
+Completed 500 Internal Server Error in 542ms (ActiveRecord: 14.0ms | Allocations: 27909)
+
+
+
+NoMethodError - undefined method `schoolcode_schoo' for #<User:0x00005615b7dcc008>
+Did you mean?  schoolcode_school
+               schoolcode_school?
+               schoolcode_school=:
+  app/views/devise/registrations/new.html.erb:24
+  app/views/devise/registrations/new.html.erb:3
+
+Started POST "/__better_errors/5efdb553c48d095f/variables" for ::1 at 2020-10-13 15:28:33 +0000
+Started GET "/users/sign_up" for ::1 at 2020-10-13 15:29:05 +0000
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 93.5ms | Allocations: 6068)
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 9.0ms | Allocations: 20659)
+
+
+
+NoMethodError - undefined method `schoolcode_schoo' for #<User:0x00005615b8cdcca0>
+Did you mean?  schoolcode_school
+               schoolcode_school?
+               schoolcode_school=:
+  app/views/devise/registrations/new.html.erb:24
+  app/views/devise/registrations/new.html.erb:3
+
+Started POST "/__better_errors/92d7ced06bc43e66/variables" for ::1 at 2020-10-13 15:29:06 +0000
+  [1m[35m (37.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1463786832121341420)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (27.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1463786832121341420)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1463786832121341420)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DropPromos (20201013154446)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (417.8ms)[0m  [1m[35mDROP TABLE "promos"[0m
+  [1m[36mprimary::SchemaMigration Create (19.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201013154446"]]
+  [1m[35m (322.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(1463786832121341420)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1463786832121341420)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameSchoolToUser (20201013154553)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (108.7ms)[0m  [1m[35mALTER TABLE "users" ADD "school_code" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (3.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201013154553"]]
+  [1m[35m (24.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1463786832121341420)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_up" for ::1 at 2020-10-13 15:48:39 +0000
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 114.4ms | Allocations: 6068)
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 0.0ms | Allocations: 20098)
+
+
+
+NoMethodError - undefined method `schoolcode_schoo' for #<User:0x00005615b7da59a8>
+Did you mean?  schoolcode_school
+               schoolcode_school?
+               schoolcode_school=:
+  app/views/devise/registrations/new.html.erb:24
+  app/views/devise/registrations/new.html.erb:3
+
+Started POST "/__better_errors/47a20f139e82b184/variables" for ::1 at 2020-10-13 15:48:40 +0000
+Started GET "/users/sign_up" for ::1 at 2020-10-13 15:50:35 +0000
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 32.5ms | Allocations: 207)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 70.3ms | Allocations: 7316)
+Completed 500 Internal Server Error in 171ms (ActiveRecord: 11.8ms | Allocations: 24336)
+
+
+
+NoMethodError - undefined method `school' for #<User:0x00007fbed109f9d8>
+Did you mean?  school_code:
+  app/views/devise/registrations/new.html.erb:24
+  app/views/devise/registrations/new.html.erb:3
+
+Started POST "/__better_errors/abd8049ac6920b84/variables" for ::1 at 2020-10-13 15:50:36 +0000
+Started GET "/users/sign_up" for ::1 at 2020-10-13 15:51:36 +0000
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 24.3ms | Allocations: 6406)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms | Allocations: 7017)
+
+
+
+NoMethodError - undefined method `school' for #<User:0x00007fbed149aa88>
+Did you mean?  school_code:
+  app/views/devise/registrations/new.html.erb:24
+  app/views/devise/registrations/new.html.erb:3
+
+Started POST "/__better_errors/49bc0134898a37fb/variables" for ::1 at 2020-10-13 15:51:37 +0000
+Started POST "/__better_errors/49bc0134898a37fb/variables" for ::1 at 2020-10-13 15:51:42 +0000
+Started GET "/users/sign_up" for ::1 at 2020-10-13 15:55:56 +0000
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2720)
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 9.3ms | Allocations: 19727)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <h2>Sign up</h2>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+<div class="control-form">
+  <%= f.label :"Nom Complet" %>
+  <%= f.text_field :username %>
+</div>
+<div class="control-form">
+  <%= f.label :contact %>
+  <%= f.text_field :contact %>
+</div>
+<div class="control-form">
+  <%= f.label :school %>
+  <%= f.text_field :school_code %>
+</div>
+<div class="control-form">
+  <%= f.label :Promotion %>
+  <%= f.text_field :level %>
+</div>
+<div class="control-form">
+  <%= f.label :role %>
+  <%= f.text_field :role %>
+</div>
+  <div class="actions">
+    <%= f.submit "Sign up" class: "btn btn-outline-primary" %>
+  </div>
+<% end %>
+<%= render "devise/shared/links" %>:
+
+Started POST "/__better_errors/00d8ae60c344b6fc/variables" for ::1 at 2020-10-13 15:55:57 +0000
+Started GET "/users/sign_up" for ::1 at 2020-10-13 15:56:15 +0000
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 206)
+  Rendered devise/shared/_links.html.erb (Duration: 11.6ms | Allocations: 554)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 43.1ms | Allocations: 3462)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 3.9ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.9ms | Allocations: 140)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.4ms | Allocations: 75)
+Completed 200 OK in 505ms (Views: 502.9ms | ActiveRecord: 0.0ms | Allocations: 21174)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1463786832121341420)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameSchoolToUser (20201013154553)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "school_code"[0m
+  [1m[36mprimary::SchemaMigration Destroy (1.0ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201013154553"]]
+  [1m[35m (9.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(1463786832121341420)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1463786832121341420)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameSchoolToUsers (20201013155735)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "users" RENAME COLUMN "schoolcode_school" TO "school_name"[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201013155735"]]
+  [1m[35m (173.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1463786832121341420)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1463786832121341420)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddSchoolCodeToUsers (20201013155952)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "users" ADD "school_code" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201013155952"]]
+  [1m[35m (125.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(1463786832121341420)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_up" for ::1 at 2020-10-13 16:01:49 +0000
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 206)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 66.6ms | Allocations: 7101)
+Completed 500 Internal Server Error in 149ms (ActiveRecord: 0.0ms | Allocations: 23522)
+
+
+
+NoMethodError - undefined method `school_name' for #<User:0x00007fbed0c0a918>
+Did you mean?  school_code:
+  app/views/devise/registrations/new.html.erb:28
+  app/views/devise/registrations/new.html.erb:3
+
+Started POST "/__better_errors/2cc2cbeb3dc62f07/variables" for ::1 at 2020-10-13 16:01:50 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1463786832121341420)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(1463786832121341420)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_up" for ::1 at 2020-10-13 16:03:34 +0000
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 4.3ms | Allocations: 504)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 13.3ms | Allocations: 2491)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.9ms | Allocations: 132)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 122ms (Views: 43.1ms | ActiveRecord: 11.5ms | Allocations: 25385)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-10-13 16:28:46 +0000
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 17.8ms | Allocations: 206)
+  Rendered devise/shared/_links.html.erb (Duration: 32.3ms | Allocations: 490)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 212.8ms | Allocations: 3228)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 14.1ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 23.1ms | Allocations: 132)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 5129ms (Views: 3683.0ms | ActiveRecord: 0.0ms | Allocations: 13411)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (951.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "LNCLASS_development"[0m
+  [1m[35m (379.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "LNCLASS_test"[0m
+  [1m[35m (1707.4ms)[0m  [1m[35mCREATE DATABASE "LNCLASS_development" ENCODING = 'unicode'[0m
+  [1m[35m (840.6ms)[0m  [1m[35mCREATE DATABASE "LNCLASS_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "courses" CASCADE[0m
+  [1m[35m (97.3ms)[0m  [1m[35mCREATE TABLE "courses" ("id" bigserial primary key, "title" character varying, "content" text, "matiere" character varying, "level" character varying, "author" character varying, "slug" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (60.1ms)[0m  [1m[35mCREATE  INDEX  "index_courses_on_user_id" ON "courses"  ("user_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  [1m[35m (106.5ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" bigserial primary key, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp)[0m
+  [1m[35m (139.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs"  ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (183.6ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs"  ("slug", "sluggable_type")[0m
+  [1m[35m (115.6ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id" ON "friendly_id_slugs"  ("sluggable_type", "sluggable_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (140.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "username" character varying, "city" character varying, "school_name" character varying, "level" character varying, "contact" character varying, "matricule" character varying, "role" character varying, "slug" character varying, "school_code" character varying)[0m
+  [1m[35m (56.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (62.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (8.6ms)[0m  [1m[35mALTER TABLE "courses" ADD CONSTRAINT "fk_rails_b3c61f05ef"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (107.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (10.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20201013155952)[0m
+  [1m[35m (42.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20201013112847),
+(20201013113232),
+(20201013113656),
+(20201013122819),
+(20201013154446),
+(20201013155735);
+
+[0m
+  [1m[35m (118.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-13 16:30:59.351582"], ["updated_at", "2020-10-13 16:30:59.351582"]]
+  [1m[35m (21.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "7a6da3a19cf9c6bcf0f4e37163c28820d07a8bf5"], ["created_at", "2020-10-13 16:30:59.411976"], ["updated_at", "2020-10-13 16:30:59.411976"]]
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "courses" CASCADE[0m
+  [1m[35m (134.8ms)[0m  [1m[35mCREATE TABLE "courses" ("id" bigserial primary key, "title" character varying, "content" text, "matiere" character varying, "level" character varying, "author" character varying, "slug" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (58.5ms)[0m  [1m[35mCREATE  INDEX  "index_courses_on_user_id" ON "courses"  ("user_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  [1m[35m (138.0ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" bigserial primary key, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp)[0m
+  [1m[35m (58.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs"  ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (80.9ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs"  ("slug", "sluggable_type")[0m
+  [1m[35m (47.4ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id" ON "friendly_id_slugs"  ("sluggable_type", "sluggable_id")[0m
+  [1m[35m (4.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (107.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "username" character varying, "city" character varying, "school_name" character varying, "level" character varying, "contact" character varying, "matricule" character varying, "role" character varying, "slug" character varying, "school_code" character varying)[0m
+  [1m[35m (60.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (60.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (7.8ms)[0m  [1m[35mALTER TABLE "courses" ADD CONSTRAINT "fk_rails_b3c61f05ef"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (100.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (10.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20201013155952)[0m
+  [1m[35m (9.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20201013112847),
+(20201013113232),
+(20201013113656),
+(20201013122819),
+(20201013154446),
+(20201013155735);
+
+[0m
+  [1m[35m (108.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (3.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-13 16:31:00.565402"], ["updated_at", "2020-10-13 16:31:00.565402"]]
+  [1m[35m (10.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.8ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-10-13 16:31:00.601568"], ["key", "environment"]]
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "7a6da3a19cf9c6bcf0f4e37163c28820d07a8bf5"], ["created_at", "2020-10-13 16:31:00.633359"], ["updated_at", "2020-10-13 16:31:00.633359"]]
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_up" for ::1 at 2020-10-13 16:33:59 +0000
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 23.0ms | Allocations: 216)
+  Rendered devise/shared/_links.html.erb (Duration: 25.5ms | Allocations: 554)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 435.8ms | Allocations: 6157)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 3.7ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.9ms | Allocations: 140)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.6ms | Allocations: 75)
+Completed 200 OK in 962ms (Views: 853.7ms | ActiveRecord: 12.1ms | Allocations: 39992)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-10-13 16:35:41 +0000
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 79)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1863)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 48ms (Views: 46.3ms | ActiveRecord: 0.0ms | Allocations: 9220)
+
+
+Started POST "/users" for ::1 at 2020-10-13 16:36:14 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"s/vDguGvZEekXHiVlg5mKe72r3Utjlj0usCVVYkRHJGA32999zhnxWg4TgwamTHAqjfo3Clt4zB09w91jlksgw==", "user"=>{"email"=>"kara@gmail.com", "password"=>"[FILTERED]", "username"=>"", "contact"=>"44320020", "school_name"=>"College Notre Dame", "level"=>"6e", "role"=>"prof"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :level[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (3.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kara@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 1464ms (ActiveRecord: 4.7ms | Allocations: 33642)
+
+
+
+NoMethodError - undefined method `school' for #<User:0x000055a0c8fc4310>
+Did you mean?  school_code:
+
+Started POST "/__better_errors/c73d7697e3138959/variables" for ::1 at 2020-10-13 16:36:17 +0000
+Started POST "/users" for ::1 at 2020-10-13 16:38:25 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"s/vDguGvZEekXHiVlg5mKe72r3Utjlj0usCVVYkRHJGA32999zhnxWg4TgwamTHAqjfo3Clt4zB09w91jlksgw==", "user"=>{"email"=>"kara@gmail.com", "password"=>"[FILTERED]", "username"=>"", "contact"=>"44320020", "school_name"=>"College Notre Dame", "level"=>"6e", "role"=>"prof"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :level[0m
+  [1m[35m (12.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kara@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."contact" = $1 LIMIT $2[0m  [["contact", "44320020"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kara@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.7ms | Allocations: 358)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 90)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 23.3ms | Allocations: 2260)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 944ms (Views: 64.9ms | ActiveRecord: 32.3ms | Allocations: 36982)
+
+
+Started GET "/users" for ::1 at 2020-10-13 16:39:14 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/sign_up" for ::1 at 2020-10-13 16:39:18 +0000
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.3ms | Allocations: 206)
+  Rendered devise/shared/_links.html.erb (Duration: 2.5ms | Allocations: 490)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 16.1ms | Allocations: 3228)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.9ms | Allocations: 132)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 61ms (Views: 58.8ms | ActiveRecord: 0.0ms | Allocations: 13403)
+
+
+Started POST "/users" for ::1 at 2020-10-13 16:39:41 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"468ulLG3mIKvJsqUNzIZTjXPrqMeqLPD+DomsJvVtRPQi4JrpyCbAGNC/A27pU6ncQ7pChpLCAc2DbyQnJ2FAQ==", "user"=>{"email"=>"kara@gmail.com", "password"=>"[FILTERED]", "username"=>"kamate vakaramoko", "contact"=>"44320020", "school_name"=>"College Notre Dame", "level"=>"6e", "role"=>"prof"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :level[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."id" IS NOT NULL AND "users"."slug" = $1 LIMIT $2[0m  [["slug", "kamate-vakaramoko"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kara@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."contact" = $1 LIMIT $2[0m  [["contact", "44320020"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kara@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (1.9ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 214)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 79)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 2090)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 594ms (Views: 37.7ms | ActiveRecord: 6.4ms | Allocations: 22836)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-10-13 16:40:01 +0000
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1854)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 52ms (Views: 48.0ms | ActiveRecord: 0.0ms | Allocations: 9190)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-10-13 16:41:49 +0000
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 5.9ms | Allocations: 206)
+  Rendered devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 490)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 24.1ms | Allocations: 3228)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 1.4ms | Allocations: 137)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 154ms (Views: 152.1ms | ActiveRecord: 0.0ms | Allocations: 13385)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-10-13 16:42:27 +0000
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.3ms | Allocations: 206)
+  Rendered devise/shared/_links.html.erb (Duration: 3.3ms | Allocations: 490)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 18.9ms | Allocations: 3231)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.9ms | Allocations: 132)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.6ms | Allocations: 73)
+Completed 200 OK in 79ms (Views: 75.3ms | ActiveRecord: 0.0ms | Allocations: 13411)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-10-13 16:43:16 +0000
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.3ms | Allocations: 206)
+  Rendered devise/shared/_links.html.erb (Duration: 2.6ms | Allocations: 490)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 40.1ms | Allocations: 3227)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 1.5ms | Allocations: 132)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 93ms (Views: 90.4ms | ActiveRecord: 0.0ms | Allocations: 13368)
+
+
+Started POST "/users" for ::1 at 2020-10-13 16:43:51 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"UUR3O7AkyIpbPW0zvODtBBMTEZycYFzagCBGx5odHC1iYNvEprPLCJdZW6owd7rtV9JWNZiD5x5OF9znnVUsPw==", "user"=>{"email"=>"kara@gmail.com", "password"=>"[FILTERED]", "username"=>"kamate vakaramoko", "contact"=>"44320020", "school_name"=>"College Notre Dame", "level"=>"6e", "role"=>"prof"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :level[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."id" IS NOT NULL AND "users"."slug" = $1 LIMIT $2[0m  [["slug", "kamate-vakaramoko"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (5.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kara@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."contact" = $1 LIMIT $2[0m  [["contact", "44320020"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kara@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (6.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.6ms | Allocations: 213)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 79)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 16.8ms | Allocations: 2089)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 615ms (Views: 51.0ms | ActiveRecord: 14.4ms | Allocations: 22816)
+
+
+Started GET "/users" for ::1 at 2020-10-13 16:45:00 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-10-13 16:45:14 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"UUR3O7AkyIpbPW0zvODtBBMTEZycYFzagCBGx5odHC1iYNvEprPLCJdZW6owd7rtV9JWNZiD5x5OF9znnVUsPw==", "user"=>{"email"=>"kara@gmail.com", "password"=>"[FILTERED]", "username"=>"kamate vakaramoko", "contact"=>"44320020", "school_name"=>"College Notre Dame", "level"=>"6e", "role"=>"prof"}, "commit"=>"Sign up"}
+  [1m[35m (6.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (3.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."id" IS NOT NULL AND "users"."slug" = $1 LIMIT $2[0m  [["slug", "kamate-vakaramoko"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kara@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."contact" = $1 LIMIT $2[0m  [["contact", "44320020"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kara@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (4.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "school_name", "level", "contact", "role", "slug") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "kara@gmail.com"], ["encrypted_password", "$2a$12$4X6N0iInOPK995k1gitzTujBNNbvvLYXMtONeKbEk95yMce5bHGwO"], ["created_at", "2020-10-13 16:45:15.809300"], ["updated_at", "2020-10-13 16:45:15.809300"], ["username", "kamate vakaramoko"], ["school_name", "College Notre Dame"], ["level", "6e"], ["contact", "44320020"], ["role", "prof"], ["slug", "kamate-vakaramoko"]]
+  [1m[35m (146.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (3.0ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", "2020-10-13 16:45:15.971366"], ["last_sign_in_at", "2020-10-13 16:45:15.971366"], ["current_sign_in_ip", "::1/128"], ["last_sign_in_ip", "::1/128"], ["updated_at", "2020-10-13 16:45:15.972057"], ["id", 1]]
+  [1m[35m (32.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/courses
+Completed 302 Found in 902ms (ActiveRecord: 213.3ms | Allocations: 32833)
+
+
+Started GET "/courses" for ::1 at 2020-10-13 16:45:16 +0000
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:20
+  Rendered courses/index.html.erb within layouts/application (Duration: 63.7ms | Allocations: 1576)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.3ms | Allocations: 13)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 421ms (Views: 92.0ms | ActiveRecord: 6.9ms | Allocations: 12172)
+
+
+Started GET "/courses/new" for ::1 at 2020-10-13 16:45:30 +0000
+Processing by CoursesController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (Duration: 36.5ms | Allocations: 1806)
+  Rendered courses/new.html.erb within layouts/application (Duration: 62.9ms | Allocations: 2154)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 156ms (Views: 105.1ms | ActiveRecord: 9.2ms | Allocations: 17003)
+
+
+Started POST "/courses" for ::1 at 2020-10-13 16:46:43 +0000
+Processing by CoursesController#create as HTML
+  Parameters: {"authenticity_token"=>"4EIobdW37LsMZ5k3vTc1L2x0uDQlDsDIWYwu33tXRmPzt/Y+TMgmEdqkhx+nrqwuLSAN6EgtWuUrBmEImjcOeQ==", "course"=>{"title"=>"Indian startups are getting ambitious and there is more availability of risk capital", "content"=>"Until 1980 no one thought India as a country that could build technology. Then it slowly became a place to do cheap data entry work. From that came the more lucrative IT consulting. And then came companies like Google and Microsoft setting up their huge development centers. Suddenly the world accepted that India could build computers. World’s largest IT companies got built in India.", "matiere"=>"math", "level"=>"6e"}, "commit"=>"Create Course"}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 3.8ms | Allocations: 5334)
+
+
+
+NoMethodError - undefined method `course' for #<User:0x00007fd4d4abe180>
+Did you mean?  courses
+               courses=:
+  app/controllers/courses_controller.rb:25:in `create'
+
+Started POST "/__better_errors/d709547b16106fca/variables" for ::1 at 2020-10-13 16:46:43 +0000
+Started POST "/courses" for ::1 at 2020-10-13 16:48:22 +0000
+Processing by CoursesController#create as HTML
+  Parameters: {"authenticity_token"=>"4EIobdW37LsMZ5k3vTc1L2x0uDQlDsDIWYwu33tXRmPzt/Y+TMgmEdqkhx+nrqwuLSAN6EgtWuUrBmEImjcOeQ==", "course"=>{"title"=>"Indian startups are getting ambitious and there is more availability of risk capital", "content"=>"Until 1980 no one thought India as a country that could build technology. Then it slowly became a place to do cheap data entry work. From that came the more lucrative IT consulting. And then came companies like Google and Microsoft setting up their huge development centers. Suddenly the world accepted that India could build computers. World’s largest IT companies got built in India.", "matiere"=>"math", "level"=>"6e"}, "commit"=>"Create Course"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/courses_controller.rb:28:in `create'
+  [1m[36mCourse Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "courses" WHERE "courses"."id" IS NOT NULL AND "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:28:in `create'
+  [1m[36mCourse Create (1.7ms)[0m  [1m[32mINSERT INTO "courses" ("title", "content", "matiere", "level", "author", "slug", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Indian startups are getting ambitious and there is more availability of risk capital"], ["content", "Until 1980 no one thought India as a country that could build technology. Then it slowly became a place to do cheap data entry work. From that came the more lucrative IT consulting. And then came companies like Google and Microsoft setting up their huge development centers. Suddenly the world accepted that India could build computers. World’s largest IT companies got built in India."], ["matiere", "math"], ["level", "6e"], ["author", "kamate vakaramoko"], ["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["user_id", 1], ["created_at", "2020-10-13 16:48:22.786424"], ["updated_at", "2020-10-13 16:48:22.786424"]]
+  ↳ app/controllers/courses_controller.rb:28:in `create'
+  [1m[35m (18.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/courses_controller.rb:28:in `create'
+Redirected to http://localhost:3000/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital
+Completed 302 Found in 315ms (ActiveRecord: 43.7ms | Allocations: 32363)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-13 16:48:22 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (1.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:53:in `set_course'
+Completed 404 Not Found in 16ms (ActiveRecord: 1.9ms | Allocations: 3251)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Course with 'id'=indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital:
+  app/controllers/courses_controller.rb:53:in `set_course'
+
+Started POST "/__better_errors/d7b3fc6b812da42c/variables" for ::1 at 2020-10-13 16:48:23 +0000
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-13 16:48:49 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:53:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 17.9ms | Allocations: 410)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 199ms (Views: 49.8ms | ActiveRecord: 29.3ms | Allocations: 32493)
+
+

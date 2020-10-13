@@ -24,6 +24,8 @@ gem 'turbolinks', '~> 5'
 
 ######################### MEMEBERSHIPS  #######################
 gem 'devise', '~> 4.7', '>= 4.7.3'
+#gem 'devise_invitable', '~> 2.0', '>= 2.0.2'
+#gem 'devise-i18n', '~> 1.9', '>= 1.9.2'
 
 #REALTIME
 #gem "redis", ">= 4.0", :require => ["redis", "redis/connection/hiredis"]
@@ -93,3 +95,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
+#RESOURCES   FORMS
+#https://webypress.fr/meilleurs-formulaires-inscription-bootstrap-gratuits-2019/
