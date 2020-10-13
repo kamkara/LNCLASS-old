@@ -1,0 +1,177 @@
+  [1m[35m (712.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "LNCLASS_development"[0m
+  [1m[35m (375.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "LNCLASS_test"[0m
+  [1m[35m (1654.0ms)[0m  [1m[35mCREATE DATABASE "LNCLASS_development" ENCODING = 'unicode'[0m
+  [1m[35m (786.9ms)[0m  [1m[35mCREATE DATABASE "LNCLASS_test" ENCODING = 'unicode'[0m
+Started GET "/" for ::1 at 2020-10-13 09:44:39 +0000
+Started GET "/" for ::1 at 2020-10-13 09:44:41 +0000
+Processing by Rails::WelcomeController#index as HTML
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendering /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 41.7ms | Allocations: 509)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 32.5ms | Allocations: 227)
+Completed 200 OK in 140ms (Views: 60.3ms | ActiveRecord: 0.0ms | Allocations: 3165)
+
+
+Completed 200 OK in 124ms (Views: 78.4ms | ActiveRecord: 0.0ms | Allocations: 2848)
+
+
+Started GET "/" for ::1 at 2020-10-13 09:47:02 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 14.9ms | Allocations: 191)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.0ms | Allocations: 1699)
+
+
+Started GET "/" for ::1 at 2020-10-13 09:47:57 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 20.3ms | Allocations: 192)
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.0ms | Allocations: 802)
+
+
+Started GET "/" for ::1 at 2020-10-13 09:47:59 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 7)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 309)
+
+
+Started GET "/" for ::1 at 2020-10-13 09:48:05 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 15.1ms | Allocations: 192)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.0ms | Allocations: 802)
+
+
+Started GET "/" for ::1 at 2020-10-13 09:49:21 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 11.5ms | Allocations: 192)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 802)
+
+
+Started GET "/" for ::1 at 2020-10-13 09:50:25 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 29.9ms | Allocations: 196)
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.0ms | Allocations: 807)
+
+
+Started GET "/" for ::1 at 2020-10-13 09:51:31 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 13.9ms | Allocations: 196)
+Completed 200 OK in 30ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 3671)
+
+
+Started GET "/" for ::1 at 2020-10-13 09:52:21 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 209)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.8ms | Allocations: 76)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/chatln/LNCLASS_Education/PROD/LNCLASS/public/packs
+[Webpacker] Hash: e7dc8b8c7722856f6943
+Version: webpack 4.44.2
+Time: 21676ms
+Built at: 2020-10-13 9:53:03 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-dbcc8ed843daf8d384ba.js    824 KiB  application  [emitted] [immutable]  application
+js/application-dbcc8ed843daf8d384ba.js.map    893 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-dbcc8ed843daf8d384ba.js js/application-dbcc8ed843daf8d384ba.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/css/application.css] 607 bytes {application} [built]
+[./app/javascript/packs/application.js] 784 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/css/application.css] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./app/javascript/css/application.css 688 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 5 hidden modules
+
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 1.7ms | Allocations: 80)
+Completed 200 OK in 42232ms (Views: 42216.8ms | ActiveRecord: 0.0ms | Allocations: 87930)
+
+
+Started GET "/" for ::1 at 2020-10-13 09:57:53 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 209)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 76)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/chatln/LNCLASS_Education/PROD/LNCLASS/public/packs
+[Webpacker] Hash: 22f9b28c7bf669da04cf
+Version: webpack 4.44.2
+Time: 15931ms
+Built at: 2020-10-13 9:58:14 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-e353e17ea93866ab78f5.js    824 KiB  application  [emitted] [immutable]  application
+js/application-e353e17ea93866ab78f5.js.map    893 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-e353e17ea93866ab78f5.js js/application-e353e17ea93866ab78f5.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/css/application.css] 607 bytes {application} [built]
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/css/application.css] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./app/javascript/css/application.css 688 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 5 hidden modules
+
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 80)
+Completed 200 OK in 20894ms (Views: 20880.3ms | ActiveRecord: 0.0ms | Allocations: 18254)
+
+
+Started GET "/" for ::1 at 2020-10-13 09:59:38 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 99)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 74)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.6ms | Allocations: 73)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.0ms | Allocations: 8418)
+
+
+Started GET "/" for ::1 at 2020-10-13 10:06:23 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 100)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 74)
+Completed 500 Internal Server Error in 515ms (ActiveRecord: 0.0ms | Allocations: 20203)
+
+
+
+SassC::SyntaxError - Error: File to import not found or unreadable: font-awesome.
+        on line 16:1 of app/assets/stylesheets/application.scss
+>> @import "font-awesome";
+   ^:
+  app/views/layouts/application.html.erb:8
+
+Started POST "/__better_errors/00c921b7f18b7c03/variables" for ::1 at 2020-10-13 10:06:24 +0000
+Started GET "/" for ::1 at 2020-10-13 10:09:02 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 105)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 86)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/chatln/LNCLASS_Education/PROD/LNCLASS/public/packs
+[Webpacker] Hash: 22f9b28c7bf669da04cf
+Version: webpack 4.44.2
+Time: 13460ms
+Built at: 2020-10-13 10:09:21 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-e353e17ea93866ab78f5.js    824 KiB  application  [emitted] [immutable]  application
+js/application-e353e17ea93866ab78f5.js.map    893 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-e353e17ea93866ab78f5.js js/application-e353e17ea93866ab78f5.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/css/application.css] 607 bytes {application} [built]
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/css/application.css] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./app/javascript/css/application.css 688 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 5 hidden modules
+
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 3.0ms | Allocations: 75)
+Completed 200 OK in 19843ms (Views: 19840.7ms | ActiveRecord: 0.0ms | Allocations: 10520)
+
+
