@@ -16,11 +16,48 @@ gem 'webpacker', '~> 4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.7'
+#gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+
+#MEMEBERSHIPS
+#gem 'devise'
+
+#REALTIME
+#gem "redis", ">= 4.0", :require => ["redis", "redis/connection/hiredis"]
+#gem "hiredis"
+
+#PAGES
+#gem "view_component"
+#gem 'react-rails', '~> 2.6', '>= 2.6.1'
+#gem 'vuejs-rails', '~> 2.5', '>= 2.5.13'
+
+#INVOICES PDF
+#gem 'prawn', '~> 2.3'
+#gem 'wicked_pdf', '~> 2.1'
+
+
+
+######################### URL BUILDERS  #######################
+#gem 'friendly_id', '~> 5.4'
+
+######################### STYLES  #######################
+gem 'tailwindcss', '~> 1.0', '>= 1.0.3'
+#gem 'bootstrap', '~> 4.5', '>= 4.5.2'
+gem 'bootstrap', '~> 5.0.0.alpha1'
+
+
+######################## JS #######################
+gem 'jquery-rails'
+#gem "stimulus_reflex", "~> 3.2"
+
+######################## FORMS #######################
+#gem 'simple_form', '~> 5.0', '>= 5.0.2'
+#gem 'bootstrap_form', '~> 4.5'
+#gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -40,6 +77,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  #BEST ERRORS MSG
+  gem 'best_errors', '~> 0.1.4'
 end
 
 group :test do
