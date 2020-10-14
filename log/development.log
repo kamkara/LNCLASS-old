@@ -3132,3 +3132,674 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 61ms (Views: 54.1ms | ActiveRecord: 1.4ms | Allocations: 14128)
 
 
+  [1m[35m (76.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1463786832121341420)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPunchlineToUsers (20201014120614)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (176.9ms)[0m  [1m[35mALTER TABLE "users" ADD "punchline" character varying[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "courses" ADD "punchline" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201014120614"]]
+  [1m[35m (24.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (28.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(1463786832121341420)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-10-14 12:09:55 +0000
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.1ms | Allocations: 6)
+  [1m[36mCourse Load (2.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  Rendered shared/courses/_feed.html.erb (Duration: 39.1ms | Allocations: 7268)
+  Rendered shared/courses/_better.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered home/_logged_in.html.erb (Duration: 40.7ms | Allocations: 7479)
+  Rendered home/index.html.erb within layouts/application (Duration: 41.4ms | Allocations: 7547)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.1ms | Allocations: 216)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 184ms (Views: 68.2ms | ActiveRecord: 4.1ms | Allocations: 32072)
+
+
+Started GET "/users/edit" for ::1 at 2020-10-14 12:10:01 +0000
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 35.9ms | Allocations: 216)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 59.2ms | Allocations: 4803)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.3ms | Allocations: 231)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 97ms (Views: 87.4ms | ActiveRecord: 1.0ms | Allocations: 15753)
+
+
+Started GET "/users/edit" for ::1 at 2020-10-14 12:12:22 +0000
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 206)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 10.9ms | Allocations: 2627)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.3ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 1.0ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 5.2ms | Allocations: 759)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 76ms (Views: 67.2ms | ActiveRecord: 1.0ms | Allocations: 15265)
+
+
+Started GET "/users/edit" for ::1 at 2020-10-14 12:13:08 +0000
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 11.1ms | Allocations: 1656)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.2ms | Allocations: 223)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 63ms (Views: 53.0ms | ActiveRecord: 2.5ms | Allocations: 10775)
+
+
+Started PUT "/users" for ::1 at 2020-10-14 12:13:22 +0000
+Processing by Users::RegistrationsController#update as HTML
+  Parameters: {"authenticity_token"=>"DcG0Au55CAEeReiJCPrnl0vevhIFadgjhZQhiZ77v1fdK/TPdRcNgUedJ+UUz2Ze4bdXSa0nxsmfP0bzKSFwfg==", "user"=>{"punchline"=>"Mieux vaut poser une question, que de rester ignorant.", "email"=>"kara@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (7.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (3.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."contact" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["contact", "44320020"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "kara@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (5.0ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1 WHERE "users"."id" = $2[0m  [["updated_at", "2020-10-14 12:13:23.664667"], ["id", 1]]
+  [1m[35m (15.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 732ms (ActiveRecord: 33.8ms | Allocations: 16488)
+
+
+Started GET "/" for ::1 at 2020-10-14 12:13:23 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.8ms | Allocations: 86)
+  [1m[36mCourse Load (4.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  Rendered shared/courses/_feed.html.erb (Duration: 12.6ms | Allocations: 1375)
+  Rendered shared/courses/_better.html.erb (Duration: 0.7ms | Allocations: 86)
+  Rendered home/_logged_in.html.erb (Duration: 19.0ms | Allocations: 2314)
+  Rendered home/index.html.erb within layouts/application (Duration: 21.0ms | Allocations: 2672)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.3ms | Allocations: 25)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.3ms | Allocations: 221)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 67ms (Views: 51.6ms | ActiveRecord: 6.6ms | Allocations: 12362)
+
+
+Started GET "/" for ::1 at 2020-10-14 12:14:06 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.6ms | Allocations: 86)
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  Rendered shared/courses/_feed.html.erb (Duration: 7.7ms | Allocations: 1375)
+  Rendered shared/courses/_better.html.erb (Duration: 0.6ms | Allocations: 86)
+  Rendered home/_logged_in.html.erb (Duration: 18.1ms | Allocations: 2311)
+  Rendered home/index.html.erb within layouts/application (Duration: 19.9ms | Allocations: 2668)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.8ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 4.9ms | Allocations: 755)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.6ms | Allocations: 73)
+Completed 200 OK in 88ms (Views: 77.4ms | ActiveRecord: 1.5ms | Allocations: 14131)
+
+
+Started GET "/users/edit" for ::1 at 2020-10-14 12:14:09 +0000
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2710)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.6ms | Allocations: 6510)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <% content_for @title = current_user.username  %>
+<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="field">
+    <%= f.label :"Votre phrase preferée" %><br />
+    <%= f.text_field :punchline, autofocus: true, placeholder: "Mieux vaut poser une question, que de rester ignorant." %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email,  autocomplete: "email" %>
+  </div>
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+  <div class="field">
+    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+    <% if @minimum_password_length %>
+      <br />
+      <em><%= @minimum_password_length %> characters minimum</em>
+    <% end %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+  <div class="field">
+    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.password_field :current_password, autocomplete: "current-password" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Update" class:"btn btn-primary" %>
+  </div>
+<% end %>
+<h3>Cancel my account</h3>
+<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<%= link_to "Back", :back %>:
+
+Started POST "/__better_errors/5eff8fc7393aac78/variables" for ::1 at 2020-10-14 12:14:09 +0000
+Started GET "/users/edit" for ::1 at 2020-10-14 12:14:20 +0000
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 206)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 13.3ms | Allocations: 2522)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 1.0ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 5.0ms | Allocations: 759)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 73ms (Views: 59.3ms | ActiveRecord: 5.8ms | Allocations: 15173)
+
+
+Started GET "/" for ::1 at 2020-10-14 12:14:26 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 5.3ms | Allocations: 86)
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  Rendered shared/courses/_feed.html.erb (Duration: 7.8ms | Allocations: 1375)
+  Rendered shared/courses/_better.html.erb (Duration: 0.7ms | Allocations: 86)
+  Rendered home/_logged_in.html.erb (Duration: 18.2ms | Allocations: 2314)
+  Rendered home/index.html.erb within layouts/application (Duration: 20.3ms | Allocations: 2672)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.1ms | Allocations: 221)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 60ms (Views: 50.8ms | ActiveRecord: 1.4ms | Allocations: 12347)
+
+
+Started GET "/courses/new" for ::1 at 2020-10-14 12:14:36 +0000
+Processing by CoursesController#new as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (Duration: 11.8ms | Allocations: 1770)
+  Rendered courses/new.html.erb within layouts/application (Duration: 112.4ms | Allocations: 2117)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 2.5ms | Allocations: 228)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 173ms (Views: 162.9ms | ActiveRecord: 2.3ms | Allocations: 11819)
+
+
+Started POST "/courses" for ::1 at 2020-10-14 12:15:22 +0000
+Processing by CoursesController#create as HTML
+  Parameters: {"authenticity_token"=>"D/5Z08G1zf5lVE7utvJmlBqdPIBwIs6HCRaPg5SqMHBlZq+rWhyeTAxZ+k70OQNGIn+ruLyJZ4GHClIm6HYaNw==", "course"=>{"title"=>"What do you think about the future of Reliance Jio?", "content"=>"Jio has been expanding its business in many sectors like Online streaming, Broadband services, digital TV etc.\r\n\r\nReliance Jio is the biggest threat for Hotstar, amazon prime and Netflix by providing a wide range of movies, Live TV etc. Jio Tv has crossed 100 million active users.\r\n\r\nBefore Netflix, cable TV companies owned the “content pipes” to customers.\r\n\r\nAfter the internet arrived, there was now a method to access customers without cable TV “pipes”. Netflix built on the internet, bypassed cable TV, and had customers “cut the cord” and “unbundle” cable.\r\n\r\nWith mobile internet becoming ubiquitous in India, a closer look reveals who owns many mobile “content pipes”.\r\n\r\nReliance Jio, of course. With Jio pushing data onto your mobile, it can also bundle content through its “pipes.” The Jio service doesn’t only provide data, but could also provide video, audio, and other content.", "matiere"=>"math", "level"=>"6e"}, "commit"=>"Create Course"}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 212ms (ActiveRecord: 3.4ms | Allocations: 10778)
+
+
+
+NoMethodError - undefined method `punchline=' for #<Course:0x00007f47e81d91b0>:
+  app/controllers/courses_controller.rb:27:in `create'
+
+Started POST "/__better_errors/4056950ae9bbc456/variables" for ::1 at 2020-10-14 12:15:22 +0000
+Started POST "/courses" for ::1 at 2020-10-14 12:16:36 +0000
+Processing by CoursesController#create as HTML
+  Parameters: {"authenticity_token"=>"D/5Z08G1zf5lVE7utvJmlBqdPIBwIs6HCRaPg5SqMHBlZq+rWhyeTAxZ+k70OQNGIn+ruLyJZ4GHClIm6HYaNw==", "course"=>{"title"=>"What do you think about the future of Reliance Jio?", "content"=>"Jio has been expanding its business in many sectors like Online streaming, Broadband services, digital TV etc.\r\n\r\nReliance Jio is the biggest threat for Hotstar, amazon prime and Netflix by providing a wide range of movies, Live TV etc. Jio Tv has crossed 100 million active users.\r\n\r\nBefore Netflix, cable TV companies owned the “content pipes” to customers.\r\n\r\nAfter the internet arrived, there was now a method to access customers without cable TV “pipes”. Netflix built on the internet, bypassed cable TV, and had customers “cut the cord” and “unbundle” cable.\r\n\r\nWith mobile internet becoming ubiquitous in India, a closer look reveals who owns many mobile “content pipes”.\r\n\r\nReliance Jio, of course. With Jio pushing data onto your mobile, it can also bundle content through its “pipes.” The Jio service doesn’t only provide data, but could also provide video, audio, and other content.", "matiere"=>"math", "level"=>"6e"}, "commit"=>"Create Course"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/courses_controller.rb:29:in `create'
+  [1m[36mCourse Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "courses" WHERE "courses"."id" IS NOT NULL AND "courses"."slug" = $1 LIMIT $2[0m  [["slug", "what-do-you-think-about-the-future-of-reliance-jio"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:29:in `create'
+  [1m[36mCourse Create (5.6ms)[0m  [1m[32mINSERT INTO "courses" ("title", "content", "matiere", "level", "author", "slug", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "What do you think about the future of Reliance Jio?"], ["content", "Jio has been expanding its business in many sectors like Online streaming, Broadband services, digital TV etc.\r\n\r\nReliance Jio is the biggest threat for Hotstar, amazon prime and Netflix by providing a wide range of movies, Live TV etc. Jio Tv has crossed 100 million active users.\r\n\r\nBefore Netflix, cable TV companies owned the “content pipes” to customers.\r\n\r\nAfter the internet arrived, there was now a method to access customers without cable TV “pipes”. Netflix built on the internet, bypassed cable TV, and had customers “cut the cord” and “unbundle” cable.\r\n\r\nWith mobile internet becoming ubiquitous in India, a closer look reveals who owns many mobile “content pipes”.\r\n\r\nReliance Jio, of course. With Jio pushing data onto your mobile, it can also bundle content through its “pipes.” The Jio service doesn’t only provide data, but could also provide video, audio, and other content."], ["matiere", "math"], ["level", "6e"], ["author", "kamate vakaramoko"], ["slug", "what-do-you-think-about-the-future-of-reliance-jio"], ["user_id", 1], ["created_at", "2020-10-14 12:16:37.213771"], ["updated_at", "2020-10-14 12:16:37.213771"]]
+  ↳ app/controllers/courses_controller.rb:29:in `create'
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/courses_controller.rb:29:in `create'
+Redirected to http://localhost:3000/courses/what-do-you-think-about-the-future-of-reliance-jio
+Completed 302 Found in 282ms (ActiveRecord: 34.4ms | Allocations: 53065)
+
+
+Started GET "/courses/what-do-you-think-about-the-future-of-reliance-jio" for ::1 at 2020-10-14 12:16:37 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"what-do-you-think-about-the-future-of-reliance-jio"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "what-do-you-think-about-the-future-of-reliance-jio"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 403)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.0ms | Allocations: 233)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 49ms (Views: 33.1ms | ActiveRecord: 1.2ms | Allocations: 10510)
+
+
+Started GET "/" for ::1 at 2020-10-14 12:16:42 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.1ms | Allocations: 6)
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  Rendered shared/courses/_feed.html.erb (Duration: 13.6ms | Allocations: 1163)
+  Rendered shared/courses/_better.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered home/_logged_in.html.erb (Duration: 17.4ms | Allocations: 1374)
+  Rendered home/index.html.erb within layouts/application (Duration: 18.2ms | Allocations: 1441)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 0.9ms | Allocations: 214)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 81ms (Views: 69.9ms | ActiveRecord: 1.5ms | Allocations: 10662)
+
+
+Started GET "/" for ::1 at 2020-10-14 12:18:30 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.6ms | Allocations: 86)
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  Rendered shared/courses/_feed.html.erb (Duration: 10.2ms | Allocations: 1490)
+  Rendered shared/courses/_better.html.erb (Duration: 0.6ms | Allocations: 86)
+  Rendered home/_logged_in.html.erb (Duration: 21.4ms | Allocations: 2429)
+  Rendered home/index.html.erb within layouts/application (Duration: 23.6ms | Allocations: 2787)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.9ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 66.9ms | Allocations: 755)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.7ms | Allocations: 78)
+Completed 200 OK in 159ms (Views: 145.8ms | ActiveRecord: 1.6ms | Allocations: 14260)
+
+
+Started GET "/" for ::1 at 2020-10-14 12:19:08 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.6ms | Allocations: 86)
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  Rendered shared/courses/_feed.html.erb (Duration: 6.7ms | Allocations: 1491)
+  Rendered shared/courses/_better.html.erb (Duration: 0.5ms | Allocations: 86)
+  Rendered home/_logged_in.html.erb (Duration: 12.0ms | Allocations: 2430)
+  Rendered home/index.html.erb within layouts/application (Duration: 13.6ms | Allocations: 2788)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.3ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.8ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 3.7ms | Allocations: 755)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.4ms | Allocations: 73)
+Completed 200 OK in 54ms (Views: 43.3ms | ActiveRecord: 1.6ms | Allocations: 14255)
+
+
+Started GET "/users/edit" for ::1 at 2020-10-14 12:19:23 +0000
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.3ms | Allocations: 206)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 17.9ms | Allocations: 2553)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.3ms | Allocations: 230)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 69ms (Views: 58.3ms | ActiveRecord: 1.9ms | Allocations: 13488)
+
+
+Started GET "/" for ::1 at 2020-10-14 12:19:28 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.1ms | Allocations: 6)
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  Rendered shared/courses/_feed.html.erb (Duration: 5.6ms | Allocations: 1167)
+  Rendered shared/courses/_better.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered home/_logged_in.html.erb (Duration: 7.1ms | Allocations: 1378)
+  Rendered home/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1445)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.0ms | Allocations: 214)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 76ms (Views: 65.1ms | ActiveRecord: 1.6ms | Allocations: 10457)
+
+
+Started GET "/" for ::1 at 2020-10-14 12:20:02 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.6ms | Allocations: 86)
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:26
+  Rendered shared/courses/_feed.html.erb (Duration: 24.0ms | Allocations: 5418)
+  Rendered shared/courses/_better.html.erb (Duration: 0.6ms | Allocations: 86)
+  Rendered home/_logged_in.html.erb (Duration: 29.1ms | Allocations: 6354)
+  Rendered home/index.html.erb within layouts/application (Duration: 31.3ms | Allocations: 6711)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.9ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 4.2ms | Allocations: 755)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.9ms | Allocations: 73)
+Completed 200 OK in 78ms (Views: 67.5ms | ActiveRecord: 2.4ms | Allocations: 18176)
+
+
+Started GET "/" for ::1 at 2020-10-14 12:20:28 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.4ms | Allocations: 86)
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:26
+  Rendered shared/courses/_feed.html.erb (Duration: 24.5ms | Allocations: 5248)
+  Rendered shared/courses/_better.html.erb (Duration: 0.5ms | Allocations: 86)
+  Rendered home/_logged_in.html.erb (Duration: 28.9ms | Allocations: 6184)
+  Rendered home/index.html.erb within layouts/application (Duration: 30.6ms | Allocations: 6541)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.3ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.8ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 4.2ms | Allocations: 755)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 70ms (Views: 60.1ms | ActiveRecord: 2.8ms | Allocations: 18000)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1463786832121341420)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPunchlineToUsers (20201014120614)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (89.0ms)[0m  [1m[35mALTER TABLE "courses" DROP COLUMN "punchline"[0m
+  [1m[35m (2.9ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "punchline"[0m
+  [1m[36mprimary::SchemaMigration Destroy (1.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201014120614"]]
+  [1m[35m (148.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(1463786832121341420)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1463786832121341420)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPunchlineToUsers (20201014120614)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "users" ADD "punchline" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201014120614"]]
+  [1m[35m (15.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(1463786832121341420)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-10-14 12:24:32 +0000
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.5ms | Allocations: 89)
+  [1m[36mCourse Load (1.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  Rendered shared/courses/_feed.html.erb (Duration: 86.1ms | Allocations: 15244)
+  Rendered shared/courses/_better.html.erb (Duration: 0.6ms | Allocations: 89)
+  Rendered home/_logged_in.html.erb (Duration: 91.3ms | Allocations: 16207)
+  Rendered home/index.html.erb within layouts/application (Duration: 93.8ms | Allocations: 16699)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.5ms | Allocations: 144)
+  Rendered shared/nav/_navbar.html.erb (Duration: 2.8ms | Allocations: 791)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 75)
+Completed 200 OK in 461ms (Views: 326.6ms | ActiveRecord: 23.4ms | Allocations: 54061)
+
+
+Started GET "/" for ::1 at 2020-10-14 12:27:16 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.7ms | Allocations: 86)
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  Rendered shared/courses/_feed.html.erb (Duration: 38.4ms | Allocations: 5247)
+  Rendered shared/courses/_better.html.erb (Duration: 0.6ms | Allocations: 120)
+  Rendered home/_logged_in.html.erb (Duration: 44.2ms | Allocations: 6220)
+  Rendered home/index.html.erb within layouts/application (Duration: 46.1ms | Allocations: 6579)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 2.0ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 5.6ms | Allocations: 755)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.6ms | Allocations: 73)
+Completed 200 OK in 103ms (Views: 90.1ms | ActiveRecord: 5.1ms | Allocations: 18072)
+
+
+Started GET "/" for ::1 at 2020-10-14 14:55:36 +0000
+Started GET "/" for ::1 at 2020-10-14 14:55:36 +0000
+  [1m[35m (250.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (249.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (131.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (222.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 33.9ms | Allocations: 129)
+  Rendered shared/courses/_sidebar.html.erb (Duration: 33.9ms | Allocations: 107)
+  [1m[36mCourse Load (87.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mCourse Load (89.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (18.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  Rendered shared/courses/_feed.html.erb (Duration: 703.1ms | Allocations: 16956)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  Rendered shared/courses/_feed.html.erb (Duration: 741.8ms | Allocations: 20454)
+  Rendered shared/courses/_better.html.erb (Duration: 38.6ms | Allocations: 2648)
+  Rendered shared/courses/_better.html.erb (Duration: 5.5ms | Allocations: 147)
+  Rendered home/_logged_in.html.erb (Duration: 821.4ms | Allocations: 21548)
+  Rendered home/_logged_in.html.erb (Duration: 821.8ms | Allocations: 21620)
+  Rendered home/index.html.erb within layouts/application (Duration: 859.9ms | Allocations: 22001)
+  Rendered home/index.html.erb within layouts/application (Duration: 877.0ms | Allocations: 22168)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 1.9ms | Allocations: 124)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 1.6ms | Allocations: 110)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 38.9ms | Allocations: 312)
+  Rendered layouts/partials/_notice.html.erb (Duration: 39.5ms | Allocations: 373)
+  Rendered shared/nav/_navbar.html.erb (Duration: 17.1ms | Allocations: 878)
+  Rendered shared/nav/_navbar.html.erb (Duration: 17.5ms | Allocations: 1014)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 2.2ms | Allocations: 75)
+Completed 200 OK in 3063ms (Views: 1438.7ms | ActiveRecord: 941.3ms | Allocations: 74050)
+
+
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 3141ms (Views: 2055.0ms | ActiveRecord: 550.5ms | Allocations: 76060)
+
+
+Started GET "/" for ::1 at 2020-10-14 15:07:10 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (28.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 11.1ms | Allocations: 86)
+  [1m[36mCourse Load (1.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  Rendered shared/courses/_feed.html.erb (Duration: 107.6ms | Allocations: 5265)
+  Rendered shared/courses/_better.html.erb (Duration: 0.8ms | Allocations: 121)
+  Rendered home/_logged_in.html.erb (Duration: 146.4ms | Allocations: 6239)
+  Rendered home/index.html.erb within layouts/application (Duration: 184.3ms | Allocations: 6598)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 10.2ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 3.4ms | Allocations: 135)
+  Rendered shared/nav/_navbar.html.erb (Duration: 21.0ms | Allocations: 755)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 986ms (Views: 912.0ms | ActiveRecord: 32.0ms | Allocations: 18201)
+
+
+Started GET "/" for ::1 at 2020-10-14 15:08:13 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.5ms | Allocations: 86)
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  Rendered shared/courses/_feed.html.erb (Duration: 36.1ms | Allocations: 5247)
+  Rendered shared/courses/_better.html.erb (Duration: 0.7ms | Allocations: 122)
+  Rendered home/_logged_in.html.erb (Duration: 41.7ms | Allocations: 6222)
+  Rendered home/index.html.erb within layouts/application (Duration: 45.0ms | Allocations: 6586)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.7ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 7.1ms | Allocations: 755)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 103ms (Views: 92.4ms | ActiveRecord: 2.8ms | Allocations: 18086)
+
+
+Started GET "/" for ::1 at 2020-10-14 15:09:19 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.8ms | Allocations: 86)
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  Rendered shared/courses/_feed.html.erb (Duration: 80.5ms | Allocations: 5247)
+  Rendered shared/courses/_better.html.erb (Duration: 2.5ms | Allocations: 122)
+  Rendered home/_logged_in.html.erb (Duration: 97.9ms | Allocations: 6219)
+  Rendered home/index.html.erb within layouts/application (Duration: 99.9ms | Allocations: 6577)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.8ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 16.3ms | Allocations: 755)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 252ms (Views: 232.9ms | ActiveRecord: 2.9ms | Allocations: 18058)
+
+
+Started GET "/" for ::1 at 2020-10-14 15:09:55 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.5ms | Allocations: 86)
+  [1m[36mCourse Load (9.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  Rendered shared/courses/_feed.html.erb (Duration: 57.8ms | Allocations: 5247)
+  Rendered shared/courses/_better.html.erb (Duration: 0.9ms | Allocations: 122)
+  Rendered home/_logged_in.html.erb (Duration: 75.9ms | Allocations: 6219)
+  Rendered home/index.html.erb within layouts/application (Duration: 77.6ms | Allocations: 6577)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.8ms | Allocations: 137)
+  Rendered shared/nav/_navbar.html.erb (Duration: 5.0ms | Allocations: 755)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 201ms (Views: 173.3ms | ActiveRecord: 11.5ms | Allocations: 18067)
+
+

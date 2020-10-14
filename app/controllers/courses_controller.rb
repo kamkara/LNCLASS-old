@@ -24,6 +24,7 @@ class CoursesController < ApplicationController
   def create
     @course = current_user.courses.build(course_params)
     @course.author = current_user.username
+    @course.punchline = current_user.punchline
 
     if @course.save
       redirect_to @course, notice: 'Course was successfully created.'
@@ -55,6 +56,6 @@ class CoursesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def course_params
-      params.require(:course).permit(:title, :content, :matiere, :level)
+      params.require(:course).permit(:title, :content, :matiere, :level, :punchline)
     end
 end

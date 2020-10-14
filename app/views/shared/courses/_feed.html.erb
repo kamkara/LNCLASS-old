@@ -19,9 +19,13 @@
 								<span class="font-bold text-gray-900 leading-none capitalize ">
 									<%= course.author %>
 								</span>
-
+							<!-- course material-->
 								<p class="font-thin text-sm hover:bg-white hover:underline"> · Prof de
 								 <span class="capitalize"><%= course.matiere %></span>
+								</p>
+								<!--  add author punch line-->
+								<p class="font-bold text-sm hover:bg-white">
+									<%= course.user.punchline %>
 								</p>
 					</div>
 				<% end %>
