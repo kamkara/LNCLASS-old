@@ -1,14 +1,6 @@
-
- <div class="font-bold">
-    Look at David Solomon. He is neither an MBA grad nor a JD. He didn't even attend an Ivy League for his bachelor degree. Yet he managed to become the CEO of the Wall Street giant, Goldman Sachs.</div>
-  <button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
-
-<button type="button" class="btn btn-link">Link</button>
-<p class=""><i class="fas fa-bed"></i>Kamate</p>
+<!-- home page /!-->
+<% if user_signed_in? %>
+  <%= render "logged_in" %>
+<% else %>
+  <%= render "logged_up" %>
+<% end %>
