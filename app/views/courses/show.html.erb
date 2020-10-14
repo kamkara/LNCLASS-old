@@ -1,39 +1,51 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @course.title %>
-</p>
+<% content_for @title = @course.title %>
 
-<p>
-  <strong>Content:</strong>
-  <%= @course.content %>
-</p>
 
-<p>
-  <strong>Matiere:</strong>
-  <%= @course.matiere %>
-</p>
+<div class="container-sm">
+  <div class="row mt-12">
+    <div class="col-12 col-md-7 col-lg-7">
+      <div class="card ">
+        <!-- title!-->
+        <h1 class="text-xl leading-tight font-bold mt-2 mx-2">
+            <%= @course.title %>
+        </h1>
 
-<p>
-  <strong>Level:</strong>
-  <%= @course.level %>
-</p>
+         <!-- avatar data/!-->
+        <div class="flex items-cente mt-4 ml-6">
+          <img class="w-10 h-10 bg-gray-400 rounded-full">
+          <div class="text-sm ml-4">
+            <!-- Username/!-->
+            <p class="text-gray-900 leading-none capitalize font-bold">
+             <%= @course.author %>
+             <!-- course material-->
+								<p class="font-thin text-sm hover:bg-white hover:underline"> · Prof de
+								 <span class="capitalize"><%= @course.matiere %></span>
+								</p>
+            </p>
+          </div>
+        </div>
 
-<p>
-  <strong>Author:</strong>
-  <%= @course.author %>
-</p>
+        <!--content/!-->
+        <div class="m-2">
+          <p class="mx-2" id="read_more">
+            <%=  sanitize(@course.content) %>
+          </p>
+          <hr>
+          <p class="d-flex justify-content-end">
+          <%= link_to  edit_course_path(@course) do %>
+             <i class="fas fa-chalkboard-teacher"></i> Editer
 
-<p>
-  <strong>Slug:</strong>
-  <%= @course.slug %>
-</p>
+            <% end %>
 
-<p>
-  <strong>User:</strong>
-  <%= @course.user_id %>
-</p>
+          </p>
+        </div>
 
-<%= link_to 'Edit', edit_course_path(@course) %> |
-<%= link_to 'Back', courses_path %>
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
+

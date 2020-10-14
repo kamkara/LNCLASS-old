@@ -1,0 +1,37 @@
+<p class="card h-16 capitalize"><%= current_user.username %></p>
+<% @courses.each do |course| %>
+<div class="mt-2"></div>
+<div class="card pt-2">
+  <!-- title/!-->
+	<p class="font-sans text-xl font-black container ">
+	  <%= link_to course do %>
+	    <%= course.title %>
+	  <% end %>
+	</p>
+
+  <!--avatar users/!-->
+	    <div class=" container">
+				<%= link_to edit_user_registration_path do %>
+					<div class="flex items-center mb-4 mt-2">
+					<!-- avatar 32X32/!-->
+						<img src="https://bulma.io/images/placeholders/32x32.png" class=" flex w-10 h-10 rounded-full mr-2">
+						<!--Name author course/!-->
+								<span class="font-bold text-gray-900 leading-none capitalize ">
+									<%= course.author %>
+								</span>
+							<!-- course material-->
+								<p class="font-thin text-sm hover:bg-white hover:underline"> · Prof de
+								 <span class="capitalize"><%= course.matiere %></span>
+								</p>
+								<!--  add author punch line-->
+								<p class="font-bold text-sm hover:bg-white">
+									<%= course.user.punchline %>
+								</p>
+					</div>
+				<% end %>
+				<div class="container">
+						<%= course.content %>
+				</div>
+     </div>
+</div>
+<% end %>
