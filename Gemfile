@@ -48,7 +48,6 @@ gem 'friendly_id', '~> 5.4.0'
 
 ######################### STYLES  #######################
 gem 'tailwindcss', '~> 1.0', '>= 1.0.3'
-#gem 'bootstrap', '~> 4.5', '>= 4.5.2'
 gem 'bootstrap', '~> 5.0.0.alpha1'
 
 
@@ -57,10 +56,9 @@ gem 'jquery-rails'
 #gem "stimulus_reflex", "~> 3.2"
 
 ######################## FORMS #######################
-#gem 'simple_form', '~> 5.0', '>= 5.0.2'
-#gem 'bootstrap_form', '~> 4.5'
+#gem 'simple_form', '~> 5.0', '>= 5.0.3'
+gem 'bootstrap_form', '~> 4.5'
 #gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
-
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

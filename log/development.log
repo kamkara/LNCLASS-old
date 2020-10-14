@@ -1853,3 +1853,100 @@ Processing by Users::RegistrationsController#edit as HTML
 Completed 200 OK in 91ms (Views: 27.8ms | ActiveRecord: 8.0ms | Allocations: 25230)
 
 
+Started GET "/users/sign_in" for ::1 at 2020-10-14 10:08:55 +0000
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 6.9ms | Allocations: 646)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 33.0ms | Allocations: 4923)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.8ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 4.0ms | Allocations: 147)
+  Rendered shared/nav/_navbar.html.erb (Duration: 258.1ms | Allocations: 12589)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 80)
+Completed 200 OK in 5566ms (Views: 5446.5ms | ActiveRecord: 10.5ms | Allocations: 107418)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-10-14 10:09:15 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"auKk9Yv2npOc8Bg8E06iA04ffpj96MBBk1eOcYKjZn17NPIy4FcyZJ8SFpYCD+/TCD5qCeocwtrrMkhvPpwH1Q==", "user"=>{"email"=>"kara@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Connexion"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "kara@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2020-10-14 10:09:16.425543"], ["last_sign_in_at", "2020-10-14 08:58:21.945722"], ["sign_in_count", 3], ["updated_at", "2020-10-14 10:09:16.426374"], ["id", 1]]
+  [1m[35m (163.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 766ms (ActiveRecord: 167.1ms | Allocations: 10895)
+
+
+Started GET "/" for ::1 at 2020-10-14 10:09:16 +0000
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (1.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:20
+  Rendered courses/index.html.erb within layouts/application (Duration: 78.4ms | Allocations: 7934)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.1ms | Allocations: 231)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 200ms (Views: 129.4ms | ActiveRecord: 10.0ms | Allocations: 18610)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-10-14 10:09:20 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tWzZq/g4c8KYRkXNm6mBOBVWbzvE/ALxIFtm6eI/LpRs1++I2eeIcMyBDUbclF6ntZCMH0SexedTOunOpUwy3A=="}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 50ms (ActiveRecord: 0.9ms | Allocations: 2697)
+
+
+Started GET "/" for ::1 at 2020-10-14 10:09:20 +0000
+Processing by CoursesController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 286)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-10-14 10:09:20 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 134)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1074)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 25)
+  Rendered shared/nav/_navbar.html.erb (Duration: 7.4ms | Allocations: 1166)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 67ms (Views: 64.2ms | ActiveRecord: 0.0ms | Allocations: 9690)
+
+
+Started GET "/courses/new" for ::1 at 2020-10-14 10:09:37 +0000
+Processing by CoursesController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 282)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-10-14 10:09:37 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 134)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1062)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 3.0ms | Allocations: 1161)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.0ms | Allocations: 9685)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-10-14 10:12:07 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.7ms | Allocations: 546)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1949)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.4ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.8ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 6.7ms | Allocations: 1705)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.9ms | Allocations: 73)
+Completed 200 OK in 48ms (Views: 44.5ms | ActiveRecord: 0.0ms | Allocations: 13387)
+
+
