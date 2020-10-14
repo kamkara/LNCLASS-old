@@ -3803,3 +3803,966 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 201ms (Views: 173.3ms | ActiveRecord: 11.5ms | Allocations: 18067)
 
 
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:14:11 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 10.4ms | Allocations: 398)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.1ms | Allocations: 228)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 67ms (Views: 34.1ms | ActiveRecord: 1.8ms | Allocations: 10896)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:28:48 +0000
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:28:48 +0000
+  [1m[35m (27.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (42.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CoursesController#show as HTML
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+Completed 401 Unauthorized in 33ms (ActiveRecord: 0.0ms | Allocations: 1127)
+
+
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 185)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-10-14 15:28:50 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 11.7ms | Allocations: 646)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 74.5ms | Allocations: 3056)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 34.2ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 23.8ms | Allocations: 144)
+  Rendered shared/nav/_navbar.html.erb (Duration: 762.1ms | Allocations: 7178)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 75)
+Completed 200 OK in 1805ms (Views: 1600.5ms | ActiveRecord: 68.5ms | Allocations: 43790)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-10-14 15:28:57 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"GuSCjrKeUUyF16v9MGiZtZNg4XiAaDEUvVv/ufJ9Wi9hVdceVS33ziEP5bt7PsAWAkNQ0aJOdVEDjule2yr2IQ==", "user"=>{"email"=>"kara@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Connexion"}
+  [1m[36mUser Load (35.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "kara@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (56.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2020-10-14 15:28:58.241921"], ["last_sign_in_at", "2020-10-14 10:13:55.832007"], ["sign_in_count", 5], ["updated_at", "2020-10-14 15:28:58.243676"], ["id", 1]]
+  [1m[35m (22.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital
+Completed 302 Found in 793ms (ActiveRecord: 115.6ms | Allocations: 10910)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:28:58 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (31.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 65.3ms | Allocations: 348)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 24)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.3ms | Allocations: 248)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 315ms (Views: 161.0ms | ActiveRecord: 37.8ms | Allocations: 18576)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:30:53 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 338)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.7ms | Allocations: 137)
+  Rendered shared/nav/_navbar.html.erb (Duration: 4.5ms | Allocations: 775)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.6ms | Allocations: 73)
+Completed 200 OK in 126ms (Views: 101.3ms | ActiveRecord: 2.8ms | Allocations: 12616)
+
+
+Started GET "/" for ::1 at 2020-10-14 15:33:24 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.7ms | Allocations: 89)
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  Rendered shared/courses/_feed.html.erb (Duration: 95.9ms | Allocations: 8421)
+  Rendered shared/courses/_better.html.erb (Duration: 16.1ms | Allocations: 126)
+  Rendered home/_logged_in.html.erb (Duration: 129.7ms | Allocations: 9421)
+  Rendered home/index.html.erb within layouts/application (Duration: 142.9ms | Allocations: 9787)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.1ms | Allocations: 220)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 187ms (Views: 175.7ms | ActiveRecord: 2.9ms | Allocations: 19411)
+
+
+Started GET "/courses/here-s-one-uncommon-way-to-work-smarter-not-harder" for ::1 at 2020-10-14 15:33:27 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"here-s-one-uncommon-way-to-work-smarter-not-harder"}
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "here-s-one-uncommon-way-to-work-smarter-not-harder"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 127)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.2ms | Allocations: 241)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 60ms (Views: 41.6ms | ActiveRecord: 5.8ms | Allocations: 9924)
+
+
+Started GET "/" for ::1 at 2020-10-14 15:33:30 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.1ms | Allocations: 6)
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  Rendered shared/courses/_feed.html.erb (Duration: 32.8ms | Allocations: 4917)
+  Rendered shared/courses/_better.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered home/_logged_in.html.erb (Duration: 35.2ms | Allocations: 5133)
+  Rendered home/index.html.erb within layouts/application (Duration: 35.6ms | Allocations: 5199)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.0ms | Allocations: 211)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 95ms (Views: 85.1ms | ActiveRecord: 2.9ms | Allocations: 14191)
+
+
+Started GET "/users/edit" for ::1 at 2020-10-14 15:33:34 +0000
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 13.2ms | Allocations: 215)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 42.2ms | Allocations: 2688)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.3ms | Allocations: 230)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 102ms (Views: 90.7ms | ActiveRecord: 2.1ms | Allocations: 13630)
+
+
+Started GET "/" for ::1 at 2020-10-14 15:33:36 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.1ms | Allocations: 6)
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  Rendered shared/courses/_feed.html.erb (Duration: 30.1ms | Allocations: 4923)
+  Rendered shared/courses/_better.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered home/_logged_in.html.erb (Duration: 31.3ms | Allocations: 5139)
+  Rendered home/index.html.erb within layouts/application (Duration: 31.7ms | Allocations: 5206)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.0ms | Allocations: 214)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 82ms (Views: 67.3ms | ActiveRecord: 3.7ms | Allocations: 14210)
+
+
+Started GET "/courses/here-s-one-uncommon-way-to-work-smarter-not-harder" for ::1 at 2020-10-14 15:33:38 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"here-s-one-uncommon-way-to-work-smarter-not-harder"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (7.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "here-s-one-uncommon-way-to-work-smarter-not-harder"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 127)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.1ms | Allocations: 241)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 56ms (Views: 36.2ms | ActiveRecord: 8.9ms | Allocations: 9921)
+
+
+Started GET "/" for ::1 at 2020-10-14 15:33:50 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.1ms | Allocations: 6)
+  [1m[36mCourse Load (2.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  Rendered shared/courses/_feed.html.erb (Duration: 29.2ms | Allocations: 4915)
+  Rendered shared/courses/_better.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered home/_logged_in.html.erb (Duration: 31.1ms | Allocations: 5131)
+  Rendered home/index.html.erb within layouts/application (Duration: 31.5ms | Allocations: 5197)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered shared/nav/_navbar.html.erb (Duration: 0.8ms | Allocations: 211)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 68ms (Views: 54.4ms | ActiveRecord: 7.6ms | Allocations: 14181)
+
+
+Started GET "/users/edit" for ::1 at 2020-10-14 15:33:52 +0000
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1645)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.2ms | Allocations: 215)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 62ms (Views: 55.7ms | ActiveRecord: 0.7ms | Allocations: 10735)
+
+
+Started GET "/" for ::1 at 2020-10-14 15:33:54 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.1ms | Allocations: 6)
+  [1m[36mCourse Load (4.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  Rendered shared/courses/_feed.html.erb (Duration: 33.8ms | Allocations: 4915)
+  Rendered shared/courses/_better.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered home/_logged_in.html.erb (Duration: 35.1ms | Allocations: 5131)
+  Rendered home/index.html.erb within layouts/application (Duration: 35.6ms | Allocations: 5197)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.0ms | Allocations: 211)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 86ms (Views: 70.2ms | ActiveRecord: 6.1ms | Allocations: 14187)
+
+
+Started GET "/courses/as-a-professor-has-there-been-a-student-you-instantly-recognized-as-a-genius-in-the-first-week-of-knowing-them" for ::1 at 2020-10-14 15:34:05 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"as-a-professor-has-there-been-a-student-you-instantly-recognized-as-a-genius-in-the-first-week-of-knowing-them"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (5.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "as-a-professor-has-there-been-a-student-you-instantly-recognized-as-a-genius-in-the-first-week-of-knowing-them"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 125)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.4ms | Allocations: 21)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.7ms | Allocations: 231)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 55ms (Views: 39.4ms | ActiveRecord: 5.9ms | Allocations: 9893)
+
+
+Started GET "/" for ::1 at 2020-10-14 15:34:30 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.1ms | Allocations: 6)
+  [1m[36mCourse Load (1.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  Rendered shared/courses/_feed.html.erb (Duration: 24.4ms | Allocations: 4915)
+  Rendered shared/courses/_better.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered home/_logged_in.html.erb (Duration: 25.8ms | Allocations: 5131)
+  Rendered home/index.html.erb within layouts/application (Duration: 26.3ms | Allocations: 5197)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.1ms | Allocations: 211)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 75ms (Views: 64.7ms | ActiveRecord: 3.7ms | Allocations: 14186)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:35:12 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (2.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 127)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.2ms | Allocations: 231)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 53ms (Views: 36.0ms | ActiveRecord: 6.7ms | Allocations: 9901)
+
+
+Started GET "/" for ::1 at 2020-10-14 15:35:17 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.1ms | Allocations: 6)
+  [1m[36mCourse Load (2.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  Rendered shared/courses/_feed.html.erb (Duration: 33.2ms | Allocations: 4915)
+  Rendered shared/courses/_better.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered home/_logged_in.html.erb (Duration: 36.5ms | Allocations: 5131)
+  Rendered home/index.html.erb within layouts/application (Duration: 37.0ms | Allocations: 5197)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.1ms | Allocations: 211)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 77ms (Views: 62.2ms | ActiveRecord: 7.1ms | Allocations: 14187)
+
+
+Started GET "/courses/here-s-one-uncommon-way-to-work-smarter-not-harder" for ::1 at 2020-10-14 15:35:31 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"here-s-one-uncommon-way-to-work-smarter-not-harder"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (7.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "here-s-one-uncommon-way-to-work-smarter-not-harder"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 125)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.2ms | Allocations: 231)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 52ms (Views: 34.5ms | ActiveRecord: 7.9ms | Allocations: 9898)
+
+
+Started GET "/" for ::1 at 2020-10-14 15:35:34 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.1ms | Allocations: 6)
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  Rendered shared/courses/_feed.html.erb (Duration: 39.2ms | Allocations: 4915)
+  Rendered shared/courses/_better.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered home/_logged_in.html.erb (Duration: 40.4ms | Allocations: 5131)
+  Rendered home/index.html.erb within layouts/application (Duration: 40.8ms | Allocations: 5197)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.1ms | Allocations: 211)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 89ms (Views: 71.1ms | ActiveRecord: 6.1ms | Allocations: 14184)
+
+
+Started GET "/users/edit" for ::1 at 2020-10-14 15:36:43 +0000
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1642)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.3ms | Allocations: 215)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 65ms (Views: 56.6ms | ActiveRecord: 1.1ms | Allocations: 10747)
+
+
+Started GET "/" for ::1 at 2020-10-14 15:36:45 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.1ms | Allocations: 6)
+  [1m[36mCourse Load (2.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  Rendered shared/courses/_feed.html.erb (Duration: 36.1ms | Allocations: 4915)
+  Rendered shared/courses/_better.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered home/_logged_in.html.erb (Duration: 37.5ms | Allocations: 5131)
+  Rendered home/index.html.erb within layouts/application (Duration: 38.0ms | Allocations: 5197)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.1ms | Allocations: 211)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 90ms (Views: 77.4ms | ActiveRecord: 6.1ms | Allocations: 14182)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:36:48 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (4.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 125)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.1ms | Allocations: 231)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 59ms (Views: 37.9ms | ActiveRecord: 5.5ms | Allocations: 9904)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:41:10 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (1.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 337)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.9ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 4.8ms | Allocations: 775)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 66ms (Views: 51.9ms | ActiveRecord: 2.3ms | Allocations: 12583)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:44:37 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 333)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.8ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 4.4ms | Allocations: 775)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 43ms (Views: 34.2ms | ActiveRecord: 0.9ms | Allocations: 12569)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:45:10 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 331)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 5.4ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 5.3ms | Allocations: 775)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 81ms (Views: 62.6ms | ActiveRecord: 1.5ms | Allocations: 12567)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:45:30 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (7.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 331)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.7ms | Allocations: 137)
+  Rendered shared/nav/_navbar.html.erb (Duration: 4.8ms | Allocations: 775)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 120ms (Views: 100.0ms | ActiveRecord: 8.0ms | Allocations: 12581)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:45:43 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 331)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.9ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.9ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 5.1ms | Allocations: 775)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 51ms (Views: 39.1ms | ActiveRecord: 1.1ms | Allocations: 12567)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:45:57 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (8.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (2.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 331)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.8ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 5.1ms | Allocations: 775)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 93ms (Views: 69.3ms | ActiveRecord: 11.0ms | Allocations: 12564)
+
+
+Started GET "/" for ::1 at 2020-10-14 15:46:00 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.3ms | Allocations: 86)
+  [1m[36mCourse Load (5.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  Rendered shared/courses/_feed.html.erb (Duration: 37.0ms | Allocations: 5247)
+  Rendered shared/courses/_better.html.erb (Duration: 0.8ms | Allocations: 121)
+  Rendered home/_logged_in.html.erb (Duration: 41.1ms | Allocations: 6221)
+  Rendered home/index.html.erb within layouts/application (Duration: 42.8ms | Allocations: 6579)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.0ms | Allocations: 220)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 83ms (Views: 65.7ms | ActiveRecord: 6.5ms | Allocations: 16242)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:46:59 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 125)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.2ms | Allocations: 241)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 60ms (Views: 46.9ms | ActiveRecord: 1.5ms | Allocations: 9911)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:47:32 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (5.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 331)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.7ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 5.2ms | Allocations: 775)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 84ms (Views: 66.4ms | ActiveRecord: 5.9ms | Allocations: 12569)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:47:44 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (3.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 330)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.9ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 5.3ms | Allocations: 775)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 84ms (Views: 67.1ms | ActiveRecord: 4.2ms | Allocations: 12569)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:49:04 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 334)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.9ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 4.8ms | Allocations: 775)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 68ms (Views: 50.7ms | ActiveRecord: 2.0ms | Allocations: 12568)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:50:41 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 335)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.8ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 5.2ms | Allocations: 775)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 80ms (Views: 59.1ms | ActiveRecord: 1.2ms | Allocations: 12573)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:51:07 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 335)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.7ms | Allocations: 137)
+  Rendered shared/nav/_navbar.html.erb (Duration: 5.1ms | Allocations: 775)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 72ms (Views: 59.4ms | ActiveRecord: 1.2ms | Allocations: 12582)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:51:29 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 335)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.7ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 9.8ms | Allocations: 775)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 82ms (Views: 64.9ms | ActiveRecord: 1.4ms | Allocations: 12578)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:51:37 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (2.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 334)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 1.0ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.7ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 4.5ms | Allocations: 775)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.8ms | Allocations: 73)
+Completed 200 OK in 64ms (Views: 49.1ms | ActiveRecord: 2.7ms | Allocations: 12568)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:51:40 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (2.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 125)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.3ms | Allocations: 241)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 46ms (Views: 30.9ms | ActiveRecord: 3.3ms | Allocations: 9914)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:51:57 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 335)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.7ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 4.7ms | Allocations: 775)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 68ms (Views: 50.3ms | ActiveRecord: 5.4ms | Allocations: 12573)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:56:38 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 335)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 3.8ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 5.3ms | Allocations: 775)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 75ms (Views: 57.3ms | ActiveRecord: 1.4ms | Allocations: 12577)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 15:59:36 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 335)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 1.0ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 5.1ms | Allocations: 775)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.4ms | Allocations: 73)
+Completed 200 OK in 64ms (Views: 50.1ms | ActiveRecord: 1.7ms | Allocations: 12569)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 16:00:54 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 6.1ms | Allocations: 997)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.7ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 5.5ms | Allocations: 766)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 82ms (Views: 64.2ms | ActiveRecord: 1.3ms | Allocations: 13224)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 16:01:21 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 5.3ms | Allocations: 433)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.9ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 4.9ms | Allocations: 766)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 71ms (Views: 51.7ms | ActiveRecord: 1.4ms | Allocations: 12660)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital/edit" for ::1 at 2020-10-14 16:01:24 +0000
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/edit.html.erb within layouts/application
+  Rendered courses/_form.html.erb (Duration: 254.1ms | Allocations: 4808)
+  Rendered courses/edit.html.erb within layouts/application (Duration: 294.2ms | Allocations: 5206)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.1ms | Allocations: 228)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 346ms (Views: 325.4ms | ActiveRecord: 1.4ms | Allocations: 15016)
+
+
+Started GET "/courses" for ::1 at 2020-10-14 16:01:30 +0000
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:20
+  Rendered courses/index.html.erb within layouts/application (Duration: 34.9ms | Allocations: 1786)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 12)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.0ms | Allocations: 227)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 112ms (Views: 100.6ms | ActiveRecord: 3.3ms | Allocations: 10913)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 16:03:31 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 434)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.7ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 4.6ms | Allocations: 766)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.6ms | Allocations: 73)
+Completed 200 OK in 78ms (Views: 60.1ms | ActiveRecord: 1.3ms | Allocations: 12679)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 16:04:00 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 433)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.8ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 4.7ms | Allocations: 766)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 52ms (Views: 42.6ms | ActiveRecord: 1.1ms | Allocations: 12661)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 16:04:12 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 434)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 1.2ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 6.5ms | Allocations: 766)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 67ms (Views: 54.1ms | ActiveRecord: 1.3ms | Allocations: 12656)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 16:06:05 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (4.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 434)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.7ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 4.8ms | Allocations: 766)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 67ms (Views: 49.4ms | ActiveRecord: 5.0ms | Allocations: 12662)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-14 16:06:21 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (7.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 433)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.8ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 5.1ms | Allocations: 766)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 97ms (Views: 73.5ms | ActiveRecord: 8.4ms | Allocations: 12659)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital/edit" for ::1 at 2020-10-14 16:06:23 +0000
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (1.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/edit.html.erb within layouts/application
+  Rendered courses/_form.html.erb (Duration: 7.0ms | Allocations: 1568)
+  Rendered courses/edit.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1961)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.0ms | Allocations: 228)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 64ms (Views: 49.6ms | ActiveRecord: 2.3ms | Allocations: 11873)
+
+
