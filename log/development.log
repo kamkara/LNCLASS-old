@@ -130,3 +130,17 @@ Processing by CoursesController#new as HTML
 Completed 200 OK in 75ms (Views: 66.9ms | ActiveRecord: 0.9ms | Allocations: 10761)
 
 
+Started GET "/users/edit" for ::1 at 2020-10-14 17:16:15 +0000
+Processing by Users::RegistrationsController#edit as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1645)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.0ms | Allocations: 215)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 53ms (Views: 44.7ms | ActiveRecord: 1.0ms | Allocations: 10753)
+
+
