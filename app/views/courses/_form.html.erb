@@ -1,39 +1,35 @@
-<%= form_with(model: course, local: true) do |form| %>
-  <% if course.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h2>
+  <%= bootstrap_form_for(@course) do |f| %>
+    <%= f.error_summary %>
+    <div class="form-inputs">
+      <%= f.text_field :title, label: 'Titre:', placeholder:"Le titre du Cours" %>
+      <%= f.text_area :content, label: 'Contenu:', id: 'course', placeholder: "Le contenu du cours" %>
+      <!--
+        <button id="edit" class="btn btn-primary" onclick="edit()" type="button">Edit 1</button>
+        <button id="save" class="btn btn-primary" onclick="save()" type="button">Save 2</button>
+        <div class="click2edit">click2edit</div>
+      </!-->
+    </div>
 
-      <ul>
-        <% course.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+    <div class="row my-2">
+        <div class="col-5  col-md-3 col-lg-3">
+          <div class="input-form">
+            <span class="select">
+              <%= f.text_field :level, placeholder:" Le niveau", hide_label: true %>
+            </span>
+          </div>
+        </div>
+        <div class="col-5 col-md-3 col-lg-3">
+          <div class="input-form">
+            <span class="select">
+              <%= f.text_field :matiere, placeholder:" La matiere", hide_label: true %>
+            </span>
+          </div>
+        </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit "Créer le Cours",  class: "btn btn-primary" %>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
-
-  <div class="field">
-    <%= form.label :matiere %>
-    <%= form.text_field :matiere %>
-  </div>
-
-  <div class="field">
-    <%= form.label :level %>
-    <%= form.text_field :level %>
-  </div>
-
-
-
-  <div class="actions">
-    <%= form.submit class: "btn btn-outline-primary font-bold" %>
-  </div>
-<% end %>
