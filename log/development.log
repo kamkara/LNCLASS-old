@@ -1426,3 +1426,502 @@ Processing by CoursesController#show as HTML
 Completed 200 OK in 199ms (Views: 49.8ms | ActiveRecord: 29.3ms | Allocations: 32493)
 
 
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-13 17:01:19 +0000
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (4.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:53:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 75.4ms | Allocations: 721)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 93)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/chatln/LNCLASS_Education/PROD/LNCLASS/public/packs
+[Webpacker] Hash: 22f9b28c7bf669da04cf
+Version: webpack 4.44.2
+Time: 26353ms
+Built at: 2020-10-13 5:02:10 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-e353e17ea93866ab78f5.js    824 KiB  application  [emitted] [immutable]  application
+js/application-e353e17ea93866ab78f5.js.map    893 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-e353e17ea93866ab78f5.js js/application-e353e17ea93866ab78f5.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/css/application.css] 607 bytes {application} [built]
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/css/application.css] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./app/javascript/css/application.css 688 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 5 hidden modules
+
+  Rendered layouts/partials/_notice.html.erb (Duration: 1.4ms | Allocations: 132)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.6ms | Allocations: 75)
+Completed 200 OK in 52059ms (Views: 51072.5ms | ActiveRecord: 36.9ms | Allocations: 124651)
+
+
+Started GET "/courses/indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital" for ::1 at 2020-10-13 17:08:51 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (2.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "indian-startups-are-getting-ambitious-and-there-is-more-availability-of-risk-capital"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:53:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 5.5ms | Allocations: 118)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 221ms (Views: 39.5ms | ActiveRecord: 12.2ms | Allocations: 31220)
+
+
+Started GET "/" for ::1 at 2020-10-13 17:08:56 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 107)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 54ms (Views: 46.2ms | ActiveRecord: 1.1ms | Allocations: 8792)
+
+
+Started GET "/" for ::1 at 2020-10-13 17:12:09 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 36.6ms | Allocations: 5771)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.9ms | Allocations: 7976)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check  <div class="font-bold">
+    Look at David Solomon. He is neither an MBA grad nor a JD. He didn't even attend an Ivy League for his bachelor degree. Yet he managed to become the CEO of the Wall Street giant, Goldman Sachs.</div>
+  <button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+<button type="button" class="btn btn-link">Link</button>
+<p class=""><i class="fas fa-bed"></i>Kamate</p>
+<%= @courses.each |course| %>
+<%= course.title %>
+<%= course.content %>
+<%= course.level %>
+<%= course.author %>
+<% end %>:
+
+Started POST "/__better_errors/27091d49cd9a6007/variables" for ::1 at 2020-10-13 17:12:10 +0000
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-10-13 17:12:38 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2368)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.8ms | Allocations: 4585)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check  <div class="font-bold">
+    Look at David Solomon. He is neither an MBA grad nor a JD. He didn't even attend an Ivy League for his bachelor degree. Yet he managed to become the CEO of the Wall Street giant, Goldman Sachs.</div>
+  <button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+<button type="button" class="btn btn-link">Link</button>
+<p class=""><i class="fas fa-bed"></i>Kamate</p>
+<%= @courses.each |course| do %>
+<%= course.title %>
+<%= course.content %>
+<%= course.level %>
+<%= course.author %>
+<% end %>:
+
+Started POST "/__better_errors/83abe052bf2118e2/variables" for ::1 at 2020-10-13 17:12:39 +0000
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-10-13 17:13:28 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2366)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.8ms | Allocations: 4569)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check  <div class="font-bold">
+    Look at David Solomon. He is neither an MBA grad nor a JD. He didn't even attend an Ivy League for his bachelor degree. Yet he managed to become the CEO of the Wall Street giant, Goldman Sachs.</div>
+  <button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+<button type="button" class="btn btn-link">Link</button>
+<p class=""><i class="fas fa-bed"></i>Kamate</p>
+<% @courses.each |course| do %>
+<%= course.title %>
+<%= course.content %>
+<%= course.level %>
+<%= course.author %>
+<% end %>:
+
+Started POST "/__better_errors/6f5507aeb19111ff/variables" for ::1 at 2020-10-13 17:13:29 +0000
+  [1m[36mCourse Load (12.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-10-13 17:14:41 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2374)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.0ms | Allocations: 4577)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check  <div class="font-bold">
+    Look at David Solomon. He is neither an MBA grad nor a JD. He didn't even attend an Ivy League for his bachelor degree. Yet he managed to become the CEO of the Wall Street giant, Goldman Sachs.</div>
+  <button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+<button type="button" class="btn btn-link">Link</button>
+<p class=""><i class="fas fa-bed"></i>Kamate</p>
+<% @courses.each |course| %>
+  <%= course.title %>
+  <%= course.content %>
+  <%= course.level %>
+  <%= course.author %>
+<% end %>:
+
+Started POST "/__better_errors/a5e433eeba157a85/variables" for ::1 at 2020-10-13 17:14:41 +0000
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-10-13 17:15:59 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 2369)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.7ms | Allocations: 4566)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check  <div class="font-bold">
+    Look at David Solomon. He is neither an MBA grad nor a JD. He didn't even attend an Ivy League for his bachelor degree. Yet he managed to become the CEO of the Wall Street giant, Goldman Sachs.</div>
+  <button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+<button type="button" class="btn btn-link">Link</button>
+<p class=""><i class="fas fa-bed"></i>Kamate</p>
+<% @courses.each |course| %>
+  <%= course.title %>
+  <%= course.content %>
+  <%= course.level %>
+  <%= course.author %>
+<% end %>:
+
+Started POST "/__better_errors/e738ae43689e00c6/variables" for ::1 at 2020-10-13 17:16:00 +0000
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-10-13 17:16:37 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2664)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 2.4ms | Allocations: 4866)
+
+
+
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/views/home/index.html.erb:15
+
+Started POST "/__better_errors/d5ea55ec54907556/variables" for ::1 at 2020-10-13 17:16:38 +0000
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-10-13 17:17:28 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2655)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.6ms | Allocations: 4858)
+
+
+
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/views/home/index.html.erb:15
+
+Started POST "/__better_errors/998a6a32f0b758df/variables" for ::1 at 2020-10-13 17:17:28 +0000
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-10-13 17:19:01 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCourse Load (1.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/home/index.html.erb:15
+  Rendered home/index.html.erb within layouts/application (Duration: 45.3ms | Allocations: 7100)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.7ms | Allocations: 132)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 175ms (Views: 69.7ms | ActiveRecord: 26.5ms | Allocations: 31296)
+
+
+Started GET "/" for ::1 at 2020-10-13 17:22:03 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/home/index.html.erb:15
+  Rendered home/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1038)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.7ms | Allocations: 132)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 69ms (Views: 57.0ms | ActiveRecord: 1.4ms | Allocations: 10768)
+
+
+Started GET "/" for ::1 at 2020-10-13 17:26:07 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCourse Load (4.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/home/index.html.erb:15
+  Rendered home/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 1070)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.8ms | Allocations: 132)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 76ms (Views: 59.8ms | ActiveRecord: 5.3ms | Allocations: 10773)
+
+
+Started GET "/" for ::1 at 2020-10-13 17:27:20 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/home/index.html.erb:15
+  Rendered home/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 1057)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.9ms | Allocations: 132)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 72ms (Views: 57.7ms | ActiveRecord: 1.4ms | Allocations: 10753)
+
+
+Started GET "/" for ::1 at 2020-10-13 17:28:49 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCourse Load (3.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/home/index.html.erb:15
+  Rendered home/index.html.erb within layouts/application (Duration: 14.1ms | Allocations: 1072)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 5.0ms | Allocations: 137)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 154ms (Views: 142.6ms | ActiveRecord: 5.1ms | Allocations: 10781)
+
+
+Started GET "/" for ::1 at 2020-10-13 17:30:32 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/home/index.html.erb:15
+  Rendered home/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1090)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 1.5ms | Allocations: 132)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.6ms | Allocations: 73)
+Completed 200 OK in 62ms (Views: 53.5ms | ActiveRecord: 2.3ms | Allocations: 10795)
+
+
+Started GET "/" for ::1 at 2020-10-13 17:31:09 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/home/index.html.erb:15
+  Rendered home/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1088)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.8ms | Allocations: 132)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 60ms (Views: 50.3ms | ActiveRecord: 1.4ms | Allocations: 10783)
+
+
+Started GET "/" for ::1 at 2020-10-13 17:31:35 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/home/index.html.erb:15
+  Rendered home/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1088)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.6ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 1.0ms | Allocations: 132)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 1.1ms | Allocations: 73)
+Completed 200 OK in 68ms (Views: 53.6ms | ActiveRecord: 1.5ms | Allocations: 10791)
+
+
+Started GET "/" for ::1 at 2020-10-13 17:32:22 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/home/index.html.erb:15
+  Rendered home/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1088)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.8ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.8ms | Allocations: 132)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 58ms (Views: 49.0ms | ActiveRecord: 1.6ms | Allocations: 10785)
+
+
+Started GET "/" for ::1 at 2020-10-13 17:32:54 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/home/index.html.erb:15
+  Rendered home/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 1073)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.8ms | Allocations: 132)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 66ms (Views: 54.2ms | ActiveRecord: 1.7ms | Allocations: 10771)
+
+
+Started GET "/" for ::1 at 2020-10-14 08:55:38 +0000
+  [1m[35m (95.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 1532)
+
+
+
+NoMethodError - undefined method `role' for nil:NilClass:
+  app/controllers/home_controller.rb:3:in `index'
+
+Started POST "/__better_errors/79c6220c1ba5e44f/variables" for ::1 at 2020-10-14 08:55:49 +0000
+Started GET "/" for ::1 at 2020-10-14 08:56:53 +0000
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 130ms (ActiveRecord: 0.0ms | Allocations: 1069)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-10-14 08:56:54 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 4.2ms | Allocations: 642)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 100.9ms | Allocations: 4022)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.8ms | Allocations: 139)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 1.1ms | Allocations: 75)
+Completed 200 OK in 735ms (Views: 537.6ms | ActiveRecord: 100.8ms | Allocations: 37354)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-10-14 08:58:04 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 69.3ms | Allocations: 5593)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 0.0ms | Allocations: 7452)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <h2>Log in</h2>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+  <div class="actions">
+    <%= f.submit "Connectez-vous" class: "btn btn-outline-success" %>
+  </div>
+<% end %>
+<%= render "devise/shared/links" %>:
+
+Started POST "/__better_errors/8f00847017c1e33a/variables" for ::1 at 2020-10-14 08:58:05 +0000
+Started GET "/users/sign_in" for ::1 at 2020-10-14 08:58:14 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 4.1ms | Allocations: 546)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 13.8ms | Allocations: 1942)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.7ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 2.0ms | Allocations: 132)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.6ms | Allocations: 73)
+Completed 200 OK in 66ms (Views: 63.2ms | ActiveRecord: 0.0ms | Allocations: 11445)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-10-14 08:58:21 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"pFVbKMzsropEljD28vVqNi8l7YFE4axHexg1trhxDbcO31pLogcjn52vcGkD2MfNSACuJiefTu889NroTRhovQ==", "user"=>{"email"=>"kara@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Connectez-vous"}
+  [1m[36mUser Load (48.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "kara@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (276.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["current_sign_in_at", "2020-10-14 08:58:21.945722"], ["sign_in_count", 2], ["updated_at", "2020-10-14 08:58:21.947246"], ["id", 1]]
+  [1m[35m (281.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1337ms (ActiveRecord: 608.1ms | Allocations: 11427)
+
+
+Started GET "/" for ::1 at 2020-10-14 08:58:22 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCourse Load (48.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (Duration: 118.6ms | Allocations: 7811)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 24)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 316ms (Views: 102.0ms | ActiveRecord: 56.0ms | Allocations: 18185)
+
+

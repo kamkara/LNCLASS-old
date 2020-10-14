@@ -1,13 +1,29 @@
- <div class="font-bold">
-    Look at David Solomon. He is neither an MBA grad nor a JD. He didn't even attend an Ivy League for his bachelor degree. Yet he managed to become the CEO of the Wall Street giant, Goldman Sachs.</div>
-  <button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
 
-<button type="button" class="btn btn-link">Link</button>
-<p class=""><i class="fas fa-bed"></i>Kamate</p>
+
+<% @courses.each do |course| %>
+  <!-- title/!-->
+	<p class="font-sans text-xl font-black ">
+	  <%= link_to course do %>
+	    <%= course.title %>
+	  <% end %>
+	</p>
+
+  <!--avatar users/!-->
+	    <div class="">
+	    <%= link_to edit_user_registration_path do %>
+	      <div class="flex items-center mb-4 mt-2">
+	      <!-- avatar 32X32/!-->
+	        <img src="https://bulma.io/images/placeholders/32x32.png" class=" flex w-10 h-10 rounded-full mr-2">
+	        <!-- current_user.username/!-->
+	            <span class="font-bold text-gray-900 leading-none ">
+	              <%= course.author %>
+	            </span>
+              <p class="hover: font-sembold hover:no-underline"> Prof de <%= course.matiere %> Niveau <%= course.level %></p>
+
+	      </div>
+	     <% end %>
+
+       <div class="container">
+          <%= course.content %>
+       </div>
+<% end %>
