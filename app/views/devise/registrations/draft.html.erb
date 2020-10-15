@@ -1,0 +1,90 @@
+<div class="container">
+<!-- row authpr infos !-->
+<div class="row">
+<!-- col auther infos !-->
+<div class="col-12 col-md-6 col-lg-6 offset-md-1">
+  <div class="card ">
+    <!-- avatar data/!-->
+    <div class="flex items-cente mt-4 ml-6">
+      <img class="w-10 h-10 bg-gray-400 rounded-full">
+      <div class="text-sm ml-4">
+      <!-- Username/!-->
+        <p class="text-gray-900 leading-none capitalize font-bold">
+          kamate vakaramoko
+          <!-- course material-->
+          <p class="font-thin text-sm hover:bg-white hover:underline"> · Prof de
+          <span class="capitalize">Math</span>
+          </p>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- col others infos !-->
+<div class="col-12 col-md-3 col-lg-3">
+<p class="">But if that’s the case – what the heck do colleges look for? How do they decide on anything?
+
+As it turns out, colleges don’t care if they’ve seen the same activity before. What becomes much more important are the reasons you do the activity.
+
+If you can’t impress the college by picking a surprising non-profit or heart-pounding adventure, you are going to have to impress them with an overwhelming passion for what you do. You need to convince them that the why is more important than the what.
+
+If you do that, you just might be exactly what the college is looking for – even if you never joined Zeta Beta Epsilon (which, as far as I have researched, is</p>
+</div>
+</div>
+
+
+<% content_for @title = current_user.username  %>
+<h2>Edit <%= resource_name.to_s.humanize %></h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :"Votre phrase preferée" %><br />
+    <%= f.text_field :punchline, autofocus: true, placeholder: "Mieux vaut poser une question, que de rester ignorant." %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email,  autocomplete: "email" %>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+    <% if @minimum_password_length %>
+      <br />
+      <em><%= @minimum_password_length %> characters minimum</em>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.password_field :current_password, autocomplete: "current-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update", class:"btn btn-primary" %>
+  </div>
+<% end %>
+
+<h3>Cancel my account</h3>
+
+<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+<%= link_to "Back", :back %>
+
+
+
+
+
+
