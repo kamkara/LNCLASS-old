@@ -7086,3 +7086,46 @@ Processing by Users::RegistrationsController#edit as HTML
 Completed 200 OK in 98ms (Views: 90.1ms | ActiveRecord: 0.6ms | Allocations: 15306)
 
 
+Started GET "/" for ::1 at 2020-10-15 16:24:16 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 8.2ms | Allocations: 89)
+  [1m[36mCourse Load (22.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  Rendered shared/courses/_feed.html.erb (Duration: 158.1ms | Allocations: 15163)
+  Rendered shared/courses/_better.html.erb (Duration: 14.6ms | Allocations: 126)
+  Rendered home/_logged_in.html.erb (Duration: 188.1ms | Allocations: 16163)
+  Rendered home/index.html.erb within layouts/application (Duration: 191.6ms | Allocations: 16528)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.8ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 1.0ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 5.0ms | Allocations: 755)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 1.0ms | Allocations: 73)
+Completed 200 OK in 277ms (Views: 202.0ms | ActiveRecord: 44.0ms | Allocations: 28973)
+
+
+Started GET "/courses/new" for ::1 at 2020-10-15 16:27:02 +0000
+Processing by CoursesController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (Duration: 23.1ms | Allocations: 2157)
+  Rendered courses/new.html.erb within layouts/application (Duration: 37.1ms | Allocations: 2475)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.5ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.7ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 6.9ms | Allocations: 766)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.5ms | Allocations: 73)
+Completed 200 OK in 106ms (Views: 95.1ms | ActiveRecord: 0.7ms | Allocations: 13948)
+
+
