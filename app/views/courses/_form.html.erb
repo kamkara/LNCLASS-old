@@ -2,12 +2,7 @@
     <%= f.error_summary %>
     <div class="form-inputs">
       <%= f.text_field :title, label: 'Titre:', placeholder:"Le titre du Cours" %>
-      <%= f.text_area :content, label: 'Contenu:', id: 'course', placeholder: "Le contenu du cours" %>
-      <!--
-        <button id="edit" class="btn btn-primary" onclick="edit()" type="button">Edit 1</button>
-        <button id="save" class="btn btn-primary" onclick="save()" type="button">Save 2</button>
-        <div class="click2edit">click2edit</div>
-      </!-->
+      <%= f.rich_text_area :content, label: 'Contenu:', id: 'course', placeholder: "Le contenu du cours" %>
     </div>
 
     <div class="row my-2">

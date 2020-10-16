@@ -2,6 +2,7 @@ class Course < ApplicationRecord
 
   #RELATIONS
   belongs_to :user
+  has_rich_text :content
 
   #VALIDATIONS
 
