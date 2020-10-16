@@ -19,13 +19,32 @@ require("@rails/actiontext")
 // const imagePath = (name) => images(name, true)
 import "../css/application.css"
 
+
 //= require jquery3
 //= require popper
 //= require bootstrap
 //= require actiontext
 //= require trix/dist/trix
 
+document.ready(function() {
+    var max = 900; // max word
+    $("#read_more").each(function() {
+        let str = $(this).text();
+        if ($.trim(str).length > max) {
+            let subStr = str.substring(0, max);
+            let hiddenStr = str.substring(max, $.trim(str).length);
+            $(this).empty().html(subStr);
+            $(this).append(' <a href="javascript:void(0);" class="lire-plus button is-info is-outlined mb-2 ml-2 rounded hover:no-underline">Lire la suite...</a> <br> ');
+            $(this).append('<span class="addText">' + hiddenStr + '</span>');
+        };
+    });
+    $(".lire-plus").click(function() {
+        $(this).siblings(".addText").contents().unwrap();
+        $(this).remove();
+    });
+});
 
+// js for Rich_text
 document.addEventListener('turbolinks:load', () => {
     document.addEventListener('click', () => {
         let element = event.target.closest('.text-content')
