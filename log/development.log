@@ -11793,3 +11793,159 @@ Processing by CoursesController#show as HTML
 Completed 200 OK in 79ms (Views: 49.0ms | ActiveRecord: 19.0ms | Allocations: 12944)
 
 
+Started GET "/courses/en-tant-qu-entrepreneur-qu-est-ce-qui-vous-fait-rouler-les-yeux-chaque-fois-que-vous-l-entendez" for ::1 at 2020-10-16 11:13:22 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"en-tant-qu-entrepreneur-qu-est-ce-qui-vous-fait-rouler-les-yeux-chaque-fois-que-vous-l-entendez"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (1.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "en-tant-qu-entrepreneur-qu-est-ce-qui-vous-fait-rouler-les-yeux-chaque-fois-que-vous-l-entendez"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (1.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:32
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 10.7ms | Allocations: 1465)
+  Rendered courses/show.html.erb within layouts/application (Duration: 26.6ms | Allocations: 3042)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/chatln/LNCLASS_Education/PROD/LNCLASS/public/packs
+[Webpacker] Hash: de253b085576e1544a5f
+Version: webpack 4.44.2
+Time: 14197ms
+Built at: 2020-10-16 11:13:40 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-7a383adcec1c7d0c9b2a.js   1.14 MiB  application  [emitted] [immutable]  application
+js/application-7a383adcec1c7d0c9b2a.js.map   1.25 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-7a383adcec1c7d0c9b2a.js js/application-7a383adcec1c7d0c9b2a.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/css/application.css] 607 bytes {application} [built]
+[./app/javascript/packs/application.js] 1.52 KiB {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/javascript/css/application.css] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./app/javascript/css/application.css 688 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 11 hidden modules
+
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.3ms | Allocations: 21)
+  Rendered shared/nav/_navbar.html.erb (Duration: 0.9ms | Allocations: 222)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 18560ms (Views: 18542.9ms | ActiveRecord: 3.2ms | Allocations: 15002)
+
+
+Started GET "/courses/en-tant-qu-entrepreneur-qu-est-ce-qui-vous-fait-rouler-les-yeux-chaque-fois-que-vous-l-entendez" for ::1 at 2020-10-16 11:18:04 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"en-tant-qu-entrepreneur-qu-est-ce-qui-vous-fait-rouler-les-yeux-chaque-fois-que-vous-l-entendez"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (2.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "en-tant-qu-entrepreneur-qu-est-ce-qui-vous-fait-rouler-les-yeux-chaque-fois-que-vous-l-entendez"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.6ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:32
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 9.8ms | Allocations: 1571)
+  Rendered courses/show.html.erb within layouts/application (Duration: 23.5ms | Allocations: 4001)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.5ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.7ms | Allocations: 134)
+  Rendered shared/nav/_navbar.html.erb (Duration: 4.7ms | Allocations: 766)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 21.7ms | Allocations: 5859)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 4.4ms | Allocations: 22111)
+
+
+
+ActionView::MissingTemplate - Missing partial layouts/partials/_read_more with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/chatln/LNCLASS_Education/PROD/LNCLASS/app/views"
+  * "/home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/devise-4.7.3/app/views"
+  * "/home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views"
+  * "/home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailbox-6.0.3.4/app/views":
+  app/views/layouts/partials/footers/_footer_links.html.erb:1
+  app/views/layouts/application.html.erb:19
+
+Started POST "/__better_errors/2ec8037feb1fe77c/variables" for ::1 at 2020-10-16 11:18:05 +0000
+Started GET "/courses/en-tant-qu-entrepreneur-qu-est-ce-qui-vous-fait-rouler-les-yeux-chaque-fois-que-vous-l-entendez" for ::1 at 2020-10-16 11:18:40 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"en-tant-qu-entrepreneur-qu-est-ce-qui-vous-fait-rouler-les-yeux-chaque-fois-que-vous-l-entendez"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "en-tant-qu-entrepreneur-qu-est-ce-qui-vous-fait-rouler-les-yeux-chaque-fois-que-vous-l-entendez"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.8ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:32
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 9.7ms | Allocations: 1571)
+  Rendered courses/show.html.erb within layouts/application (Duration: 27.3ms | Allocations: 3998)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.7ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.8ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 5.3ms | Allocations: 766)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 4.4ms | Allocations: 2755)
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 2.2ms | Allocations: 18993)
+
+
+
+ActionView::MissingTemplate - Missing partial layouts/partials/footers/_read_more with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/chatln/LNCLASS_Education/PROD/LNCLASS/app/views"
+  * "/home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/devise-4.7.3/app/views"
+  * "/home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views"
+  * "/home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actionmailbox-6.0.3.4/app/views":
+  app/views/layouts/partials/footers/_footer_links.html.erb:1
+  app/views/layouts/application.html.erb:19
+
+Started POST "/__better_errors/1449a7a170186891/variables" for ::1 at 2020-10-16 11:18:41 +0000
+Started GET "/courses/en-tant-qu-entrepreneur-qu-est-ce-qui-vous-fait-rouler-les-yeux-chaque-fois-que-vous-l-entendez" for ::1 at 2020-10-16 11:19:34 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"en-tant-qu-entrepreneur-qu-est-ce-qui-vous-fait-rouler-les-yeux-chaque-fois-que-vous-l-entendez"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (2.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "en-tant-qu-entrepreneur-qu-est-ce-qui-vous-fait-rouler-les-yeux-chaque-fois-que-vous-l-entendez"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.8ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:32
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 13.2ms | Allocations: 1571)
+  Rendered courses/show.html.erb within layouts/application (Duration: 34.1ms | Allocations: 4009)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.6ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.8ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 11.9ms | Allocations: 766)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.6ms | Allocations: 75)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 2.4ms | Allocations: 379)
+Completed 200 OK in 158ms (Views: 92.3ms | ActiveRecord: 5.8ms | Allocations: 16657)
+
+
+Started GET "/courses/en-tant-qu-entrepreneur-qu-est-ce-qui-vous-fait-rouler-les-yeux-chaque-fois-que-vous-l-entendez" for ::1 at 2020-10-16 11:20:26 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"en-tant-qu-entrepreneur-qu-est-ce-qui-vous-fait-rouler-les-yeux-chaque-fois-que-vous-l-entendez"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "en-tant-qu-entrepreneur-qu-est-ce-qui-vous-fait-rouler-les-yeux-chaque-fois-que-vous-l-entendez"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (2.8ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:32
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 7.9ms | Allocations: 1470)
+  Rendered courses/show.html.erb within layouts/application (Duration: 24.2ms | Allocations: 3050)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.0ms | Allocations: 228)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.5ms | Allocations: 76)
+Completed 200 OK in 73ms (Views: 56.3ms | ActiveRecord: 4.0ms | Allocations: 13005)
+
+
+Started GET "/courses/en-tant-qu-entrepreneur-qu-est-ce-qui-vous-fait-rouler-les-yeux-chaque-fois-que-vous-l-entendez" for ::1 at 2020-10-16 11:20:35 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"en-tant-qu-entrepreneur-qu-est-ce-qui-vous-fait-rouler-les-yeux-chaque-fois-que-vous-l-entendez"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (2.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "en-tant-qu-entrepreneur-qu-est-ce-qui-vous-fait-rouler-les-yeux-chaque-fois-que-vous-l-entendez"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (1.0ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:32
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 7.9ms | Allocations: 1463)
+  Rendered courses/show.html.erb within layouts/application (Duration: 24.1ms | Allocations: 3037)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.0ms | Allocations: 222)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.5ms | Allocations: 76)
+Completed 200 OK in 75ms (Views: 61.1ms | ActiveRecord: 3.7ms | Allocations: 12971)
+
+
