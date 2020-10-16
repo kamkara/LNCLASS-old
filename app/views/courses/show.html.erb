@@ -29,7 +29,7 @@
         <!--content/!-->
         <div class="m-2">
           <p class="mx-2" id="read_more">
-            <%=  (@course.content).to_s.html_safe %>
+            <%= truncate(strip_tags(@course.content.to_s.html_safe), length: 700) %>
           </p>
           <hr>
           <p class="d-flex justify-content-end">

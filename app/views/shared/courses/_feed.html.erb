@@ -29,9 +29,19 @@
 								</p>
 					</div>
 				<% end %>
-				<div class="container">
-						<%= course.content %>
-				</div>
+				<!-- render course clickable-->
+				<%= link_to course_path(course), class: "no-underline hover:text-black" do %>
+					<div class="container">
+						<!-- course content-->
+						<%= truncate(strip_tags(course.content.to_s.html_safe), length: 700) %>
+						<!-- More option-->
+						<%= link_to course_path(course) do%>
+							<span class="text-blue-700">
+								</i> (Plus...)
+							</span>
+						<% end %>
+					</div>
+        <% end %>
      </div>
 </div>
 <% end %>
