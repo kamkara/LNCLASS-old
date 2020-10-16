@@ -11949,3 +11949,1493 @@ Processing by CoursesController#show as HTML
 Completed 200 OK in 75ms (Views: 61.1ms | ActiveRecord: 3.7ms | Allocations: 12971)
 
 
+  [1m[35m (12.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1463786832121341420)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMaterials (20201016113054)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (945.9ms)[0m  [1m[35mCREATE TABLE "materials" ("id" bigserial primary key, "title" character varying, "level" character varying, "slug" character varying, "user_id" bigint NOT NULL, "course_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_cf58c42728"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_ba1a5db428"
+FOREIGN KEY ("course_id")
+  REFERENCES "courses" ("id")
+)[0m
+  [1m[35m (86.5ms)[0m  [1m[35mCREATE  INDEX  "index_materials_on_user_id" ON "materials"  ("user_id")[0m
+  [1m[35m (38.6ms)[0m  [1m[35mCREATE  INDEX  "index_materials_on_course_id" ON "materials"  ("course_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201016113054"]]
+  [1m[35m (15.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (29.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(1463786832121341420)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1463786832121341420)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMaterials (20201016113054)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (91.1ms)[0m  [1m[35mDROP TABLE "materials"[0m
+  [1m[36mprimary::SchemaMigration Destroy (1.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201016113054"]]
+  [1m[35m (26.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(1463786832121341420)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1463786832121341420)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMaterials (20201016115545)
+  [1m[35m (6.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (136.7ms)[0m  [1m[35mCREATE TABLE "materials" ("id" bigserial primary key, "title" character varying, "cycle" character varying, "slug" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_cf58c42728"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (282.3ms)[0m  [1m[35mCREATE  INDEX  "index_materials_on_user_id" ON "materials"  ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201016115545"]]
+  [1m[35m (26.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(1463786832121341420)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-10-16 12:09:01 +0000
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+SyntaxError - syntax error, unexpected and, expecting ')'
+...erial.where("cycle= ?", all and "cycle= ?", current_user.cyc...
+...                            ^~~
+/home/chatln/LNCLASS_Education/PROD/LNCLASS/app/controllers/home_controller.rb:6: syntax error, unexpected ',', expecting end
+..."cycle= ?", all and "cycle= ?", current_user.cycle )
+...                              ^
+/home/chatln/LNCLASS_Education/PROD/LNCLASS/app/controllers/home_controller.rb:6: syntax error, unexpected ')', expecting end
+...cycle= ?", current_user.cycle )
+...                              ^:
+  app/controllers/home_controller.rb:6:in `'
+
+Started POST "/__better_errors/2d86490431338479/variables" for ::1 at 2020-10-16 12:09:02 +0000
+Started GET "/" for ::1 at 2020-10-16 12:09:39 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.6ms | Allocations: 89)
+  [1m[36mCourse Load (1.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (0.9ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 23.7ms | Allocations: 2514)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 8.3ms | Allocations: 1464)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 1.3ms | Allocations: 228)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.2ms | Allocations: 55)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 55.2ms | Allocations: 22937)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (0.7ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 62)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.6ms | Allocations: 60)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 61.1ms | Allocations: 21296)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (2.0ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.4ms | Allocations: 63)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 23.7ms | Allocations: 11407)
+  Rendered shared/courses/_feed.html.erb (Duration: 549.9ms | Allocations: 103529)
+  Rendered shared/courses/_better.html.erb (Duration: 0.8ms | Allocations: 131)
+  Rendered home/_logged_in.html.erb (Duration: 557.0ms | Allocations: 104534)
+  Rendered home/index.html.erb within layouts/application (Duration: 561.0ms | Allocations: 105026)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.6ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 1.1ms | Allocations: 139)
+  Rendered shared/nav/_navbar.html.erb (Duration: 5.1ms | Allocations: 791)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.4ms | Allocations: 75)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 1.9ms | Allocations: 382)
+Completed 200 OK in 918ms (Views: 698.6ms | ActiveRecord: 43.4ms | Allocations: 145054)
+
+
+Started GET "/" for ::1 at 2020-10-16 12:10:12 +0000
+
+SyntaxError - syntax error, unexpected and, expecting ')'
+...erial.where("cycle= ?", all and "cycle= ?", current_user.cyc...
+...                            ^~~
+/home/chatln/LNCLASS_Education/PROD/LNCLASS/app/controllers/home_controller.rb:6: syntax error, unexpected ',', expecting end
+..."cycle= ?", all and "cycle= ?", current_user.cycle )
+...                              ^
+/home/chatln/LNCLASS_Education/PROD/LNCLASS/app/controllers/home_controller.rb:6: syntax error, unexpected ')', expecting end
+...cycle= ?", current_user.cycle )
+...                              ^:
+  app/controllers/home_controller.rb:6:in `'
+
+Started POST "/__better_errors/a308726697ede907/variables" for ::1 at 2020-10-16 12:10:12 +0000
+Started GET "/" for ::1 at 2020-10-16 12:10:28 +0000
+
+SyntaxError - syntax error, unexpected and, expecting ')'
+...erial.where("cycle= ?", all and "cycle= ?", current_user.cyc...
+...                            ^~~
+/home/chatln/LNCLASS_Education/PROD/LNCLASS/app/controllers/home_controller.rb:6: syntax error, unexpected ',', expecting end
+..."cycle= ?", all and "cycle= ?", current_user.cycle)
+...                              ^
+/home/chatln/LNCLASS_Education/PROD/LNCLASS/app/controllers/home_controller.rb:6: syntax error, unexpected ')', expecting end
+..."cycle= ?", current_user.cycle)
+...                              ^:
+  app/controllers/home_controller.rb:6:in `'
+
+Started POST "/__better_errors/f21e97ca3fd91054/variables" for ::1 at 2020-10-16 12:10:29 +0000
+Started GET "/" for ::1 at 2020-10-16 12:11:26 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.1ms | Allocations: 6)
+  [1m[36mCourse Load (1.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.0ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 11.8ms | Allocations: 2387)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 10.6ms | Allocations: 1463)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (0.8ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.4ms | Allocations: 57)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 55)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 36.3ms | Allocations: 21278)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (0.7ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 62)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.4ms | Allocations: 60)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 37.2ms | Allocations: 21292)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (0.8ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.4ms | Allocations: 63)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 37.9ms | Allocations: 11407)
+  Rendered shared/courses/_feed.html.erb (Duration: 393.6ms | Allocations: 97298)
+  Rendered shared/courses/_better.html.erb (Duration: 0.2ms | Allocations: 11)
+  Rendered home/_logged_in.html.erb (Duration: 396.9ms | Allocations: 97515)
+  Rendered home/index.html.erb within layouts/application (Duration: 397.4ms | Allocations: 97584)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.1ms | Allocations: 216)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.5ms | Allocations: 76)
+Completed 200 OK in 562ms (Views: 418.2ms | ActiveRecord: 35.7ms | Allocations: 124798)
+
+
+Started GET "/" for ::1 at 2020-10-16 12:18:04 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.1ms | Allocations: 6)
+  [1m[36mCourse Load (1.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.4ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 14.2ms | Allocations: 2387)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (2.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 13.3ms | Allocations: 1463)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.4ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 57)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 55)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 39.9ms | Allocations: 21278)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (2.8ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 62)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 36.3ms | Allocations: 21292)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 63)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 22.3ms | Allocations: 11407)
+  Rendered shared/courses/_feed.html.erb (Duration: 387.2ms | Allocations: 96738)
+  Rendered shared/courses/_better.html.erb (Duration: 0.3ms | Allocations: 11)
+  Rendered home/_logged_in.html.erb (Duration: 388.9ms | Allocations: 96955)
+  Rendered home/index.html.erb within layouts/application (Duration: 389.6ms | Allocations: 97024)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.2ms | Allocations: 216)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.6ms | Allocations: 76)
+Completed 200 OK in 574ms (Views: 458.1ms | ActiveRecord: 13.4ms | Allocations: 123740)
+
+
+Started GET "/" for ::1 at 2020-10-16 12:19:49 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.7ms | Allocations: 86)
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 13.3ms | Allocations: 2486)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (0.6ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 6.9ms | Allocations: 1463)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (0.7ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 1.6ms | Allocations: 214)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.5ms | Allocations: 55)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 36.1ms | Allocations: 22041)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (0.7ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.4ms | Allocations: 62)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 36.7ms | Allocations: 21294)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.0ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.6ms | Allocations: 63)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 24.7ms | Allocations: 11407)
+  Rendered shared/courses/_feed.html.erb (Duration: 269.2ms | Allocations: 82339)
+  Rendered shared/courses/_better.html.erb (Duration: 2.6ms | Allocations: 121)
+  Rendered home/_logged_in.html.erb (Duration: 278.7ms | Allocations: 83313)
+  Rendered home/index.html.erb within layouts/application (Duration: 281.5ms | Allocations: 83676)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.6ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.7ms | Allocations: 132)
+  [1m[36mMaterial Load (1.2ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/layouts/application.html.erb:15
+  [1m[36mCACHE Material Load (0.1ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/layouts/application.html.erb:15
+  [1m[36mCACHE Material Load (0.1ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/layouts/application.html.erb:15
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/layouts/application.html.erb:15
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/layouts/application.html.erb:15
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/layouts/application.html.erb:15
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/layouts/application.html.erb:15
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/layouts/application.html.erb:15
+  Rendered shared/nav/_navbar.html.erb (Duration: 1834.7ms | Allocations: 242155)
+Completed 500 Internal Server Error in 2163ms (ActiveRecord: 15.6ms | Allocations: 336263)
+
+
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Material Load (0.1ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Material Load (0.1ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+
+NameError - undefined local variable or method `new_matiere_path' for #<#<Class:0x000055ed48f48b30>:0x000055ed48f6bc70>
+Did you mean?  new_material_path:
+  app/views/shared/nav/_navbar.html.erb:40
+  app/views/layouts/application.html.erb:15
+
+Started POST "/__better_errors/86e70e0582267558/variables" for ::1 at 2020-10-16 12:19:53 +0000
+  [1m[36mMaterial Load (0.6ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Material Load (0.1ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Material Load (0.1ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Material Load (0.1ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Material Load (0.0ms)[0m  [1m[34mSELECT "materials".* FROM "materials" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-10-16 12:20:13 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.6ms | Allocations: 86)
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.4ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 16.3ms | Allocations: 2488)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.4ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 9.7ms | Allocations: 1463)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.9ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 1.3ms | Allocations: 214)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 55)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 55.6ms | Allocations: 22042)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (0.9ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 62)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.4ms | Allocations: 60)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 67.5ms | Allocations: 21294)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (5.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.4ms | Allocations: 63)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 43.8ms | Allocations: 11407)
+  Rendered shared/courses/_feed.html.erb (Duration: 369.7ms | Allocations: 82346)
+  Rendered shared/courses/_better.html.erb (Duration: 0.8ms | Allocations: 121)
+  Rendered home/_logged_in.html.erb (Duration: 377.0ms | Allocations: 83320)
+  Rendered home/index.html.erb within layouts/application (Duration: 384.2ms | Allocations: 83686)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.6ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 1.6ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 6.4ms | Allocations: 839)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.5ms | Allocations: 73)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 2.0ms | Allocations: 377)
+Completed 200 OK in 451ms (Views: 429.8ms | ActiveRecord: 13.6ms | Allocations: 95571)
+
+
+Started GET "/courses/here-s-one-uncommon-way-to-work-smarter-not-harder" for ::1 at 2020-10-16 12:20:18 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"here-s-one-uncommon-way-to-work-smarter-not-harder"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."slug" = $1 LIMIT $2[0m  [["slug", "here-s-one-uncommon-way-to-work-smarter-not-harder"], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:54:in `set_course'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (5.5ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:32
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 12.9ms | Allocations: 2385)
+  Rendered courses/show.html.erb within layouts/application (Duration: 33.0ms | Allocations: 4536)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.4ms | Allocations: 262)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.5ms | Allocations: 76)
+Completed 200 OK in 88ms (Views: 60.3ms | ActiveRecord: 7.3ms | Allocations: 15258)
+
+
+Started GET "/materials/new" for ::1 at 2020-10-16 12:20:23 +0000
+
+SyntaxError - syntax error, unexpected and, expecting ')'
+...erial.where("cycle= ?", all and "cycle= ?", current_user.cyc...
+...                            ^~~
+/home/chatln/LNCLASS_Education/PROD/LNCLASS/app/controllers/materials_controller.rb:8: syntax error, unexpected ',', expecting end
+..."cycle= ?", all and "cycle= ?", current_user.cycle )
+...                              ^
+/home/chatln/LNCLASS_Education/PROD/LNCLASS/app/controllers/materials_controller.rb:8: syntax error, unexpected ')', expecting end
+...cycle= ?", current_user.cycle )
+...                              ^:
+  app/controllers/materials_controller.rb:8:in `'
+
+Started POST "/__better_errors/53cbdbf28eac2941/variables" for ::1 at 2020-10-16 12:20:23 +0000
+Started GET "/materials/new" for ::1 at 2020-10-16 12:20:49 +0000
+Processing by MaterialsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering materials/new.html.erb within layouts/application
+  Rendered materials/_form.html.erb (Duration: 142.4ms | Allocations: 3775)
+  Rendered materials/new.html.erb within layouts/application (Duration: 144.8ms | Allocations: 4124)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.4ms | Allocations: 270)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.5ms | Allocations: 76)
+Completed 200 OK in 312ms (Views: 176.6ms | ActiveRecord: 18.3ms | Allocations: 35032)
+
+
+Started GET "/materials/new" for ::1 at 2020-10-16 12:21:42 +0000
+Processing by MaterialsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering materials/new.html.erb within layouts/application
+  Rendered materials/_form.html.erb (Duration: 11.1ms | Allocations: 1060)
+  Rendered materials/new.html.erb within layouts/application (Duration: 13.1ms | Allocations: 1403)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.5ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.8ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 4.9ms | Allocations: 849)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.5ms | Allocations: 73)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 2.0ms | Allocations: 373)
+Completed 200 OK in 85ms (Views: 75.9ms | ActiveRecord: 0.8ms | Allocations: 13349)
+
+
+Started GET "/materials/new" for ::1 at 2020-10-16 12:22:02 +0000
+Processing by MaterialsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering materials/new.html.erb within layouts/application
+  Rendered materials/_form.html.erb (Duration: 7.8ms | Allocations: 1059)
+  Rendered materials/new.html.erb within layouts/application (Duration: 14.4ms | Allocations: 1402)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.5ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.8ms | Allocations: 137)
+  Rendered shared/nav/_navbar.html.erb (Duration: 9.6ms | Allocations: 849)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.9ms | Allocations: 73)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 2.9ms | Allocations: 373)
+Completed 200 OK in 145ms (Views: 135.8ms | ActiveRecord: 0.7ms | Allocations: 13352)
+
+
+Started POST "/materials" for ::1 at 2020-10-16 12:22:16 +0000
+Processing by MaterialsController#create as HTML
+  Parameters: {"authenticity_token"=>"+ihlqxmKZzAO4yMRchPxIYJrL2A3BQaSsPZ5ONBktY1+3U9xWG/v2K26pi/hSeW+BXfCHmNuj+oFh282mDZOEA==", "material"=>{"title"=>"Math", "cycle"=>"all"}, "commit"=>"Create Material"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+  [1m[36mMaterial Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "materials" WHERE "materials"."id" IS NOT NULL AND "materials"."slug" = $1 LIMIT $2[0m  [["slug", "math"], ["LIMIT", 1]]
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+  [1m[36mMaterial Create (1.3ms)[0m  [1m[32mINSERT INTO "materials" ("title", "cycle", "slug", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Math"], ["cycle", "all"], ["slug", "math"], ["user_id", 1], ["created_at", "2020-10-16 12:22:16.445425"], ["updated_at", "2020-10-16 12:22:16.445425"]]
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+  [1m[35m (159.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+Redirected to http://localhost:3000/materials/math
+Completed 302 Found in 522ms (ActiveRecord: 163.3ms | Allocations: 72258)
+
+
+Started GET "/materials/math" for ::1 at 2020-10-16 12:22:16 +0000
+Processing by MaterialsController#show as HTML
+  Parameters: {"id"=>"math"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMaterial Load (0.7ms)[0m  [1m[34mSELECT "materials".* FROM "materials" WHERE "materials"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/materials_controller.rb:57:in `set_material'
+Completed 404 Not Found in 21ms (ActiveRecord: 3.5ms | Allocations: 3253)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Material with 'id'=math:
+  app/controllers/materials_controller.rb:57:in `set_material'
+
+Started POST "/__better_errors/a9b4fb270d002526/variables" for ::1 at 2020-10-16 12:22:17 +0000
+Started GET "/materials/math" for ::1 at 2020-10-16 12:22:45 +0000
+Processing by MaterialsController#show as HTML
+  Parameters: {"id"=>"math"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 133ms (ActiveRecord: 9.6ms | Allocations: 21711)
+
+
+
+NoMethodError - undefined method `frinedly' for #<Class:0x00007fd7f004baa8>
+Did you mean?  friendly:
+  app/controllers/materials_controller.rb:57:in `set_material'
+
+Started POST "/__better_errors/4d409a9098125351/variables" for ::1 at 2020-10-16 12:22:46 +0000
+Started GET "/materials/math" for ::1 at 2020-10-16 12:22:58 +0000
+Processing by MaterialsController#show as HTML
+  Parameters: {"id"=>"math"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMaterial Load (0.6ms)[0m  [1m[34mSELECT "materials".* FROM "materials" WHERE "materials"."slug" = $1 LIMIT $2[0m  [["slug", "math"], ["LIMIT", 1]]
+  ↳ app/controllers/materials_controller.rb:57:in `set_material'
+  Rendering materials/show.html.erb within layouts/application
+  Rendered materials/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 330)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.4ms | Allocations: 270)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.5ms | Allocations: 76)
+Completed 200 OK in 175ms (Views: 28.1ms | ActiveRecord: 22.2ms | Allocations: 31686)
+
+
+Started GET "/materials/math" for ::1 at 2020-10-16 12:24:21 +0000
+Processing by MaterialsController#show as HTML
+  Parameters: {"id"=>"math"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMaterial Load (0.8ms)[0m  [1m[34mSELECT "materials".* FROM "materials" WHERE "materials"."slug" = $1 LIMIT $2[0m  [["slug", "math"], ["LIMIT", 1]]
+  ↳ app/controllers/materials_controller.rb:57:in `set_material'
+  Rendering materials/show.html.erb within layouts/application
+  Rendered materials/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 304)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.5ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.7ms | Allocations: 122)
+  Rendered shared/nav/_navbar.html.erb (Duration: 5.3ms | Allocations: 849)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.6ms | Allocations: 73)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 5.1ms | Allocations: 373)
+Completed 200 OK in 67ms (Views: 52.4ms | ActiveRecord: 1.6ms | Allocations: 13006)
+
+
+Started GET "/" for ::1 at 2020-10-16 12:24:25 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mMaterial Load (0.7ms)[0m  [1m[34mSELECT "materials".* FROM "materials"[0m
+  ↳ app/views/shared/courses/_sidebar.html.erb:11
+  Rendered shared/courses/_sidebar.html.erb (Duration: 9.5ms | Allocations: 956)
+  [1m[36mCourse Load (2.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (0.7ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 13.4ms | Allocations: 2493)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.0ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 7.1ms | Allocations: 1463)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 1.3ms | Allocations: 214)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 55)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 33.7ms | Allocations: 21865)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (0.7ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 62)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 35.1ms | Allocations: 21294)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (0.7ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.4ms | Allocations: 63)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 22.4ms | Allocations: 11407)
+  Rendered shared/courses/_feed.html.erb (Duration: 369.4ms | Allocations: 98822)
+  Rendered shared/courses/_better.html.erb (Duration: 0.7ms | Allocations: 122)
+  Rendered home/_logged_in.html.erb (Duration: 385.7ms | Allocations: 100667)
+  Rendered home/index.html.erb within layouts/application (Duration: 387.4ms | Allocations: 101025)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.1ms | Allocations: 254)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.4ms | Allocations: 76)
+Completed 200 OK in 484ms (Views: 434.2ms | ActiveRecord: 27.7ms | Allocations: 112274)
+
+
+Started GET "/materials/new" for ::1 at 2020-10-16 12:24:31 +0000
+Processing by MaterialsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering materials/new.html.erb within layouts/application
+  Rendered materials/_form.html.erb (Duration: 5.1ms | Allocations: 1060)
+  Rendered materials/new.html.erb within layouts/application (Duration: 16.4ms | Allocations: 1409)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.2ms | Allocations: 262)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.5ms | Allocations: 76)
+Completed 200 OK in 59ms (Views: 51.0ms | ActiveRecord: 0.6ms | Allocations: 10760)
+
+
+Started POST "/materials" for ::1 at 2020-10-16 12:25:02 +0000
+Processing by MaterialsController#create as HTML
+  Parameters: {"authenticity_token"=>"1SCUfcJKeYsUFJo65z8zOwr8EAKuyqbm0CjoAprII0j/kbLYJTRGo0sCQWwdy/dRqfogfv+UImsJtMzE4K/Llg==", "material"=>{"title"=>"Physique-Chimie", "cycle"=>"all"}, "commit"=>"Create Material"}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (3.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+  [1m[36mMaterial Exists? (5.3ms)[0m  [1m[34mSELECT 1 AS one FROM "materials" WHERE "materials"."id" IS NOT NULL AND "materials"."slug" = $1 LIMIT $2[0m  [["slug", "physique-chimie"], ["LIMIT", 1]]
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+  [1m[36mMaterial Create (5.3ms)[0m  [1m[32mINSERT INTO "materials" ("title", "cycle", "slug", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Physique-Chimie"], ["cycle", "all"], ["slug", "physique-chimie"], ["user_id", 1], ["created_at", "2020-10-16 12:25:02.983708"], ["updated_at", "2020-10-16 12:25:02.983708"]]
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+Redirected to http://localhost:3000/materials/physique-chimie
+Completed 302 Found in 68ms (ActiveRecord: 25.1ms | Allocations: 8119)
+
+
+Started GET "/materials/physique-chimie" for ::1 at 2020-10-16 12:25:03 +0000
+Processing by MaterialsController#show as HTML
+  Parameters: {"id"=>"physique-chimie"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMaterial Load (6.7ms)[0m  [1m[34mSELECT "materials".* FROM "materials" WHERE "materials"."slug" = $1 LIMIT $2[0m  [["slug", "physique-chimie"], ["LIMIT", 1]]
+  ↳ app/controllers/materials_controller.rb:57:in `set_material'
+  Rendering materials/show.html.erb within layouts/application
+  Rendered materials/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 89)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.3ms | Allocations: 255)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.5ms | Allocations: 76)
+Completed 200 OK in 78ms (Views: 53.6ms | ActiveRecord: 7.3ms | Allocations: 10058)
+
+
+Started GET "/materials" for ::1 at 2020-10-16 12:25:06 +0000
+Processing by MaterialsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering materials/index.html.erb within layouts/application
+  [1m[36mMaterial Load (0.9ms)[0m  [1m[34mSELECT "materials".* FROM "materials"[0m
+  ↳ app/views/materials/index.html.erb:17
+  Rendered materials/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1251)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.6ms | Allocations: 252)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.7ms | Allocations: 76)
+Completed 200 OK in 58ms (Views: 48.6ms | ActiveRecord: 1.5ms | Allocations: 10581)
+
+
+Started GET "/materials/new" for ::1 at 2020-10-16 12:25:07 +0000
+Processing by MaterialsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering materials/new.html.erb within layouts/application
+  Rendered materials/_form.html.erb (Duration: 3.5ms | Allocations: 725)
+  Rendered materials/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 812)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.2ms | Allocations: 255)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.4ms | Allocations: 76)
+Completed 200 OK in 50ms (Views: 42.4ms | ActiveRecord: 0.6ms | Allocations: 10017)
+
+
+Started POST "/materials" for ::1 at 2020-10-16 12:25:17 +0000
+Processing by MaterialsController#create as HTML
+  Parameters: {"authenticity_token"=>"/V9nCM3CFDp7eMn5B+HeWiznXI7hv1a1u0tqAtPMzbbX7kGtKrwrEiRuEq/9FRowj+Fs8rDh0jhi107EqaslaA==", "material"=>{"title"=>"Anglais", "cycle"=>"all"}, "commit"=>"Create Material"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+  [1m[36mMaterial Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "materials" WHERE "materials"."id" IS NOT NULL AND "materials"."slug" = $1 LIMIT $2[0m  [["slug", "anglais"], ["LIMIT", 1]]
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+  [1m[36mMaterial Create (2.8ms)[0m  [1m[32mINSERT INTO "materials" ("title", "cycle", "slug", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Anglais"], ["cycle", "all"], ["slug", "anglais"], ["user_id", 1], ["created_at", "2020-10-16 12:25:17.075406"], ["updated_at", "2020-10-16 12:25:17.075406"]]
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+  [1m[35m (163.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+Redirected to http://localhost:3000/materials/anglais
+Completed 302 Found in 202ms (ActiveRecord: 168.4ms | Allocations: 5830)
+
+
+Started GET "/materials/anglais" for ::1 at 2020-10-16 12:25:17 +0000
+Processing by MaterialsController#show as HTML
+  Parameters: {"id"=>"anglais"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMaterial Load (0.7ms)[0m  [1m[34mSELECT "materials".* FROM "materials" WHERE "materials"."slug" = $1 LIMIT $2[0m  [["slug", "anglais"], ["LIMIT", 1]]
+  ↳ app/controllers/materials_controller.rb:57:in `set_material'
+  Rendering materials/show.html.erb within layouts/application
+  Rendered materials/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 87)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.1ms | Allocations: 255)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.4ms | Allocations: 76)
+Completed 200 OK in 48ms (Views: 34.3ms | ActiveRecord: 1.4ms | Allocations: 10050)
+
+
+Started GET "/materials" for ::1 at 2020-10-16 12:25:18 +0000
+Processing by MaterialsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering materials/index.html.erb within layouts/application
+  [1m[36mMaterial Load (0.8ms)[0m  [1m[34mSELECT "materials".* FROM "materials"[0m
+  ↳ app/views/materials/index.html.erb:17
+  Rendered materials/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1074)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.1ms | Allocations: 11)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.2ms | Allocations: 246)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.5ms | Allocations: 76)
+Completed 200 OK in 60ms (Views: 51.5ms | ActiveRecord: 1.4ms | Allocations: 10268)
+
+
+Started GET "/materials/new" for ::1 at 2020-10-16 12:25:21 +0000
+Processing by MaterialsController#new as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering materials/new.html.erb within layouts/application
+  Rendered materials/_form.html.erb (Duration: 4.2ms | Allocations: 722)
+  Rendered materials/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 809)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.2ms | Allocations: 255)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.5ms | Allocations: 76)
+Completed 200 OK in 95ms (Views: 51.9ms | ActiveRecord: 1.9ms | Allocations: 10014)
+
+
+Started POST "/materials" for ::1 at 2020-10-16 12:25:30 +0000
+Processing by MaterialsController#create as HTML
+  Parameters: {"authenticity_token"=>"pyiQVRVm3/mC6m0j7vQdQUHCFCoOZscv7jXzY3PC+sONmbbw8hjg0d38tnUUANkr4sQkVl84Q6I3qdelCaUSHQ==", "material"=>{"title"=>"Français", "cycle"=>"all"}, "commit"=>"Create Material"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+  [1m[36mMaterial Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "materials" WHERE "materials"."id" IS NOT NULL AND "materials"."slug" = $1 LIMIT $2[0m  [["slug", "francais"], ["LIMIT", 1]]
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+  [1m[36mMaterial Create (1.1ms)[0m  [1m[32mINSERT INTO "materials" ("title", "cycle", "slug", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Français"], ["cycle", "all"], ["slug", "francais"], ["user_id", 1], ["created_at", "2020-10-16 12:25:30.118548"], ["updated_at", "2020-10-16 12:25:30.118548"]]
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+  [1m[35m (151.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+Redirected to http://localhost:3000/materials/francais
+Completed 302 Found in 185ms (ActiveRecord: 157.2ms | Allocations: 5839)
+
+
+Started GET "/materials/francais" for ::1 at 2020-10-16 12:25:30 +0000
+Processing by MaterialsController#show as HTML
+  Parameters: {"id"=>"francais"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMaterial Load (3.5ms)[0m  [1m[34mSELECT "materials".* FROM "materials" WHERE "materials"."slug" = $1 LIMIT $2[0m  [["slug", "francais"], ["LIMIT", 1]]
+  ↳ app/controllers/materials_controller.rb:57:in `set_material'
+  Rendering materials/show.html.erb within layouts/application
+  Rendered materials/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 88)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.2ms | Allocations: 12)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.1ms | Allocations: 255)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.5ms | Allocations: 76)
+Completed 200 OK in 69ms (Views: 51.0ms | ActiveRecord: 4.1ms | Allocations: 10050)
+
+
+Started GET "/materials" for ::1 at 2020-10-16 12:25:34 +0000
+Processing by MaterialsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering materials/index.html.erb within layouts/application
+  [1m[36mMaterial Load (0.8ms)[0m  [1m[34mSELECT "materials".* FROM "materials"[0m
+  ↳ app/views/materials/index.html.erb:17
+  Rendered materials/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1206)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.2ms | Allocations: 11)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.7ms | Allocations: 246)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.8ms | Allocations: 76)
+Completed 200 OK in 48ms (Views: 39.3ms | ActiveRecord: 1.7ms | Allocations: 10396)
+
+
+Started GET "/materials/new" for ::1 at 2020-10-16 12:25:36 +0000
+Processing by MaterialsController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering materials/new.html.erb within layouts/application
+  Rendered materials/_form.html.erb (Duration: 3.3ms | Allocations: 722)
+  Rendered materials/new.html.erb within layouts/application (Duration: 8.8ms | Allocations: 809)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.3ms | Allocations: 255)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.4ms | Allocations: 76)
+Completed 200 OK in 56ms (Views: 47.7ms | ActiveRecord: 1.4ms | Allocations: 10021)
+
+
+Started POST "/materials" for ::1 at 2020-10-16 12:25:43 +0000
+Processing by MaterialsController#create as HTML
+  Parameters: {"authenticity_token"=>"XGptmT6mChAMybXYaUlnKPgwM4/ixu5pz5xwiAc4TTR220s82dg1OFPfbo6TvaNCWzYD87OYauQWAFROfV+l6g==", "material"=>{"title"=>"SVT", "cycle"=>"all"}, "commit"=>"Create Material"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (6.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+  [1m[36mMaterial Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "materials" WHERE "materials"."id" IS NOT NULL AND "materials"."slug" = $1 LIMIT $2[0m  [["slug", "svt"], ["LIMIT", 1]]
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+  [1m[36mMaterial Create (4.0ms)[0m  [1m[32mINSERT INTO "materials" ("title", "cycle", "slug", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "SVT"], ["cycle", "all"], ["slug", "svt"], ["user_id", 1], ["created_at", "2020-10-16 12:25:43.483869"], ["updated_at", "2020-10-16 12:25:43.483869"]]
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+  [1m[35m (35.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+Redirected to http://localhost:3000/materials/svt
+Completed 302 Found in 73ms (ActiveRecord: 48.2ms | Allocations: 5827)
+
+
+Started GET "/materials/svt" for ::1 at 2020-10-16 12:25:43 +0000
+Processing by MaterialsController#show as HTML
+  Parameters: {"id"=>"svt"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMaterial Load (8.6ms)[0m  [1m[34mSELECT "materials".* FROM "materials" WHERE "materials"."slug" = $1 LIMIT $2[0m  [["slug", "svt"], ["LIMIT", 1]]
+  ↳ app/controllers/materials_controller.rb:57:in `set_material'
+  Rendering materials/show.html.erb within layouts/application
+  Rendered materials/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 87)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.1ms | Allocations: 255)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.5ms | Allocations: 76)
+Completed 200 OK in 79ms (Views: 58.4ms | ActiveRecord: 10.2ms | Allocations: 10056)
+
+
+Started GET "/materials" for ::1 at 2020-10-16 12:25:45 +0000
+Processing by MaterialsController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering materials/index.html.erb within layouts/application
+  [1m[36mMaterial Load (1.2ms)[0m  [1m[34mSELECT "materials".* FROM "materials"[0m
+  ↳ app/views/materials/index.html.erb:17
+  Rendered materials/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 1336)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.1ms | Allocations: 11)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.2ms | Allocations: 246)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.5ms | Allocations: 76)
+Completed 200 OK in 57ms (Views: 46.5ms | ActiveRecord: 2.7ms | Allocations: 10527)
+
+
+Started GET "/materials/new" for ::1 at 2020-10-16 12:25:47 +0000
+Processing by MaterialsController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering materials/new.html.erb within layouts/application
+  Rendered materials/_form.html.erb (Duration: 3.1ms | Allocations: 722)
+  Rendered materials/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 809)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.1ms | Allocations: 255)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.5ms | Allocations: 76)
+Completed 200 OK in 128ms (Views: 115.6ms | ActiveRecord: 1.4ms | Allocations: 10021)
+
+
+Started POST "/materials" for ::1 at 2020-10-16 12:26:01 +0000
+Processing by MaterialsController#create as HTML
+  Parameters: {"authenticity_token"=>"TIZgRWEYK1Jk7mApRFHQIBKF7L87LhNTKXLZOTdNw4BmN0bghmYUejv4u3++pRRKsYPcw2pwl97w7v3/TSorXg==", "material"=>{"title"=>"Histoire-Géo", "cycle"=>"all"}, "commit"=>"Create Material"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+  [1m[36mMaterial Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "materials" WHERE "materials"."id" IS NOT NULL AND "materials"."slug" = $1 LIMIT $2[0m  [["slug", "histoire-geo"], ["LIMIT", 1]]
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+  [1m[36mMaterial Create (2.7ms)[0m  [1m[32mINSERT INTO "materials" ("title", "cycle", "slug", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Histoire-Géo"], ["cycle", "all"], ["slug", "histoire-geo"], ["user_id", 1], ["created_at", "2020-10-16 12:26:01.738733"], ["updated_at", "2020-10-16 12:26:01.738733"]]
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+  [1m[35m (15.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+Redirected to http://localhost:3000/materials/histoire-geo
+Completed 302 Found in 55ms (ActiveRecord: 21.7ms | Allocations: 5832)
+
+
+Started GET "/materials/histoire-geo" for ::1 at 2020-10-16 12:26:01 +0000
+Processing by MaterialsController#show as HTML
+  Parameters: {"id"=>"histoire-geo"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMaterial Load (1.9ms)[0m  [1m[34mSELECT "materials".* FROM "materials" WHERE "materials"."slug" = $1 LIMIT $2[0m  [["slug", "histoire-geo"], ["LIMIT", 1]]
+  ↳ app/controllers/materials_controller.rb:57:in `set_material'
+  Rendering materials/show.html.erb within layouts/application
+  Rendered materials/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 88)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.4ms | Allocations: 255)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.5ms | Allocations: 76)
+Completed 200 OK in 56ms (Views: 39.8ms | ActiveRecord: 4.7ms | Allocations: 10054)
+
+
+Started GET "/" for ::1 at 2020-10-16 12:26:03 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mMaterial Load (3.1ms)[0m  [1m[34mSELECT "materials".* FROM "materials"[0m
+  ↳ app/views/shared/courses/_sidebar.html.erb:11
+  Rendered shared/courses/_sidebar.html.erb (Duration: 10.3ms | Allocations: 1002)
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (8.4ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 23.9ms | Allocations: 2385)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (0.7ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 7.4ms | Allocations: 1463)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 57)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 55)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 52.1ms | Allocations: 21447)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (2.6ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.4ms | Allocations: 62)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 41.2ms | Allocations: 21292)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (6.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.4ms | Allocations: 63)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 21.9ms | Allocations: 11407)
+  Rendered shared/courses/_feed.html.erb (Duration: 368.6ms | Allocations: 80641)
+  Rendered shared/courses/_better.html.erb (Duration: 0.2ms | Allocations: 10)
+  Rendered home/_logged_in.html.erb (Duration: 381.8ms | Allocations: 81853)
+  Rendered home/index.html.erb within layouts/application (Duration: 382.3ms | Allocations: 81920)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.4ms | Allocations: 248)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.5ms | Allocations: 76)
+Completed 200 OK in 423ms (Views: 383.2ms | ActiveRecord: 26.9ms | Allocations: 91044)
+
+
+Started GET "/materials/physique-chimie" for ::1 at 2020-10-16 12:26:12 +0000
+Processing by MaterialsController#show as HTML
+  Parameters: {"id"=>"physique-chimie"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMaterial Load (0.5ms)[0m  [1m[34mSELECT "materials".* FROM "materials" WHERE "materials"."slug" = $1 LIMIT $2[0m  [["slug", "physique-chimie"], ["LIMIT", 1]]
+  ↳ app/controllers/materials_controller.rb:57:in `set_material'
+  Rendering materials/show.html.erb within layouts/application
+  Rendered materials/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 86)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.1ms | Allocations: 11)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.4ms | Allocations: 255)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.5ms | Allocations: 76)
+Completed 200 OK in 38ms (Views: 28.4ms | ActiveRecord: 1.7ms | Allocations: 10041)
+
+
+Started GET "/materials" for ::1 at 2020-10-16 12:26:14 +0000
+Processing by MaterialsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering materials/index.html.erb within layouts/application
+  [1m[36mMaterial Load (0.8ms)[0m  [1m[34mSELECT "materials".* FROM "materials"[0m
+  ↳ app/views/materials/index.html.erb:17
+  Rendered materials/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1467)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.1ms | Allocations: 11)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.0ms | Allocations: 246)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.4ms | Allocations: 76)
+Completed 200 OK in 44ms (Views: 34.2ms | ActiveRecord: 2.2ms | Allocations: 10661)
+
+
+Started GET "/materials/new" for ::1 at 2020-10-16 12:26:29 +0000
+Processing by MaterialsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering materials/new.html.erb within layouts/application
+  Rendered materials/_form.html.erb (Duration: 3.2ms | Allocations: 722)
+  Rendered materials/new.html.erb within layouts/application (Duration: 9.6ms | Allocations: 809)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.1ms | Allocations: 255)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.4ms | Allocations: 76)
+Completed 200 OK in 52ms (Views: 44.3ms | ActiveRecord: 0.6ms | Allocations: 10004)
+
+
+Started POST "/materials" for ::1 at 2020-10-16 12:26:54 +0000
+Processing by MaterialsController#create as HTML
+  Parameters: {"authenticity_token"=>"3c57OXOQ6a9XS9pWEyC10y+CLH4M93cG7ge6wdk9dFv3f12clO7WhwhdAQDp1HG5jIQcAl2p84s3m54Ho1qchQ==", "material"=>{"title"=>"Philo", "cycle"=>"sec"}, "commit"=>"Create Material"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+  [1m[36mMaterial Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "materials" WHERE "materials"."id" IS NOT NULL AND "materials"."slug" = $1 LIMIT $2[0m  [["slug", "philo"], ["LIMIT", 1]]
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+  [1m[36mMaterial Create (2.3ms)[0m  [1m[32mINSERT INTO "materials" ("title", "cycle", "slug", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Philo"], ["cycle", "sec"], ["slug", "philo"], ["user_id", 1], ["created_at", "2020-10-16 12:26:54.548108"], ["updated_at", "2020-10-16 12:26:54.548108"]]
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+  [1m[35m (164.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/materials_controller.rb:32:in `create'
+Redirected to http://localhost:3000/materials/philo
+Completed 302 Found in 190ms (ActiveRecord: 168.7ms | Allocations: 5826)
+
+
+Started GET "/materials/philo" for ::1 at 2020-10-16 12:26:54 +0000
+Processing by MaterialsController#show as HTML
+  Parameters: {"id"=>"philo"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMaterial Load (3.8ms)[0m  [1m[34mSELECT "materials".* FROM "materials" WHERE "materials"."slug" = $1 LIMIT $2[0m  [["slug", "philo"], ["LIMIT", 1]]
+  ↳ app/controllers/materials_controller.rb:57:in `set_material'
+  Rendering materials/show.html.erb within layouts/application
+  Rendered materials/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 87)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.2ms | Allocations: 12)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.2ms | Allocations: 255)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 2.9ms | Allocations: 76)
+Completed 200 OK in 53ms (Views: 36.8ms | ActiveRecord: 5.2ms | Allocations: 10049)
+
+
+Started GET "/materials" for ::1 at 2020-10-16 12:27:00 +0000
+Processing by MaterialsController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering materials/index.html.erb within layouts/application
+  [1m[36mMaterial Load (6.3ms)[0m  [1m[34mSELECT "materials".* FROM "materials"[0m
+  ↳ app/views/materials/index.html.erb:17
+  Rendered materials/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 1597)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.1ms | Allocations: 11)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.2ms | Allocations: 246)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.5ms | Allocations: 76)
+Completed 200 OK in 69ms (Views: 52.7ms | ActiveRecord: 7.9ms | Allocations: 10790)
+
+
+Started GET "/" for ::1 at 2020-10-16 12:27:14 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mMaterial Load (5.9ms)[0m  [1m[34mSELECT "materials".* FROM "materials"[0m
+  ↳ app/views/shared/courses/_sidebar.html.erb:11
+  Rendered shared/courses/_sidebar.html.erb (Duration: 10.3ms | Allocations: 1048)
+  [1m[36mCourse Load (3.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.4ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 10.1ms | Allocations: 2378)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (2.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 14.6ms | Allocations: 1463)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 57)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 55)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 38.0ms | Allocations: 21447)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (2.8ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 62)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 36.9ms | Allocations: 21292)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.4ms | Allocations: 63)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 13.7ms | Allocations: 11407)
+  Rendered shared/courses/_feed.html.erb (Duration: 270.6ms | Allocations: 80629)
+  Rendered shared/courses/_better.html.erb (Duration: 0.2ms | Allocations: 10)
+  Rendered home/_logged_in.html.erb (Duration: 282.4ms | Allocations: 81887)
+  Rendered home/index.html.erb within layouts/application (Duration: 282.8ms | Allocations: 81953)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered shared/nav/_navbar.html.erb (Duration: 0.9ms | Allocations: 244)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.4ms | Allocations: 76)
+Completed 200 OK in 340ms (Views: 307.2ms | ActiveRecord: 25.0ms | Allocations: 91060)
+
+
+Started GET "/" for ::1 at 2020-10-16 14:45:35 +0000
+  [1m[35m (28.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 38ms (ActiveRecord: 0.0ms | Allocations: 1115)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-10-16 14:45:37 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 4.7ms | Allocations: 646)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 69.0ms | Allocations: 3056)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 6.7ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 15.1ms | Allocations: 139)
+  Rendered shared/nav/_navbar.html.erb (Duration: 232.1ms | Allocations: 7230)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.5ms | Allocations: 75)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 13.6ms | Allocations: 387)
+Completed 200 OK in 861ms (Views: 720.2ms | ActiveRecord: 48.0ms | Allocations: 44209)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-10-16 14:45:43 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"RFcwsBHznOtgeDdhchoZKI4GBW8AEZRiH5ei5vYniHlY5zpL3/WN8c+jfV4QVI7gMmEz3Lo7t5OUt52GgW2wkA==", "user"=>{"email"=>"kara@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Connexion"}
+  [1m[36mUser Load (59.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "kara@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (10.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (25.7ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2020-10-16 14:45:43.972151"], ["last_sign_in_at", "2020-10-16 10:50:48.533141"], ["sign_in_count", 11], ["updated_at", "2020-10-16 14:45:43.973551"], ["id", 1]]
+  [1m[35m (22.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 926ms (ActiveRecord: 118.2ms | Allocations: 10917)
+
+
+Started GET "/" for ::1 at 2020-10-16 14:45:44 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mMaterial Load (24.8ms)[0m  [1m[34mSELECT "materials".* FROM "materials"[0m
+  ↳ app/views/shared/courses/_sidebar.html.erb:11
+  Rendered shared/courses/_sidebar.html.erb (Duration: 107.8ms | Allocations: 5897)
+  [1m[36mCourse Load (22.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (54.6ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 40.2ms | Allocations: 2514)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (2.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 6.2ms | Allocations: 1464)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (0.9ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 23.2ms | Allocations: 225)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 55)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 144.8ms | Allocations: 22935)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (2.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 62)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.7ms | Allocations: 60)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 48.6ms | Allocations: 21294)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (0.9ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.4ms | Allocations: 63)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 33.9ms | Allocations: 11407)
+  Rendered shared/courses/_feed.html.erb (Duration: 937.7ms | Allocations: 103386)
+  Rendered shared/courses/_better.html.erb (Duration: 13.1ms | Allocations: 126)
+  Rendered home/_logged_in.html.erb (Duration: 1068.5ms | Allocations: 110194)
+  Rendered home/index.html.erb within layouts/application (Duration: 1085.7ms | Allocations: 110560)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.2ms | Allocations: 24)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.3ms | Allocations: 259)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 4.2ms | Allocations: 76)
+Completed 200 OK in 1176ms (Views: 999.7ms | ActiveRecord: 133.2ms | Allocations: 122966)
+
+
+Started GET "/" for ::1 at 2020-10-16 16:25:17 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mMaterial Load (1.4ms)[0m  [1m[34mSELECT "materials".* FROM "materials"[0m
+  ↳ app/views/shared/courses/_sidebar.html.erb:11
+  Rendered shared/courses/_sidebar.html.erb (Duration: 10.1ms | Allocations: 1214)
+  [1m[36mCourse Load (1.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 18.4ms | Allocations: 2488)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.5ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 10.0ms | Allocations: 1463)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.9ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 1.3ms | Allocations: 214)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 55)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 54.5ms | Allocations: 22037)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.4ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.4ms | Allocations: 62)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 34.1ms | Allocations: 21295)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (0.9ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 63)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 18.3ms | Allocations: 11407)
+  Rendered shared/courses/_feed.html.erb (Duration: 349.9ms | Allocations: 82354)
+  Rendered shared/courses/_better.html.erb (Duration: 0.7ms | Allocations: 126)
+  Rendered home/_logged_in.html.erb (Duration: 364.5ms | Allocations: 84461)
+  Rendered home/index.html.erb within layouts/application (Duration: 368.1ms | Allocations: 84819)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.5ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.7ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 4.7ms | Allocations: 838)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.5ms | Allocations: 73)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 2.1ms | Allocations: 373)
+Completed 200 OK in 420ms (Views: 396.6ms | ActiveRecord: 13.0ms | Allocations: 96802)
+
+
+Started GET "/materials/histoire-geo" for ::1 at 2020-10-16 16:25:44 +0000
+Processing by MaterialsController#show as HTML
+  Parameters: {"id"=>"histoire-geo"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMaterial Load (1.4ms)[0m  [1m[34mSELECT "materials".* FROM "materials" WHERE "materials"."slug" = $1 LIMIT $2[0m  [["slug", "histoire-geo"], ["LIMIT", 1]]
+  ↳ app/controllers/materials_controller.rb:57:in `set_material'
+  Rendering materials/show.html.erb within layouts/application
+  Rendered materials/show.html.erb within layouts/application (Duration: 6.5ms | Allocations: 321)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.2ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.3ms | Allocations: 262)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.4ms | Allocations: 76)
+Completed 200 OK in 57ms (Views: 39.4ms | ActiveRecord: 2.3ms | Allocations: 11013)
+
+
+Started GET "/" for ::1 at 2020-10-16 16:25:46 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mMaterial Load (0.7ms)[0m  [1m[34mSELECT "materials".* FROM "materials"[0m
+  ↳ app/views/shared/courses/_sidebar.html.erb:11
+  Rendered shared/courses/_sidebar.html.erb (Duration: 5.1ms | Allocations: 1054)
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (4.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 20.3ms | Allocations: 2387)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (4.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 13.5ms | Allocations: 1463)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (5.6ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 57)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 55)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 32.1ms | Allocations: 21448)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (0.6ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 62)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 69.2ms | Allocations: 21292)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (0.8ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 63)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 19.5ms | Allocations: 11408)
+  Rendered shared/courses/_feed.html.erb (Duration: 314.6ms | Allocations: 80648)
+  Rendered shared/courses/_better.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered home/_logged_in.html.erb (Duration: 325.3ms | Allocations: 81912)
+  Rendered home/index.html.erb within layouts/application (Duration: 325.7ms | Allocations: 81980)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.1ms | Allocations: 248)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.4ms | Allocations: 76)
+Completed 200 OK in 364ms (Views: 335.3ms | ActiveRecord: 21.6ms | Allocations: 91107)
+
+
+Started GET "/" for ::1 at 2020-10-16 16:33:53 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mMaterial Load (1.5ms)[0m  [1m[34mSELECT "materials".* FROM "materials"[0m
+  ↳ app/views/shared/courses/_sidebar.html.erb:11
+  Rendered shared/courses/_sidebar.html.erb (Duration: 6.4ms | Allocations: 1048)
+  [1m[36mCourse Load (6.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.6ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 15.4ms | Allocations: 2378)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (0.9ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 7.9ms | Allocations: 1463)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.0ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 57)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 55)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 49.7ms | Allocations: 21447)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (8.6ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 62)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 45.7ms | Allocations: 21292)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (3.9ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 63)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 35.6ms | Allocations: 11407)
+  Rendered shared/courses/_feed.html.erb (Duration: 323.1ms | Allocations: 80648)
+  Rendered shared/courses/_better.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered home/_logged_in.html.erb (Duration: 330.9ms | Allocations: 81906)
+  Rendered home/index.html.erb within layouts/application (Duration: 331.3ms | Allocations: 81972)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.1ms | Allocations: 244)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.4ms | Allocations: 76)
+Completed 200 OK in 408ms (Views: 370.3ms | ActiveRecord: 28.5ms | Allocations: 91197)
+
+
+Started GET "/" for ::1 at 2020-10-16 16:35:31 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mMaterial Load (7.7ms)[0m  [1m[34mSELECT "materials".* FROM "materials"[0m
+  ↳ app/views/shared/courses/_sidebar.html.erb:11
+  Rendered shared/courses/_sidebar.html.erb (Duration: 13.7ms | Allocations: 1213)
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.8ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 70.4ms | Allocations: 2487)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.7ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 7.7ms | Allocations: 1463)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (0.7ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 1.3ms | Allocations: 219)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 55)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 61.4ms | Allocations: 22046)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (0.8ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.4ms | Allocations: 62)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 49.0ms | Allocations: 21294)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (2.9ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 63)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 22.9ms | Allocations: 11407)
+  Rendered shared/courses/_feed.html.erb (Duration: 405.6ms | Allocations: 82339)
+  Rendered shared/courses/_better.html.erb (Duration: 0.7ms | Allocations: 121)
+  Rendered home/_logged_in.html.erb (Duration: 423.8ms | Allocations: 84440)
+  Rendered home/index.html.erb within layouts/application (Duration: 425.5ms | Allocations: 84803)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.5ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.7ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 5.1ms | Allocations: 839)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.4ms | Allocations: 73)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 1.7ms | Allocations: 373)
+Completed 200 OK in 487ms (Views: 453.3ms | ActiveRecord: 19.6ms | Allocations: 96650)
+
+
+Started GET "/" for ::1 at 2020-10-16 16:36:04 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mMaterial Load (0.8ms)[0m  [1m[34mSELECT "materials".* FROM "materials"[0m
+  ↳ app/views/shared/courses/_sidebar.html.erb:11
+  Rendered shared/courses/_sidebar.html.erb (Duration: 7.7ms | Allocations: 1213)
+  [1m[36mCourse Load (1.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.9ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 15.5ms | Allocations: 2486)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.7ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 7.7ms | Allocations: 1463)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (0.7ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 1.2ms | Allocations: 214)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 55)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 76.2ms | Allocations: 22038)
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (1.6ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 62)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 30.4ms | Allocations: 21294)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:28
+  [1m[36mActionText::RichText Load (0.8ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Course"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/shared/courses/_feed.html.erb:36
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/attachables/_remote_image.html.erb (Duration: 0.3ms | Allocations: 63)
+  Rendered /home/chatln/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views/action_text/content/_layout.html.erb (Duration: 18.9ms | Allocations: 11407)
+  Rendered shared/courses/_feed.html.erb (Duration: 292.3ms | Allocations: 82329)
+  Rendered shared/courses/_better.html.erb (Duration: 1.0ms | Allocations: 126)
+  Rendered home/_logged_in.html.erb (Duration: 307.1ms | Allocations: 84435)
+  Rendered home/index.html.erb within layouts/application (Duration: 311.2ms | Allocations: 84793)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.7ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.8ms | Allocations: 132)
+  Rendered shared/nav/_navbar.html.erb (Duration: 5.9ms | Allocations: 839)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.5ms | Allocations: 73)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 2.1ms | Allocations: 373)
+Completed 200 OK in 364ms (Views: 342.0ms | ActiveRecord: 13.2ms | Allocations: 96640)
+
+
+Started GET "/materials/francais" for ::1 at 2020-10-16 16:36:24 +0000
+Processing by MaterialsController#show as HTML
+  Parameters: {"id"=>"francais"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMaterial Load (0.7ms)[0m  [1m[34mSELECT "materials".* FROM "materials" WHERE "materials"."slug" = $1 LIMIT $2[0m  [["slug", "francais"], ["LIMIT", 1]]
+  ↳ app/controllers/materials_controller.rb:57:in `set_material'
+  Rendering materials/show.html.erb within layouts/application
+  Rendered materials/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 306)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.2ms | Allocations: 262)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 0.5ms | Allocations: 76)
+Completed 200 OK in 63ms (Views: 44.3ms | ActiveRecord: 1.6ms | Allocations: 10947)
+
+
+Started GET "/materials" for ::1 at 2020-10-16 16:36:30 +0000
+Processing by MaterialsController#index as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering materials/index.html.erb within layouts/application
+  [1m[36mMaterial Load (0.8ms)[0m  [1m[34mSELECT "materials".* FROM "materials"[0m
+  ↳ app/views/materials/index.html.erb:17
+  Rendered materials/index.html.erb within layouts/application (Duration: 27.5ms | Allocations: 1904)
+  Rendered layouts/partials/headers/_header_links.html.erb (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/headers/_notice.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered shared/nav/_navbar.html.erb (Duration: 1.1ms | Allocations: 252)
+  Rendered layouts/partials/footers/_read_more.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/footers/_footer_links.html.erb (Duration: 2.7ms | Allocations: 76)
+Completed 200 OK in 85ms (Views: 74.3ms | ActiveRecord: 3.1ms | Allocations: 11232)
+
+

@@ -1,3 +1,16 @@
-<p class="bg-blue-200 ">
-A few years back I had an MBA student, born in the Caribbean, who had considerable world-travel experience under his belt. Quietly confident, and charming and affable, he had natural leadership abilities. Over time his stories of travels came with the additional details that he was facile with languages, and that helped him pick up work as he travelled.
-<p>
+
+<!-- boucle for matiere items/!-->
+<div class="container-fluid">
+  <!-- Icon/!-->
+  <div class="h-8 bg-red-200 rounded-md">
+    <span class="fil-icon">
+        <i class="fa fa-square m-2"></i> Fil Matières
+    </span>
+  </div>
+  <ul class="leading-relaxed pt-2">
+    <% @materials.each do |m| %>
+     <li class="text-lg font-bold"> <%= link_to m.title, m , class: "hover:no-underline hover:text-black" %></li>
+    <% end %>
+  </ul>
+
+</div>

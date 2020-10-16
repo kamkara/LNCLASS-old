@@ -2,7 +2,12 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :trackable
+  :recoverable, :rememberable, :validatable, :trackable
+
+  #RELATIONS
+  has_many :courses, dependent: :destroy
+  has_many :materials
+
 
 
   #PRESENTE
@@ -18,8 +23,6 @@ class User < ApplicationRecord
    validates :contact,
              :email, uniqueness: true
 
-  #RELATIONS
-  has_many :courses, dependent: :destroy
 
   #SLUG
   extend FriendlyId
