@@ -35,11 +35,10 @@
 						<!-- course content-->
 						<%= truncate(strip_tags(course.content.to_s.html_safe), length: 700) %>
 						<!-- More option-->
-						<%= link_to course_path(course) do%>
 							<span class="text-blue-700">
-								</i> (Plus...)
+							 (Plus...)
 							</span>
-						<% end %>
+
 					</div>
         <% end %>
      </div>
