@@ -99,3 +99,23 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #RESOURCES   FORMS
 #https://webypress.fr/meilleurs-formulaires-inscription-bootstrap-gratuits-2019/
+
+
+#RESOURCES DESIGN
+#tailwind css section ICON
+#https://tailwindcss.com/resources#icons
+
+#IMAGES DRAW
+#https://undraw.co/ AND https://undraw.co/illustrations
+
+#STACK IMAGES
+#https://unsplash.com/
+
+#ICON HEROICONS
+#https://github.com/tailwindlabs/heroicons
+
+#ICON ZONDICONS
+#http://www.zondicons.com/icons.html
+
+#HERO PATTERN
+#http://www.heropatterns.com/
