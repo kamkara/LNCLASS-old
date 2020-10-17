@@ -4,16 +4,12 @@ class MaterialsController < ApplicationController
 
   # GET /materials
   def index
-    if current_user.role == "student"
-      #@materials = Material.where("cycle= ?", all and "cycle= ?", current_user.cycle )
-      @materials = Material.all
-    else
-      @materials = Material.all
-    end
+    @materials = Material.all
   end
 
   # GET /materials/1
   def show
+    @courses = Course.where('material_id = ?', @material.id)
   end
 
   # GET /materials/new
@@ -59,6 +55,6 @@ class MaterialsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def material_params
-      params.require(:material).permit(:title, :cycle, :slug, :user_id)
+      params.require(:material).permit(:title, :cycle, :slug, :user_id, :course_id)
     end
 end

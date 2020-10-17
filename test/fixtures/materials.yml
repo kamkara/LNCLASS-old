@@ -2,12 +2,14 @@
 
 one:
   title: MyString
-  cycle: MyString
+  level: MyString
   slug: MyString
   user: one
+  course: one
 
 two:
   title: MyString
-  cycle: MyString
+  level: MyString
   slug: MyString
   user: two
+  course: two

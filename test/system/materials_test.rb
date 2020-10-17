@@ -14,7 +14,8 @@ class MaterialsTest < ApplicationSystemTestCase
     visit materials_url
     click_on "New Material"
 
-    fill_in "Cycle", with: @material.cycle
+    fill_in "Course", with: @material.course_id
+    fill_in "Level", with: @material.level
     fill_in "Slug", with: @material.slug
     fill_in "Title", with: @material.title
     fill_in "User", with: @material.user_id
@@ -28,7 +29,8 @@ class MaterialsTest < ApplicationSystemTestCase
     visit materials_url
     click_on "Edit", match: :first
 
-    fill_in "Cycle", with: @material.cycle
+    fill_in "Course", with: @material.course_id
+    fill_in "Level", with: @material.level
     fill_in "Slug", with: @material.slug
     fill_in "Title", with: @material.title
     fill_in "User", with: @material.user_id

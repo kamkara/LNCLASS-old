@@ -1,14 +1,13 @@
 class Material < ApplicationRecord
   belongs_to :user
-
+  has_many :courses
 
    #PRESENTE
   validates :title,
-            :slug,
-            :user_id,
-            :cycle, presence: true
+            :slug, presence: true
 
-  ##SLUG
+
+  #SLUG
   extend FriendlyId
     friendly_id :title, use: :slugged
 

@@ -6,9 +6,10 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Cycle</th>
+      <th>Level</th>
       <th>Slug</th>
       <th>User</th>
+      <th>Course</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,6 +21,7 @@
         <td><%= material.cycle %></td>
         <td><%= material.slug %></td>
         <td><%= material.user_id %></td>
+        <td><%= material.course_id %></td>
         <td><%= link_to 'Show', material %></td>
         <td><%= link_to 'Edit', edit_material_path(material) %></td>
         <td><%= link_to 'Destroy', material, method: :delete, data: { confirm: 'Are you sure?' } %></td>

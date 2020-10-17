@@ -1,5 +1,6 @@
 class CoursesController < ApplicationController
   before_action :authenticate_user!
+  before_action :find_materials, only: [:index, :show, :new, :edit, :create]
   before_action :set_course, only: [:show, :edit, :update, :destroy]
 
   # GET /courses
@@ -52,6 +53,10 @@ class CoursesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_course
       @course = Course.friendly.find(params[:id])
+    end
+
+    def find_materials
+      @materials = Material.all.order('created_at desc')
     end
 
     # Only allow a trusted parameter "white list" through.

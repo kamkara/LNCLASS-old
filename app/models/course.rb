@@ -11,6 +11,7 @@ class Course < ApplicationRecord
   validates :title,
             :content,
             :level,
+            :material_id,
             :author, presence: true
 
 

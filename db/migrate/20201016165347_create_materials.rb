@@ -4,7 +4,8 @@ class CreateMaterials < ActiveRecord::Migration[6.0]
       t.string :title
       t.string :cycle
       t.string :slug
-      t.references :user, null: false, foreign_key: true
+      t.references :user, null: true, foreign_key: true
+      t.references :course, null: true, foreign_key: true
 
       t.timestamps
     end
