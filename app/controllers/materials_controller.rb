@@ -9,6 +9,7 @@ class MaterialsController < ApplicationController
 
   # GET /materials/1
   def show
+    @materials = Material.all#where(level= ?", current_user.level)
     @courses = Course.where('material_id = ?', @material.id)
   end
 
