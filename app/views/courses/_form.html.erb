@@ -2,26 +2,25 @@
     <%= f.error_summary %>
     <div class="form-inputs">
       <%= f.text_field :title, label: 'Titre:', placeholder:"Le titre du Cours" %>
-      <%= f.text_area :content, label: 'Contenu:', id: 'course', placeholder: "Le contenu du cours" %>
-      <!--
-        <button id="edit" class="btn btn-primary" onclick="edit()" type="button">Edit 1</button>
-        <button id="save" class="btn btn-primary" onclick="save()" type="button">Save 2</button>
-        <div class="click2edit">click2edit</div>
-      </!-->
+      <%= f.rich_text_area :content, label: 'Contenu:', class: "customized-min-height", placeholder: "Le contenu du cours" %>
     </div>
 
     <div class="row my-2">
         <div class="col-5  col-md-3 col-lg-3">
           <div class="input-form">
             <span class="select">
-              <%= f.text_field :level, placeholder:" Le niveau", hide_label: true %>
+            <%= f.select :material_id,
+              @materials.map { |m| [m.title, m.id] },
+              placeholder:"la matiere",
+               hide_label: true %>
+
             </span>
           </div>
         </div>
         <div class="col-5 col-md-3 col-lg-3">
           <div class="input-form">
             <span class="select">
-              <%= f.text_field :matiere, placeholder:" La matiere", hide_label: true %>
+              <%= f.text_field :level, placeholder:" Niveau", hide_label: true %>
             </span>
           </div>
         </div>

@@ -2,6 +2,8 @@ class Course < ApplicationRecord
 
   #RELATIONS
   belongs_to :user
+  belongs_to :material
+  has_rich_text :content
 
   #VALIDATIONS
 
@@ -9,6 +11,7 @@ class Course < ApplicationRecord
   validates :title,
             :content,
             :level,
+            :material_id,
             :author, presence: true
 
 

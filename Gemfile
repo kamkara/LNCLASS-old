@@ -61,7 +61,7 @@ gem 'bootstrap_form', '~> 4.5'
 #gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 
 # Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+ gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -80,7 +80,9 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 
   #BEST ERRORS MSG
-  gem 'best_errors', '~> 0.1.4'
+  #gem 'best_errors', '~> 0.1.4'
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 group :test do
@@ -97,3 +99,23 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #RESOURCES   FORMS
 #https://webypress.fr/meilleurs-formulaires-inscription-bootstrap-gratuits-2019/
+
+
+#RESOURCES DESIGN
+#tailwind css section ICON
+#https://tailwindcss.com/resources#icons
+
+#IMAGES DRAW
+#https://undraw.co/ AND https://undraw.co/illustrations
+
+#STACK IMAGES
+#https://unsplash.com/
+
+#ICON HEROICONS
+#https://github.com/tailwindlabs/heroicons
+
+#ICON ZONDICONS
+#http://www.zondicons.com/icons.html
+
+#HERO PATTERN
+#http://www.heropatterns.com/
