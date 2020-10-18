@@ -2,31 +2,34 @@
 <!-- first section-->
   <div class="row">
     <!-- Wording Profil-->
-    <div class="col-12 col-md--8 offset-md-3">
-      <div class="font-bold h-12 d-flex justify-items-end">
-        <span class="">TABLEAU DE BORD</span>
-        <span class="hover:underline">PROFIL</span>
-        <span class="">ECOLE CONNECTEE</span>
-        <span class="">PARAMETRES</span>
+    <div class="col-12 col-md-4 col-lg-4 mt-8">
+    <!-- User avatar-->
+      <div class="flex items-cente mt-4 ml-6">
+        <img class="w-20 h-20 bg-gray-600 rounded-full">
+        <div class="text-sm ml-4">
+          <!-- Username/!-->
+          <p class="text-gray-900 leading-none capitalize font-bold">
+            kamate vakaramoko
+             <!-- course material-->
+            <p class="font-thin text-sm hover:bg-white hover:underline"> · Prof de
+              <span class="capitalize">Math</span>
+            </p>
+          </p>
+
+        </div>
+      </div>
+      <div class="mt-20 h-6 bg-blue-500">
       </div>
     </div>
-    <!-- dashboard-->
-    <div class="h-24 bg-blue-400">
-      <p class="my-10 mx-auto">
-        <i class="fa fa-home"></i> Tableau de bord
-      </p>
+    <!-- FORM USER-->
+    <div class="col-12 col-md-4 col-lg-4 mt-8">
+      <%= render "devise/shared/user_profil_form" %>
+    <hr class="mt-20">
     </div>
-
-  <div class="col-12 col-md-7 col-lg-7">
-    <div class="offset-md-1 md:mt-16">
-      <%= render "devise/shared/card_user" %>
-    </div>
-  </div>
-
-    <div class="col-12 col-md-3 col-lg-3">
-    <p class="">Mais je ne sais pas ce qui va se passer avec mon entreprise, alors comment puis-je montrer mes finances?"
-
-Ma réponse est généralement: «Comment comptez-vous amener les investisseurs à investir dans votre entreprise si vous ne savez pas ce qui va se passer?»</p>
+    <!-- FORM COMPTE SCHOOL-->
+    <div class="col-12 col-md-4 col-lg-4 mt-8">
+    <p class="">To be super intelligent is a gift from the creator. But to use that gift as a source of pride or any other horrible trait to cause jealousy or bring out the worst in people or to deceive and trample those that are less intelligent is a terrible waste of human potential.</p>
+    <hr class="mt-20">
     </div>
   </div>
 </div>

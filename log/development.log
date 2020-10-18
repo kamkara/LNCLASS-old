@@ -7129,3 +7129,68 @@ Processing by CoursesController#new as HTML
 Completed 200 OK in 106ms (Views: 95.1ms | ActiveRecord: 0.7ms | Allocations: 13948)
 
 
+Started GET "/" for ::1 at 2020-10-18 10:02:21 +0000
+  [1m[35m (27.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 125ms (ActiveRecord: 0.0ms | Allocations: 1114)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-10-18 10:02:25 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 9.3ms | Allocations: 646)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 74.8ms | Allocations: 3056)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.4ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 1.0ms | Allocations: 139)
+  Rendered shared/nav/_navbar.html.erb (Duration: 221.9ms | Allocations: 7178)
+Started GET "/users/sign_in" for ::1 at 2020-10-18 10:02:26 +0000
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 8.8ms | Allocations: 1121)
+Completed 200 OK in 974ms (Views: 813.2ms | ActiveRecord: 39.2ms | Allocations: 45041)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 134)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1078)
+  Rendered layouts/partials/_header_links.html.erb (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/partials/_notice.html.erb (Duration: 0.2ms | Allocations: 25)
+  Rendered shared/nav/_navbar.html.erb (Duration: 5.4ms | Allocations: 1166)
+  Rendered layouts/partials/_footer_links.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 69ms (Views: 66.1ms | ActiveRecord: 0.0ms | Allocations: 9781)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-10-18 10:02:32 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Jg5QrWlRFQWccxI7SB86nP6+9uplsjROiU7yRF3lhyfEPKw1T0akDS5IbXFPmDAJtWksnFOX9ANoWGwQZbqMGA==", "user"=>{"email"=>"kara@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Connexion"}
+  [1m[36mUser Load (62.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "kara@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (22.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2020-10-18 10:02:33.297011"], ["last_sign_in_at", "2020-10-17 18:47:24.812985"], ["sign_in_count", 14], ["updated_at", "2020-10-18 10:02:33.298964"], ["id", 1]]
+  [1m[35m (57.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 913ms (ActiveRecord: 144.4ms | Allocations: 10928)
+
+
+Started GET "/" for ::1 at 2020-10-18 10:02:33 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/courses/_sidebar.html.erb (Duration: 0.6ms | Allocations: 89)
+  [1m[36mCourse Load (52.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/shared/courses/_feed.html.erb:2
+  Rendered shared/courses/_feed.html.erb (Duration: 185.2ms | Allocations: 12537)
+  Rendered home/_logged_in.html.erb (Duration: 189.6ms | Allocations: 13205)
+  Rendered home/index.html.erb within layouts/application (Duration: 205.8ms | Allocations: 13572)
+Completed 500 Internal Server Error in 265ms (ActiveRecord: 65.5ms | Allocations: 17322)
+
+
+
+NoMethodError - undefined method `matiere' for #<Course:0x00005615a8c5c128>:
+  app/views/shared/courses/_feed.html.erb:24
+  app/views/shared/courses/_feed.html.erb:14
+  app/views/shared/courses/_feed.html.erb:2
+  app/views/home/_logged_in.html.erb:10
+  app/views/home/index.html.erb:3
+
+Started POST "/__better_errors/d7446a15d7cd3c51/variables" for ::1 at 2020-10-18 10:02:34 +0000
