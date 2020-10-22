@@ -39,6 +39,7 @@ gem 'devise', '~> 4.7', '>= 4.7.3'
 #INVOICES PDF
 gem 'prawn', '~> 2.3'
 gem 'prawn-qrcode', '~> 0.5.2'
+#gem 'quickchart', '~> 1.0'
 #gem 'wicked_pdf', '~> 2.1'
 
 
@@ -120,3 +121,13 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #HERO PATTERN
 #http://www.heropatterns.com/
+
+
+#RESOURCES
+#https://hackademy.io/tutoriel-videos/nouveaute-rails-41-active-record-methode-enum
+
+#SCOLARITE FORMAT
+#https://www.pdftron.com/blog/rails/how-to-generate-pdf-with-ruby-on-rails/
+#http://rails-generate-pdf.herokuapp.com/invoices/1
+#https://github.com/PDFTron/rails-generate-pdf
+#https://www.synbioz.com/blog/tech/generation-de-pdf
