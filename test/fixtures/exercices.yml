@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  content_fiche: MyText
+  content_correct: MyText
+  level: MyString
+  material: MyString
+  author: MyString
+  slug: MyString
+  course: one
+  user: one
+
+two:
+  title: MyString
+  content_fiche: MyText
+  content_correct: MyText
+  level: MyString
+  material: MyString
+  author: MyString
+  slug: MyString
+  course: two
+  user: two

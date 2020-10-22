@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-6 offset-md-1">
+    <div class="card">
+      <p>
+        <strong>Title:</strong>
+        <%= @exercice.title %>
+      </p>
+
+      <p>
+        <strong>Content fiche:</strong>
+        <%= @exercice.content_exercice %>
+      </p>
+      </div>
+      <%= link_to 'Edit', edit_exercice_path(@exercice) %> |
+  </div>
+</div>
+

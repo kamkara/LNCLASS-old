@@ -1,0 +1,14 @@
+<% if exercice.content_exercice.persisted? %>
+  <%= link_to exercice_path(exercice), class:"hover:text-black" do %>
+    <div class="card my-1">
+      <div class="m-2">
+        <div class="justify-content-between">
+          <p class="font-semibold"><%= exercice.author %></p>
+        </div>
+        <hr>
+        <%= truncate(strip_tags(exercice.content_exercice.to_s.html_safe), length: 500) %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+

@@ -1,10 +1,7 @@
-class Material < ApplicationRecord
+class Exercice < ApplicationRecord
+  belongs_to :course
   belongs_to :user
-  has_many :courses
-
-   #PRESENTE
-  validates :title,
-            :slug, presence: true
+  has_rich_text :content_exercice
 
 
   #SLUG
@@ -15,5 +12,3 @@ class Material < ApplicationRecord
     title_changed?
   end
 end
-
-

@@ -37,7 +37,8 @@ gem 'devise', '~> 4.7', '>= 4.7.3'
 #gem 'vuejs-rails', '~> 2.5', '>= 2.5.13'
 
 #INVOICES PDF
-#gem 'prawn', '~> 2.3'
+gem 'prawn', '~> 2.3'
+gem 'prawn-qrcode', '~> 0.5.2'
 #gem 'wicked_pdf', '~> 2.1'
 
 
@@ -56,7 +57,7 @@ gem 'jquery-rails'
 #gem "stimulus_reflex", "~> 3.2"
 
 ######################## FORMS #######################
-#gem 'simple_form', '~> 5.0', '>= 5.0.3'
+gem 'simple_form', '~> 5.0', '>= 5.0.3'
 gem 'bootstrap_form', '~> 4.5'
 #gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 
