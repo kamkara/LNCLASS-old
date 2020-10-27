@@ -131,3 +131,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #http://rails-generate-pdf.herokuapp.com/invoices/1
 #https://github.com/PDFTron/rails-generate-pdf
 #https://www.synbioz.com/blog/tech/generation-de-pdf
+#https://www.grzegorowski.com/using-prawn-gem-for-generating-pdfs-in-rails-5
+#https://www.grzegorowski.com/using-prawn-gem-for-generating-pdfs-in-rails-5
