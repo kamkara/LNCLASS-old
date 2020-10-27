@@ -62,9 +62,11 @@ gem 'simple_form', '~> 5.0', '>= 5.0.3'
 gem 'bootstrap_form', '~> 4.5'
 #gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 
+######################## FILES STAORAGES #######################
 # Use Active Storage variant
  gem 'image_processing', '~> 1.2'
-
+ gem 'carrierwave', '~> 2.1'
+gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
