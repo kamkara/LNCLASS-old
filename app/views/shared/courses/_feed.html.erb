@@ -1,4 +1,9 @@
-<%= render "shared/courses/feed_home_infos" %>
+<!-- Home feed-->
+<!-- Home feed -onglet Msg -->
+<% content_for @title= "Accueil" %>
+<!-- Home feed -onglet Msg -->
+
+<%= render "shared/courses/feed_home_scan" %>
 
 <% @courses.each do |course| %>
 <div class="mt-2"></div>
