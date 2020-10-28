@@ -1,0 +1,38 @@
+
+<%= simple_form_for([@school], class:"needs-validation") do |f| %>
+
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+
+  <div class="form-inputs">
+    <%= f.input :name, label:"Nom De L'etablissement",
+     placeholder:"College Moderne Mixte de Tiassale" %>
+  </div>
+<div class="">
+    <%= f.input :sigle %>
+</div>
+<div class="">
+    <%= f.input :role %>
+</div>
+<div class="">
+    <%= f.input :contact %>
+</div>
+<div class="">
+    <%= f.input :school_address %>
+</div>
+<div class="">
+    <%= f.input :city %>
+</div>
+<div class="">
+    <%= f.input :code_school %>
+</div>
+<div class="mb-2">
+  <%= f.input :code_secret %>
+</div>
+
+
+  <div class="form-actions">
+    <%= f.button :submit, class:"btn btn-outline-primary font-bold hover:no-underline" %>
+  </div>
+<% end %>

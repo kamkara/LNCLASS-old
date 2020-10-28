@@ -3,13 +3,15 @@
 
 
   <div class="form-inputs">
-
-    <%= f.text_field :title, label:"References Unique du sujet", placeholder:"Reference du sujet", id:"exerciceTitle" %>
+    <%= f.text_field :title, label:"References Unique du sujet",
+                       placeholder:"Reference du sujet", id:"exerciceTitle" %>
   </div>
 
   <div class="form-inputs">
-
-    <%= f.rich_text_area :content_exercice, label: 'Contenu:', class: "customized-min-height", placeholder: "Le contenu du cours", id:"exerciceContent" %>
+    <%= f.rich_text_area :content_exercice, label: 'Contenu:',
+                           class: "customized-min-height",
+                            placeholder: "Le contenu du cours",
+                             id:"exerciceContent" %>
   </div>
 
   <div class="actions mt-2">
