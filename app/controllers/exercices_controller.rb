@@ -8,6 +8,8 @@ class ExercicesController < ApplicationController
     @exercice = @course.exercices.build(exercice_params)
     @exercice.user_id = current_user.id
     @exercice.author = current_user.username
+    @exercice.material = @course.materials
+
 
     if @exercice.save
       format.html { redirect_to @course }
@@ -65,6 +67,6 @@ class ExercicesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def exercice_params
-      params.require(:exercice).permit(:title, :content_exercice )
+      params.require(:exercice).permit(:title, :content_exercice, :material )
     end
 end
