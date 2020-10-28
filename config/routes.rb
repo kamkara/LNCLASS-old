@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :materials
-  resources :courses
+
+  resources :courses do
+    resources :exercices, only: [:index, :new, :create]
+  end
+  resources :exercices, only: [:show, :update, :edit, :destroy]
   root to:'home#index'
 
   devise_for :users, controllers: { registrations: 'users/registrations' }

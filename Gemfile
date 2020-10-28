@@ -37,7 +37,9 @@ gem 'devise', '~> 4.7', '>= 4.7.3'
 #gem 'vuejs-rails', '~> 2.5', '>= 2.5.13'
 
 #INVOICES PDF
-#gem 'prawn', '~> 2.3'
+gem 'prawn', '~> 2.3'
+gem 'prawn-qrcode', '~> 0.5.2'
+#gem 'quickchart', '~> 1.0'
 #gem 'wicked_pdf', '~> 2.1'
 
 
@@ -56,13 +58,15 @@ gem 'jquery-rails'
 #gem "stimulus_reflex", "~> 3.2"
 
 ######################## FORMS #######################
-#gem 'simple_form', '~> 5.0', '>= 5.0.3'
+gem 'simple_form', '~> 5.0', '>= 5.0.3'
 gem 'bootstrap_form', '~> 4.5'
 #gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 
+######################## FILES STAORAGES #######################
 # Use Active Storage variant
  gem 'image_processing', '~> 1.2'
-
+ gem 'carrierwave', '~> 2.1'
+gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
@@ -119,3 +123,15 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #HERO PATTERN
 #http://www.heropatterns.com/
+
+
+#RESOURCES
+#https://hackademy.io/tutoriel-videos/nouveaute-rails-41-active-record-methode-enum
+
+#SCOLARITE FORMAT
+#https://www.pdftron.com/blog/rails/how-to-generate-pdf-with-ruby-on-rails/
+#http://rails-generate-pdf.herokuapp.com/invoices/1
+#https://github.com/PDFTron/rails-generate-pdf
+#https://www.synbioz.com/blog/tech/generation-de-pdf
+#https://www.grzegorowski.com/using-prawn-gem-for-generating-pdfs-in-rails-5
+#https://www.grzegorowski.com/using-prawn-gem-for-generating-pdfs-in-rails-5

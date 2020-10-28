@@ -13,8 +13,10 @@ trix-editor {
     }
 }
 
-// trix content
-.trix-content {
+// trix tool-bar custom
+.trix-button-row {}
+
+trix-content {
     .attachment-gallery {
         >action-text-attachment,
         >.attachment {

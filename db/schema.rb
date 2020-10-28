@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_17_094931) do
+ActiveRecord::Schema.define(version: 2020_10_28_112208) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +58,28 @@ ActiveRecord::Schema.define(version: 2020_10_17_094931) do
     t.bigint "material_id"
     t.index ["material_id"], name: "index_courses_on_material_id"
     t.index ["user_id"], name: "index_courses_on_user_id"
+  end
+
+  create_table "evals", force: :cascade do |t|
+    t.string "title"
+    t.string "slug"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_evals_on_user_id"
+  end
+
+  create_table "exercices", force: :cascade do |t|
+    t.string "title"
+    t.text "content_exercice"
+    t.string "author"
+    t.bigint "course_id"
+    t.string "slug"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "material"
+    t.index ["user_id"], name: "index_exercices_on_user_id"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -113,6 +135,8 @@ ActiveRecord::Schema.define(version: 2020_10_17_094931) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "courses", "materials"
   add_foreign_key "courses", "users"
+  add_foreign_key "evals", "users"
+  add_foreign_key "exercices", "users"
   add_foreign_key "materials", "courses"
   add_foreign_key "materials", "users"
 end
