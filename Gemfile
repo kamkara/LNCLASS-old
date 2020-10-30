@@ -61,7 +61,6 @@ gem 'jquery-rails'
 gem 'squasher', '~> 0.6.2'
 
 
-
 ######################## FORMS #######################
 gem 'simple_form', '~> 5.0', '>= 5.0.3'
 gem 'bootstrap_form', '~> 4.5'
