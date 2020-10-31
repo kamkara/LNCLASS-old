@@ -57,6 +57,10 @@ gem 'bootstrap', '~> 5.0.0.alpha1'
 gem 'jquery-rails'
 #gem "stimulus_reflex", "~> 3.2"
 
+######################## CLEAN MIGRATIONS #######################
+gem 'squasher', '~> 0.6.2'
+
+
 ######################## FORMS #######################
 gem 'simple_form', '~> 5.0', '>= 5.0.3'
 gem 'bootstrap_form', '~> 4.5'
