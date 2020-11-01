@@ -10,9 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_28_112208) do
+ActiveRecord::Schema.define(version: 2020_11_01_124554) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pgcrypto"
   enable_extension "plpgsql"
 
   create_table "action_text_rich_texts", force: :cascade do |t|
@@ -60,15 +61,6 @@ ActiveRecord::Schema.define(version: 2020_10_28_112208) do
     t.index ["user_id"], name: "index_courses_on_user_id"
   end
 
-  create_table "evals", force: :cascade do |t|
-    t.string "title"
-    t.string "slug"
-    t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_evals_on_user_id"
-  end
-
   create_table "exercices", force: :cascade do |t|
     t.string "title"
     t.text "content_exercice"
@@ -105,38 +97,23 @@ ActiveRecord::Schema.define(version: 2020_10_28_112208) do
     t.index ["user_id"], name: "index_materials_on_user_id"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer "sign_in_count", default: 0, null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.inet "current_sign_in_ip"
-    t.inet "last_sign_in_ip"
+  create_table "schools", force: :cascade do |t|
+    t.string "name"
+    t.string "sigle"
+    t.string "role"
+    t.string "contact"
+    t.string "school_address"
+    t.string "city"
+    t.string "code_school"
+    t.string "code_secret"
+    t.string "slug"
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "username"
-    t.string "city"
-    t.string "school_name"
-    t.string "level"
-    t.string "contact"
-    t.string "matricule"
-    t.string "role"
-    t.string "slug"
-    t.string "school_code"
-    t.string "punchline"
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["user_id"], name: "index_schools_on_user_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "courses", "materials"
-  add_foreign_key "courses", "users"
-  add_foreign_key "evals", "users"
-  add_foreign_key "exercices", "users"
   add_foreign_key "materials", "courses"
-  add_foreign_key "materials", "users"
 end

@@ -135,3 +135,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #https://www.synbioz.com/blog/tech/generation-de-pdf
 #https://www.grzegorowski.com/using-prawn-gem-for-generating-pdfs-in-rails-5
 #https://www.grzegorowski.com/using-prawn-gem-for-generating-pdfs-in-rails-5
+
+
+#UUUID
+#https://itnext.io/using-uuids-to-your-rails-6-application-6438f4eeafdf
