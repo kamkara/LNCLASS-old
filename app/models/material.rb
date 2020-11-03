@@ -1,6 +1,7 @@
 class Material < ApplicationRecord
   belongs_to :user
   has_many :courses
+  has_many :exercices
 
    #PRESENTE
   validates :title,
