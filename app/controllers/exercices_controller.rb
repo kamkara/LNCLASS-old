@@ -8,7 +8,7 @@ class ExercicesController < ApplicationController
     @exercice = @course.exercices.build(exercice_params)
     @exercice.user_id = current_user.id
     @exercice.author = current_user.username
-    @exercice.material = @course.materials
+    @exercice.material_id = @course.material_id
 
 
     if @exercice.save

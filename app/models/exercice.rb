@@ -2,6 +2,7 @@ class Exercice < ApplicationRecord
   belongs_to :course
   belongs_to :user
   has_rich_text :content_exercice
+  belongs_to :material
 
 
   #SLUG
